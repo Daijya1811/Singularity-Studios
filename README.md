@@ -5,7 +5,7 @@
 _This README contains basic information about the project and its artifacts. If kept up to date, it will act as a primary dashboard for the project._
 
 ## Team Members
-- ...
+- Jonathan Benz
 
 ## Repo Organization
 - [Sample2DProject/](Sample2DProject/) - A template 2D Unity project already configured to correctly build to WebGL for GitHub pages deployment.
