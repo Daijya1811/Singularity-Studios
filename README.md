@@ -17,4 +17,4 @@ _This README contains basic information about the project and its artifacts. If 
 
 ## Other Resources
 - [Task management Board](https://trello.com/invite/b/66d1ee82d148b6dd4962b991/ATTI3271662cb0cf4b8746776b2530b3ed5847EC3976/game-design-template)
-- [Google Project Doc](https://docs.google.com/document/d/1fgYwW3fK7d3w79_qk88qGBqytb0YTgLMN1EYT3zXkWI/edit)
+- [Google Project Doc](https://docs.google.com/document/d/1BRZSJY17bVkzMYttxcc2F4zss3bqRwmTX_qmXMcCKwM/edit)
