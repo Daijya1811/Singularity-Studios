@@ -1,4 +1,4 @@
-# **GAME TITLE** by Singularity Studios
+# **Echo Breach** by Singularity Studios
 ## Course number: 601
 ## 2024
 
