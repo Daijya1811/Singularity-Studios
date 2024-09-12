@@ -6,6 +6,7 @@ _This README contains basic information about the project and its artifacts. If 
 
 ## Team Members
 - William Tallarico
+- Silly Conflict
 
 ## Repo Organization
 - [Sample2DProject/](Sample2DProject/) - A template 2D Unity project already configured to correctly build to WebGL for GitHub pages deployment.
