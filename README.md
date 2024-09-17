@@ -7,7 +7,7 @@ _This README contains basic information about the project and its artifacts. If 
 ## Team Members
 - Annalee Dorozynski
 - Daijya Robinson
-- Jon Benz
+- Jonathan Benz
 - Midna Meyer
 - William Tallarico
 
