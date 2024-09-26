@@ -15,11 +15,11 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movementInput = Vector2.zero;
     Rigidbody rb;
-
-    // Start is called before the first frame update
+    Animator animator;
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,6 +32,14 @@ public class PlayerMovement : MonoBehaviour
         }
         else movement = new Vector3(movementInput.x, 0f, movementInput.y);
         rb.velocity += movement * playerSpeed * Time.deltaTime;
+        transform.LookAt(transform.position + movement);
+
+        if (rb.velocity.magnitude > 2f)
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else animator.SetBool("isRunning", false);
+
     }
     public void OnMove(InputAction.CallbackContext context)
     {

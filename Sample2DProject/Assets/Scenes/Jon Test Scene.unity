@@ -427,26 +427,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1110007451772453540, guid: 7ec88c9153046b5418284424a59d94af, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1110007451772453540, guid: 7ec88c9153046b5418284424a59d94af, type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1110007451772453540, guid: 7ec88c9153046b5418284424a59d94af, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516208834701454447, guid: 7ec88c9153046b5418284424a59d94af, type: 3}
-      propertyPath: m_Name
-      value: Player2Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516208834701454447, guid: 7ec88c9153046b5418284424a59d94af, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2314001349631517773, guid: 7ec88c9153046b5418284424a59d94af, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.89
@@ -487,17 +467,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7781421996605764335, guid: 7ec88c9153046b5418284424a59d94af, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8242193835078469457, guid: 7ec88c9153046b5418284424a59d94af, type: 3}
       propertyPath: m_Name
       value: Player2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8242193835078469457, guid: 7ec88c9153046b5418284424a59d94af, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -557,7 +529,15 @@ MonoBehaviour:
       m_Id: 21f8a7ec-6625-4787-a3e8-ced792586fd7
       m_Processors: 
       m_Interactions: 
-      m_SingletonActionBindings: []
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 0b2c737d-6a6c-4711-9b45-4803157425af
+        m_Path: 
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_PlayerPrefab: {fileID: 8777648626705269619, guid: c1844e10b5da44b4b939d5f3e4a8f999, type: 3}
@@ -1545,14 +1525,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
-    - target: {fileID: 747080627469062648, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1423458904246985798, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6350345642020532964, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.5
@@ -1592,54 +1564,6 @@ PrefabInstance:
     - target: {fileID: 6350345642020532964, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889078956736815803, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889078956736815803, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889078956736815803, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 963507181}
-    - target: {fileID: 6889078956736815803, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889078956736815803, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ToggleCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889078956736815803, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: CamerasController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889078956736815803, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
-      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7255143744570666194, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869663929350929094, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
-      propertyPath: m_Name
-      value: Player1Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869663929350929094, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8600617058615809037, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8600617058615809037, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1740,7 +1664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1822925383
 Transform:
   m_ObjectHideFlags: 0
