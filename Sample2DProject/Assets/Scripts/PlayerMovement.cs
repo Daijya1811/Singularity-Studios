@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     float playerSpeed = 20f;
     [SerializeField] [Range(1, 2)]
     float sprintMultiplier = 1.5f;
+    [SerializeField]
+    float floatingHeight = 2f;
     bool isSprinting;
 
     Vector2 movementInput = Vector2.zero;
@@ -38,6 +40,15 @@ public class PlayerMovement : MonoBehaviour
     public void OnSprint(InputAction.CallbackContext context)
     {
         isSprinting = context.performed;
+    }
+
+    private void ToggleFloating(bool isFloating)
+    {
+        if(isFloating)
+        {
+            rb.position = new Vector3(rb.position.x, floatingHeight, rb.position.z);
+        }
+        else rb.position = new Vector3(rb.position.x, 0f, rb.position.z);
     }
     /*private bool CheckForOtherPlayer()
     {
