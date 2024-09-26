@@ -142,7 +142,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 84ecdbd8445592e4995e137a5f484eb5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -169,7 +169,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae9240c022a4f8f48b5a066fd7621e6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 20
+  rotationSpeed: 5
   sprintMultiplier: 1.7
   floatingHeight: 2
 --- !u!114 &3176372524862844976

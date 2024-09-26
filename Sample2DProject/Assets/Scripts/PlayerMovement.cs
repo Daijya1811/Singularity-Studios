@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    float playerSpeed = 20f;
+    float rotationSpeed = 5f;
     [SerializeField] [Range(1, 2)]
     float sprintMultiplier = 1.5f;
     [SerializeField]
@@ -28,17 +28,25 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movement;
         if (isSprinting)
         {
+            animator.SetBool("isSprinting", true);
             movement = new Vector3(movementInput.x, 0f, movementInput.y) * sprintMultiplier;
         }
-        else movement = new Vector3(movementInput.x, 0f, movementInput.y);
-        rb.velocity += movement * playerSpeed * Time.deltaTime;
-        transform.LookAt(transform.position + movement);
+        else 
+        {
+            animator.SetBool("isSprinting", false);
+            movement = new Vector3(movementInput.x, 0f, movementInput.y);
+        }
+        // Leave this out because we are just going to use the root motion of the animation to move our character
+        // rb.velocity += movement * playerSpeed * Time.deltaTime;
 
-        if (rb.velocity.magnitude > 2f)
+        // Smooth rotation
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(movement), rotationSpeed * Time.deltaTime);
+
+        if (movement.magnitude > 0 && !isSprinting)
         {
             animator.SetBool("isRunning", true);
         }
-        else animator.SetBool("isRunning", false);
+        else if (movement.magnitude < 0.05f) animator.SetBool("isRunning", false);
 
     }
     public void OnMove(InputAction.CallbackContext context)
