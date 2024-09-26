@@ -14,13 +14,15 @@ public class FollowCamera : MonoBehaviour
     {
         midCameraPrefab = Instantiate(midCameraPrefab, this.transform);
         midCameraPrefab.transform.localEulerAngles = new Vector3(-45, 0, 0);
+        players = GetPlayers();
     }
 
     // Update is called once per frame
     void Update()
     {
         // Keep calling the GetPlayers function in case the second player hasn't joined yet. 
-        players = GetPlayers();
+        if(players.Length < 2)
+            players = GetPlayers();
         CenterCamera();
     }
 
