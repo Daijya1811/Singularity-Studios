@@ -8,7 +8,7 @@ using UnityEngine.AI;
 public class ClickPlayerMovement : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent agent;
-    private MouseInput mouseInput;
+    private Input mouseInput;
 
     private Camera cam;
     
@@ -16,7 +16,7 @@ public class ClickPlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        mouseInput = new MouseInput();
+        mouseInput = new Input();
     }
 
     private void OnEnable()
@@ -34,12 +34,12 @@ public class ClickPlayerMovement : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         cam = Camera.main;
-        mouseInput.Mouse.MouseClick.performed += _ => MouseClick();
+        mouseInput.Player.MouseClick.performed += _ => MouseClick();
     }
 
     void MouseClick()
     {
-        Vector3 mousePosition = mouseInput.Mouse.MousePosition.ReadValue<Vector2>();
+        Vector3 mousePosition = mouseInput.Player.MousePosition.ReadValue<Vector2>();
         Ray ray = cam.ScreenPointToRay(mousePosition);
         RaycastHit hit;
         Debug.DrawRay(ray.origin, ray.direction * 1000, Color.magenta, 1000);
