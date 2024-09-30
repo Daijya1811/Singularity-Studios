@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 
+
+// This is just a test mock-up of what character selection might look like. 
 public class UIPlayerSelect : MonoBehaviour
 {
     [SerializeField] GameObject leftSelectPrefab;
