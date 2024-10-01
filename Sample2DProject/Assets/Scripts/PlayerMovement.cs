@@ -38,15 +38,17 @@ public class PlayerMovement : MonoBehaviour
         }
         // Leave this out because we are just going to use the root motion of the animation to move our character
         // rb.velocity += movement * playerSpeed * Time.deltaTime;
-
-        // Smooth rotation
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(movement), rotationSpeed * Time.deltaTime);
+        
 
         if (movement.magnitude > 0 && !isSprinting)
         {
             animator.SetBool("isRunning", true);
         }
         else if (movement.magnitude < 0.05f) animator.SetBool("isRunning", false);
+
+        // Smooth rotation
+        movement += transform.forward;
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(movement), rotationSpeed * Time.deltaTime);
 
     }
     public void OnMove(InputAction.CallbackContext context)
