@@ -427,10 +427,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1516208834701454447, guid: 7ec88c9153046b5418284424a59d94af, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2314001349631517773, guid: 7ec88c9153046b5418284424a59d94af, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.89
@@ -471,20 +467,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3140910375395786771, guid: 7ec88c9153046b5418284424a59d94af, type: 3}
-      propertyPath: m_PresetInfoIsWorld
+    - target: {fileID: 6546264399616228404, guid: 7ec88c9153046b5418284424a59d94af, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8242193835078469457, guid: 7ec88c9153046b5418284424a59d94af, type: 3}
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
-    - target: {fileID: 8395516874222294471, guid: 7ec88c9153046b5418284424a59d94af, type: 3}
-      propertyPath: playerSplitScreenCamera
-      value: 
-      objectReference: {fileID: 420081783}
-    m_RemovedComponents:
-    - {fileID: 6962872501275818248, guid: 7ec88c9153046b5418284424a59d94af, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1538,10 +1529,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
-    - target: {fileID: 3287565945509853555, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4421555713933383163, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1586,12 +1573,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8253928832941583527, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
-      propertyPath: playerSplitScreenCamera
-      value: 
-      objectReference: {fileID: 728059415}
-    m_RemovedComponents:
-    - {fileID: 1770854098451712430, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
