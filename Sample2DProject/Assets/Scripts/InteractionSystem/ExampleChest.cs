@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExampleChest : MonoBehaviour, IInteractable
+public class ExampleInteractable : MonoBehaviour, IInteractable
 {
     [SerializeField] private string prompt;
     
@@ -10,7 +10,7 @@ public class ExampleChest : MonoBehaviour, IInteractable
     
     public bool Interact(Interactor interactor)
     {
-       Debug.Log("Opening Chest");
+       Debug.Log("Event Triggered");
        return true;
     }
 }

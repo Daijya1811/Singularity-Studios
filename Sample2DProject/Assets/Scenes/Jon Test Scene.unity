@@ -483,7 +483,8 @@ PrefabInstance:
       propertyPath: playerSplitScreenCamera
       value: 
       objectReference: {fileID: 420081783}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6962872501275818248, guid: 7ec88c9153046b5418284424a59d94af, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1589,7 +1590,8 @@ PrefabInstance:
       propertyPath: playerSplitScreenCamera
       value: 
       objectReference: {fileID: 728059415}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1770854098451712430, guid: 0f5d31203b10dfc4baa98d02b3f3217d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
