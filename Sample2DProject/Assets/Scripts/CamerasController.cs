@@ -13,11 +13,6 @@ public class CamerasController : MonoBehaviour
         mainCamera = Camera.main;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void ToggleCamera()
     {

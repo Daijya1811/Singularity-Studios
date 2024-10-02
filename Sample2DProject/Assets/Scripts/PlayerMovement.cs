@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         }
         // Leave this out because we are just going to use the root motion of the animation to move our character
         // rb.velocity += movement * playerSpeed * Time.deltaTime;
-        
+
 
         if (movement.magnitude > 0 && !isSprinting)
         {
@@ -46,10 +46,10 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (movement.magnitude < 0.05f) animator.SetBool("isRunning", false);
 
-        // Smooth rotation
+        // This line is necessary for player to look at last input direction!
         movement += transform.forward;
+        // Smooth rotation
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(movement), rotationSpeed * Time.deltaTime);
-
     }
     public void OnMove(InputAction.CallbackContext context)
     {
