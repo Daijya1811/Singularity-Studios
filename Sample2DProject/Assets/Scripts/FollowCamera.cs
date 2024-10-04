@@ -9,7 +9,10 @@ public class FollowCamera : MonoBehaviour
     [SerializeField] GameObject midCameraPrefab;
     GameObject[] players;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Instantiates a GameObject midCameraPrefab which represents the midpoint position of both players. 
+    /// The midCameraPrefab also has bounding boxes associated with it which prevent the players from leaving the camera screen. 
+    /// </summary>
     void Start()
     {
         midCameraPrefab = Instantiate(midCameraPrefab, this.transform);
@@ -26,10 +29,18 @@ public class FollowCamera : MonoBehaviour
         CenterCamera();
     }
 
+    /// <summary>
+    /// Finds the Player GameObjects tagged with "Player" and stores them in an array to use for reference. 
+    /// </summary>
+    /// <returns> Array of our Player GameObjects. </returns>
     private GameObject[] GetPlayers()
     {
         return GameObject.FindGameObjectsWithTag("Player");
     }
+
+    /// <summary>
+    /// Centers the camera on the midpoint position of both players. 
+    /// </summary>
     private void CenterCamera()
     {
         if (players.Length == 1) 

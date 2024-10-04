@@ -6,14 +6,16 @@ using UnityEngine.InputSystem;
 public class CamerasController : MonoBehaviour
 {
     Camera mainCamera;
-    [SerializeField]
-    Camera[] playerCameras;
+    [SerializeField] Camera[] playerCameras;
     void Awake()
     {
         mainCamera = Camera.main;
     }
 
 
+    /// <summary>
+    /// Toggles between Split-Screen cameras and Main Camera.
+    /// </summary>
     public void ToggleCamera()
     {
         mainCamera.enabled = !mainCamera.enabled;
