@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    
+    private InputActionAsset inputAsset;
+    private InputActionMap player;
+    private InputAction move;
+    
     [SerializeField]
     float rotationSpeed = 5f;
     [SerializeField] [Range(1, 2)]
@@ -20,11 +26,14 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        inputAsset = GetComponent<PlayerInput>().actions;
+        player = inputAsset.FindActionMap("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+        movementInput = move.ReadValue<Vector2>();
         Vector3 movement;
         if (isSprinting)
         {
@@ -57,7 +66,11 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnSprint(InputAction.CallbackContext context)
     {
-        isSprinting = context.performed;
+        isSprinting = context.started;
+    }
+    public void CancelSprint(InputAction.CallbackContext context)
+    {
+        isSprinting = false;
     }
 
     private void ToggleFloating(bool isFloating)
@@ -67,6 +80,21 @@ public class PlayerMovement : MonoBehaviour
             rb.position = new Vector3(rb.position.x, floatingHeight, rb.position.z);
         }
         else rb.position = new Vector3(rb.position.x, 0f, rb.position.z);
+    }
+
+    private void OnEnable()
+    {
+        player.FindAction("Sprint").started += OnSprint;
+        player.FindAction("Sprint").canceled += CancelSprint;
+        move = player.FindAction("Move");
+        player.Enable();
+    }
+    private void OnDisable()
+    {
+        player.FindAction("Sprint").started -= OnSprint;
+        player.FindAction("Sprint").canceled -= CancelSprint;
+        player.Disable();
+
     }
     /*private bool CheckForOtherPlayer()
     {
