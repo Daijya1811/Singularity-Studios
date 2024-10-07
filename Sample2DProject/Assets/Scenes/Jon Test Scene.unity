@@ -1670,6 +1670,7 @@ GameObject:
   - component: {fileID: 701410698}
   - component: {fileID: 701410697}
   - component: {fileID: 701410699}
+  - component: {fileID: 701410700}
   m_Layer: 0
   m_Name: Co-Op Manager
   m_TagString: Untagged
@@ -1772,6 +1773,34 @@ MonoBehaviour:
   - {fileID: 589451175029981414, guid: f2e44d84d37056644818e7bee7f55b80, type: 3}
   - {fileID: 7729790283518403675, guid: 9d218c49dd2d02a448895778fb87cd5c, type: 3}
   _playerInputManager: {fileID: 701410697}
+--- !u!114 &701410700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701410696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b38a88a8fed0a4788f913d3e8943cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventChannel: {fileID: 11400000, guid: 5b398cbb22788a2488ec0b76a32b4f4b, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 701410699}
+        m_TargetAssemblyTypeName: JoinPlayers, Assembly-CSharp
+        m_MethodName: SwapPrefab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &730363522
 GameObject:
   m_ObjectHideFlags: 0
