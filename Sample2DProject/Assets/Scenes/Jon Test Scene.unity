@@ -5362,9 +5362,21 @@ PrefabInstance:
       propertyPath: playerSplitScreenCamera
       value: 
       objectReference: {fileID: 8600617059831057288}
+    - target: {fileID: 472663131971684287, guid: f2e44d84d37056644818e7bee7f55b80, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472663131971684287, guid: f2e44d84d37056644818e7bee7f55b80, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 589451175029981414, guid: f2e44d84d37056644818e7bee7f55b80, type: 3}
       propertyPath: m_Name
       value: _Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 589451175029981414, guid: f2e44d84d37056644818e7bee7f55b80, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5359991311593991432, guid: f2e44d84d37056644818e7bee7f55b80, type: 3}
       propertyPath: m_Camera
@@ -5483,6 +5495,10 @@ PrefabInstance:
     - target: {fileID: 7729790283518403675, guid: 9d218c49dd2d02a448895778fb87cd5c, type: 3}
       propertyPath: m_Name
       value: _Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729790283518403675, guid: 9d218c49dd2d02a448895778fb87cd5c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8781649888722815080, guid: 9d218c49dd2d02a448895778fb87cd5c, type: 3}
       propertyPath: m_Camera
