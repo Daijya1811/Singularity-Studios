@@ -579,7 +579,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.338
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -677,7 +677,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footstepSounds:
   - {fileID: 8300000, guid: 487d162d3a08449428580e71a899d370, type: 3}
-  footstepVolume: 0.5
+  animator: {fileID: 0}
+  footStepVolume: 0.01
+  pitchMin: 1
+  pitchMax: 1.2
 --- !u!1 &1223163211061093905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,7 +1304,7 @@ Transform:
   m_GameObject: {fileID: 2704051896342262819}
   serializedVersion: 2
   m_LocalRotation: {x: 0.38268343, y: 0.000000086496584, z: -0.000000035826815, w: 0.92387956}
-  m_LocalPosition: {x: -0.03054142, y: 5, z: -2.2061062}
+  m_LocalPosition: {x: 0, y: 5, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
