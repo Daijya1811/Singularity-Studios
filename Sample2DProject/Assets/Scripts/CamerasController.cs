@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +8,11 @@ public class CamerasController : MonoBehaviour
 {
     Camera mainCamera;
     [SerializeField]
-    Camera[] playerCameras;
+    List<Camera> playerCameras = new List<Camera>();
     void Awake()
     {
         mainCamera = Camera.main;
     }
-
 
     public void ToggleCamera()
     {
@@ -21,5 +21,10 @@ public class CamerasController : MonoBehaviour
         {
             camera.enabled = !camera.enabled;
         }
+    }
+
+    public void SetCamera(PlayerInput playerInput)
+    {
+        playerCameras.Add( playerInput.transform.parent.GetComponentInChildren<Camera>());
     }
 }
