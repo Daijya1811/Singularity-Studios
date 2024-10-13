@@ -26,28 +26,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 movement = new Vector3(movementInput.x, 0f, movementInput.y);
         AnimateMovement(movement, isSprinting);
-        /*movement = Vector3.zero;
-
-        // If sprinting, transition to the sprinting animation state! 
-        if (isSprinting)
-        {
-            animator.SetBool("isSprinting", true);
-            movement = new Vector3(movementInput.x, 0f, movementInput.y);
-        }
-        else
-        {
-            animator.SetBool("isSprinting", false);
-            movement = new Vector3(movementInput.x, 0f, movementInput.y);
-        }
-
-        // If not sprinting, but moving, transition to the running animation state! 
-        if (movement.magnitude > 0)
-        {
-            animator.SetBool("isRunning", true);
-        }
-        // If not moving, transition to the idle animation state!
-        else if (movement.magnitude < 0.05f) animator.SetBool("isRunning", false);*/
-
+        
         // This line is necessary for player to look at last input direction!
         movement += transform.forward;
         // Smooth rotation

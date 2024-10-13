@@ -7,10 +7,6 @@ public class FollowCamera : MonoBehaviour
     [SerializeField] GameObject midCameraPrefab;
     GameObject[] players;
 
-    /// <summary>
-    /// Instantiates a GameObject midCameraPrefab which represents the midpoint position of both players. 
-    /// The midCameraPrefab also has bounding boxes associated with it which prevent the players from leaving the camera screen. 
-    /// </summary>
     void Start()
     {
         players = GetPlayers();
