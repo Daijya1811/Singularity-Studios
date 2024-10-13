@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float rotationSpeed = 5f;
     [SerializeField] float lerpSmoothingSpeed = 2f;
     [SerializeField] float floatingHeight = 2f;
+    bool toggleSprint;
     bool isSprinting;
     float speed;
 
@@ -67,7 +68,11 @@ public class PlayerMovement : MonoBehaviour
     /// <param name="context"> The state of the Sprint input. </param>
     public void OnSprint(InputAction.CallbackContext context)
     {
-        isSprinting = context.performed;
+        if(toggleSprint)
+        {
+            isSprinting = !isSprinting;
+        }
+        else isSprinting = context.performed;
     }
 
     /// <summary>
