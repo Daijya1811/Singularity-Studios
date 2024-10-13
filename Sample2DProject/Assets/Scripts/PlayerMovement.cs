@@ -6,9 +6,10 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float rotationSpeed = 5f;
-    [SerializeField] [Range(1, 2)] float sprintMultiplier = 1.5f;
+    [SerializeField] float lerpSmoothingSpeed = 2f;
     [SerializeField] float floatingHeight = 2f;
     bool isSprinting;
+    float speed;
 
     Vector2 movementInput = Vector2.zero;
     Rigidbody rb;
@@ -22,15 +23,17 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 movement = Vector3.zero;
+        Vector3 movement = new Vector3(movementInput.x, 0f, movementInput.y);
+        AnimateMovement(movement, isSprinting);
+        /*movement = Vector3.zero;
 
         // If sprinting, transition to the sprinting animation state! 
         if (isSprinting)
         {
             animator.SetBool("isSprinting", true);
-            movement = new Vector3(movementInput.x, 0f, movementInput.y) * sprintMultiplier;
+            movement = new Vector3(movementInput.x, 0f, movementInput.y);
         }
-        else 
+        else
         {
             animator.SetBool("isSprinting", false);
             movement = new Vector3(movementInput.x, 0f, movementInput.y);
@@ -42,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isRunning", true);
         }
         // If not moving, transition to the idle animation state!
-        else if (movement.magnitude < 0.05f) animator.SetBool("isRunning", false);
+        else if (movement.magnitude < 0.05f) animator.SetBool("isRunning", false);*/
 
         // This line is necessary for player to look at last input direction!
         movement += transform.forward;
@@ -65,6 +68,40 @@ public class PlayerMovement : MonoBehaviour
     public void OnSprint(InputAction.CallbackContext context)
     {
         isSprinting = context.performed;
+    }
+
+    /// <summary>
+    /// Animates the player to smoothly move within their animation blend tree. 
+    /// </summary>
+    /// <param name="movement"> movement input. </param>
+    /// <param name="isSprinting"> bool value to determine if the player is sprinting or not. </param>
+    private void AnimateMovement(Vector3 movement, bool isSprinting)
+    {
+        float multiplier = isSprinting ? 2f : 1.25f;
+        float target = movement.magnitude * multiplier;
+
+        // If running against a wall, do not play a running animation. 
+        if(Physics.Raycast(transform.position, transform.forward, 0.25f, 3))
+        {
+            speed -= lerpSmoothingSpeed * Time.deltaTime;
+        }
+
+        else if (Mathf.Abs(speed - target) < 0.1f)
+        {
+            speed = target;
+        }
+
+        // Lerping the movement for smooth animation blending
+        else if (speed < target)
+        {
+            speed += lerpSmoothingSpeed * Time.deltaTime;
+        }
+        else if (speed > target)
+        {
+            speed -= lerpSmoothingSpeed * Time.deltaTime;
+        }
+
+        animator.SetFloat("speed", speed);
     }
 
     /// <summary>

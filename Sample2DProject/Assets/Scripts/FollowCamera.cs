@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
-    [SerializeField] float offsetY = 30f;
-    [SerializeField] float offsetZ = -30f;
     [SerializeField] GameObject midCameraPrefab;
     GameObject[] players;
 
@@ -15,9 +13,13 @@ public class FollowCamera : MonoBehaviour
     /// </summary>
     void Start()
     {
-        midCameraPrefab = Instantiate(midCameraPrefab, this.transform);
-        midCameraPrefab.transform.localEulerAngles = new Vector3(-45, 0, 0);
         players = GetPlayers();
+    }
+
+    // Resets the camera within the editor at the end of play
+    private void OnDisable()
+    {
+        midCameraPrefab.transform.position = Vector3.zero;
     }
 
     // Update is called once per frame
@@ -45,9 +47,8 @@ public class FollowCamera : MonoBehaviour
     {
         if (players.Length == 1) 
         {
-            return;
-            /*Vector3 player1Pos = players[0].transform.position;
-            transform.position = new Vector3(player1Pos.x, player1Pos.y + offsetY, player1Pos.z + offsetZ);*/
+            Vector3 player1Pos = players[0].transform.position;
+            transform.position = new Vector3(player1Pos.x, player1Pos.y, player1Pos.z);
         }
         else if (players.Length == 2)
         {
@@ -56,8 +57,12 @@ public class FollowCamera : MonoBehaviour
             float midPointX = (player2Pos.x + player1Pos.x) / 2f;
             float midPointY = (player2Pos.y + player1Pos.y) / 2f;
             float midPointZ = (player2Pos.z + player1Pos.z) / 2f;
-            transform.position = new Vector3(midPointX, midPointY + offsetY, midPointZ + offsetZ);
+            transform.position = new Vector3(midPointX, midPointY, midPointZ);
             midCameraPrefab.transform.position = new Vector3(midPointX, midPointY, midPointZ);
+        }
+        else
+        {
+            transform.position = Vector3.zero;
         }
     }
 }
