@@ -4,9 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// This class stores all split-screen player cameras in a reference, and allows toggling between the main camera with the split-screen camera. 
+/// </summary>
 public class CamerasController : MonoBehaviour
 {
-    public List<Camera> playerCameras = new List<Camera>();
+    List<Camera> playerCameras = new List<Camera>();
     Camera mainCamera;
     void Awake()
     {
@@ -15,6 +18,7 @@ public class CamerasController : MonoBehaviour
 
     private void Start()
     {
+        // Find and store the split-screen cameras. 
         GameObject[] playerCams = GameObject.FindGameObjectsWithTag("PlayerCamera");
         playerCameras.Add(playerCams[0].GetComponent<Camera>());
         playerCameras.Add(playerCams[1].GetComponent<Camera>());
@@ -30,10 +34,5 @@ public class CamerasController : MonoBehaviour
         {
             camera.enabled = !camera.enabled;
         }
-    }
-
-    public void SetCamera(PlayerInput playerInput)
-    {
-        playerCameras.Add(playerInput.transform.GetComponentInChildren<Camera>());
     }
 }

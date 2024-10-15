@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movementInput = Vector2.zero;
     Animator animator;
     PlayerInput pi;
+
     void Awake()
     {
         animator = GetComponent<Animator>();
@@ -97,18 +98,14 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("speed", speed);
     }
-
     /// <summary>
     /// Enables the Player Input components on the players after the character selection scene transitions into gameplay.
     /// </summary>
-    /// <param name="activation">bool value to enable or disable to Player Input component.</param>
-    /// <param name="playerInput">Reference to the Player Input component.</param>
+    /// <param name="activation"> bool value to enable or disable to Player Input component. </param>
+    /// <param name="playerInput"> Reference to the Player Input component. </param>
     public void SetPlayerInputActive(bool activation, PlayerInput playerInput)
     {
-        // UnityEngine.Debug.Log("Activating pi at " + Time.time);
-        if (pi == null)
-            pi = playerInput;
-
+        if (pi == null) pi = playerInput;
         pi.enabled = activation;
     }
     /// <summary>

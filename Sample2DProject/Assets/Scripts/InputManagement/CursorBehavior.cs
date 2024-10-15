@@ -36,7 +36,6 @@ public class CursorBehavior : MonoBehaviour
         transform.Translate(new Vector3(movement.x, movement.y, 0f) * cursorSpeed * Time.deltaTime);
         // UnityEngine.Debug.Log("There are currently " + PlayerInput.all.Count + " players.");
     }
-
     /// <summary>
     /// Moves the cursor if it hasn't selected a character selection.
     /// </summary>
@@ -48,7 +47,6 @@ public class CursorBehavior : MonoBehaviour
         else  // Released button!
             movement = Vector2.zero;
     }
-
     /// <summary>
     /// If the cursor is hovering over a character selection, press the Select Button (Spacebar or the A button on a gamepad)
     /// to select that character to be used for that player. 
@@ -69,6 +67,8 @@ public class CursorBehavior : MonoBehaviour
                 {
                     objectSelected = true;
                     playerSelection = target.transform.gameObject;
+                    // Highlight the character when they get selected
+                    playerSelection.GetComponentInChildren<Light>().intensity += 1;
                     return;
                 }
             }
@@ -78,11 +78,12 @@ public class CursorBehavior : MonoBehaviour
             if (objectSelected)
             {
                 objectSelected = false;
+                // Darken the character when they get deselected
+                playerSelection.GetComponentInChildren<Light>().intensity -= 1;
                 playerSelection = null;
             }
         }
     }
-
     /// <summary>
     /// If both players have chosen their characters, they can press Enter or Start to transition from the character selection scene to gameplay!
     /// </summary>
@@ -91,7 +92,6 @@ public class CursorBehavior : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Started)
         {
-            // UnityEngine.Debug.Log("Start method tripped");
             DoneSelectingEvent?.Invoke(this, EventArgs.Empty);
         }
     }

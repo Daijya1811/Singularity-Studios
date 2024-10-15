@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerCamera
   - PlayerCursor
+  - CharacterSelectionLight
   layers:
   - Default
   - TransparentFX

@@ -37,20 +37,18 @@ public class SceneInitialization : MonoBehaviour
             PlayerObjectHandler.shouldSpawnSelectedPlayers = false;
         }
     }
-
     private void SpawnSelectedPlayers()
     {
         foreach (var player in PlayerObjectHandler.playerControllers)
         {
-            var playerController = PlayerObjectHandler.playerControllers[player.Key];
-            var playerObjectName = PlayerObjectHandler.playerSelectionNames[player.Key];
-            var playerControlScheme = PlayerObjectHandler.playerControlSchemes[player.Key];
+            InputDevice playerController = PlayerObjectHandler.playerControllers[player.Key];
+            List<string> playerObjectName = PlayerObjectHandler.playerSelectionNames[player.Key];
+            string playerControlScheme = PlayerObjectHandler.playerControlSchemes[player.Key];
 
             GameObject parentPlayerObject = new GameObject();
-
             for (int i = 0; i < playerObjectName.Count; i++)
             {
-                var currentObject = Resources.Load<GameObject>(playerObjectName[i]);
+                GameObject currentObject = Resources.Load<GameObject>(playerObjectName[i]);
 
                 // Only activate PlayerInput component on the first object (it defines the "player")
                 if (i == 0)
@@ -65,14 +63,14 @@ public class SceneInitialization : MonoBehaviour
 
                     //  *** It seems...that the above Instantiation doesn't exactly work... I'm assuming, because the PlayerInput component on the prefab is starting off
                     // disabled, that it...doesn't work.  This code here will force it to keep the device/scheme/etc... that we tried to assign the wretch above!
-                    var inputUser = playerInput.user;
+                    InputUser inputUser = playerInput.user;
                     playerInput.SwitchCurrentControlScheme(playerControlScheme);
                     InputUser.PerformPairingWithDevice(playerController, inputUser, InputUserPairingOptions.UnpairCurrentDevicesFromUser);
                 }
-
-                // If not the first object (sword/vehicle/etc...) just instantiate, don't associate a PlayerInput
+                // Then, instantiate all of the player's child objects normally! 
                 else
                 {
+                    // Assuming that the last child of our players is the Character Selection Light, we don't need to keep that when changing scenes. 
                     Instantiate(currentObject, parentPlayerObject.transform);
                 }
             }

@@ -24,18 +24,26 @@ public class StickToPlayer : MonoBehaviour
             playerInputs[0].camera = thisCamera;
             playerTransform = playerInputs[0].transform;
         }
-        else
+        else if(playerInputs.Length > 1)
         {
             playerInputs[1].camera = thisCamera;
             playerTransform = playerInputs[1].transform;
+        }
+
+        // Also, clean up any artifacts on the player that might have been brought over from character selection scene.
+        GameObject[] characterSelectionLights = GameObject.FindGameObjectsWithTag("CharacterSelectionLight");
+        foreach (GameObject light in characterSelectionLights)
+        {
+            light.SetActive(false);
         }
     }
     // Update is called once per frame
     void LateUpdate()
     {
         // Camera should follow the player
-        this.transform.position = new Vector3(playerTransform.position.x,
-                                              playerTransform.position.y + posOffsetY,
-                                              playerTransform.position.z + posOffsetZ);
+        if(playerTransform != null)
+            this.transform.position = new Vector3(playerTransform.position.x,
+                                                  playerTransform.position.y + posOffsetY,
+                                                  playerTransform.position.z + posOffsetZ);
     }
 }

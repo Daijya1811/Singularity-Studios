@@ -14,7 +14,6 @@ public class GamepadJoinBehavior : MonoBehaviour
 {
     // Reference to the Character Selection canvas initialized in the editor
     [SerializeField] Canvas currentCanvas;
-    public int numberOfActivePlayers { get; private set; } = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -55,14 +54,12 @@ public class GamepadJoinBehavior : MonoBehaviour
         // Keep track of player index (1-based). This is also needed to load the proper cursor. 
         int playerNumberToAdd = PlayerInput.all.Count + 1;
 
+        // Getting controlScheme argument from the player to pass into the PlayerInput.Instantiate() method. 
         string controlScheme = "";
-
-        /*// The inclusion of a Gamepad & Joystick scheme here is due to the potential for cheap/whacky
-        // controllers to be picked up as joysticks (D-pads detected as HATs or what-not)
         if (device.displayName.Contains("Controller") || device.displayName.Contains("Gamepad"))
             controlScheme = "Gamepad";
         else if (device.displayName.Contains("Keyboard"))
-            controlScheme = "Keyboard";*/
+            controlScheme = "Keyboard";
 
         // *** Note this utilizes the NAME of the cursor prefabs to associate the player/player # ***
         // Loads in from the Resources folder and creates the cursor. DO NOT TOUCH THE RESOURCES FOLDER. 

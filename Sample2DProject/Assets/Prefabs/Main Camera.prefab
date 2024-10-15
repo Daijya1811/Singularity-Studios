@@ -101,7 +101,6 @@ GameObject:
   - component: {fileID: 6220492699860112161}
   - component: {fileID: 4887960293429023466}
   - component: {fileID: 980898053884270748}
-  - component: {fileID: 5886566284778637894}
   - component: {fileID: 1458801527228923489}
   m_Layer: 0
   m_Name: Main Camera
@@ -126,7 +125,7 @@ Transform:
   - {fileID: 4115852924243511567}
   - {fileID: 5654044298554916224}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!20 &1940991582116002351
 Camera:
   m_ObjectHideFlags: 0
@@ -211,35 +210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb9bd41e445294479dc724564ced043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCameras: []
---- !u!114 &5886566284778637894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8670628849638305168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76b38a88a8fed0a4788f913d3e8943cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EventChannel: {fileID: 11400000, guid: 5b398cbb22788a2488ec0b76a32b4f4b, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 980898053884270748}
-        m_TargetAssemblyTypeName: CamerasController, Assembly-CSharp
-        m_MethodName: SetCamera
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1458801527228923489
 MonoBehaviour:
   m_ObjectHideFlags: 0

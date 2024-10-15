@@ -58,7 +58,7 @@ public class PlayerObjectHandler : MonoBehaviour
         // First, make sure all players have selected their character
         playerCursors = GameObject.FindGameObjectsWithTag("PlayerCursor");
 
-        foreach (var cursor in playerCursors)
+        foreach (GameObject cursor in playerCursors)
         {
             if (!cursor.GetComponent<CursorBehavior>().objectSelected)
             {
@@ -85,7 +85,7 @@ public class PlayerObjectHandler : MonoBehaviour
             }
             else
             {
-                var currentGameObjectList = playerSelectionNames[playerIndex];
+                List<string> currentGameObjectList = playerSelectionNames[playerIndex];
                 currentGameObjectList.Add(playerSelection);
             }
 

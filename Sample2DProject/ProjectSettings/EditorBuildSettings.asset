@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 07dcb1a8015d5b7438da8c9a759a07df
   - enabled: 1
-    path: Assets/Scenes/PlayerSelectionScene.unity
+    path: Assets/Scenes/CharacterSelectionScene.unity
     guid: 30ccc13148518454ca709ed2501ad20b
   - enabled: 1
     path: Assets/Scenes/Jon Test Scene.unity

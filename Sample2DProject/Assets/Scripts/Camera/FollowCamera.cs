@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class allows the main camera to always follow the midpoint position between both players. 
+/// </summary>
 public class FollowCamera : MonoBehaviour
 {
     [SerializeField] GameObject midCameraPrefab;
