@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 4785855352982989243}
   - component: {fileID: 7629805032141735592}
   - component: {fileID: 4928079809075138805}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ Animator:
   m_GameObject: {fileID: 1104397388123731182}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 1dc4cf14a74348a4681a8026870e0967, type: 2}
-  m_Controller: {fileID: 9100000, guid: 84ecdbd8445592e4995e137a5f484eb5, type: 2}
+  m_Controller: {fileID: 9100000, guid: b746a5f00d7fa36408f63937838ee6fe, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -409,8 +409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae9240c022a4f8f48b5a066fd7621e6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 5
-  sprintMultiplier: 1.7
+  rotationSpeed: 10
+  lerpSmoothingSpeed: 1.5
   floatingHeight: 2
 --- !u!114 &4785855352982989243
 MonoBehaviour:
