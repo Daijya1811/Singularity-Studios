@@ -43,8 +43,7 @@ public class FlashlightController : MonoBehaviour
     public void TriggerFlashLight(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-        Debug.Log("trigger");
-        
+
         flashlight.enabled = !flashlight.enabled;
 
         //if enabled turn off
