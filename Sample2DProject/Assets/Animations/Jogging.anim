@@ -119670,42 +119670,42 @@ AnimationClip:
   - time: 0.23333333
     functionName: PlayFootstep
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 589451175029981414, guid: f2e44d84d37056644818e7bee7f55b80, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.6666667
     functionName: PlayFootstep
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 589451175029981414, guid: f2e44d84d37056644818e7bee7f55b80, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.0666667
     functionName: PlayFootstep
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 589451175029981414, guid: f2e44d84d37056644818e7bee7f55b80, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.4666667
     functionName: PlayFootstep
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 589451175029981414, guid: f2e44d84d37056644818e7bee7f55b80, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.9333333
     functionName: PlayFootstep
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 589451175029981414, guid: f2e44d84d37056644818e7bee7f55b80, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 2.3666666
     functionName: PlayFootstep
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 589451175029981414, guid: f2e44d84d37056644818e7bee7f55b80, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

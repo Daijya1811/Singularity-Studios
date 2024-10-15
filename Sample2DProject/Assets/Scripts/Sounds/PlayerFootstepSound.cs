@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(AudioSource))]
 public class PlayerFootstepSound : MonoBehaviour
@@ -33,6 +34,7 @@ public class PlayerFootstepSound : MonoBehaviour
     /// </summary>
     public void PlayFootstep()
     {
+        Debug.Log("hellp");
         if (/*!animator.IsInTransition(0) &&*/ footstepSounds.Length > 0)
         {
             // Pick a random footstep sound from the array
