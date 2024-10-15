@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startClip: {fileID: 8300000, guid: d30c1113c49c9fd41aa2864ddabcce8d, type: 3}
-  endClip: {fileID: 8300000, guid: d30c1113c49c9fd41aa2864ddabcce8d, type: 3}
+  endClip: {fileID: 8300000, guid: 7bf9e41d97d42c44fa866f6411a2cbe9, type: 3}
   chargeClip: {fileID: 8300000, guid: 8a3406e315b05164184ecbbdb2b84754, type: 3}
   startBatteryTime: 100
   dimLightWithTime: 1

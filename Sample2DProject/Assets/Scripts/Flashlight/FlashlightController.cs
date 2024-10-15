@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Light))]
 public class FlashlightController : MonoBehaviour
@@ -25,6 +26,7 @@ public class FlashlightController : MonoBehaviour
         
         audioSource = GetComponent<AudioSource>();
         audioSource.playOnAwake = false;
+        audioSource.loop = false;
 
         currentBatteryTime = startBatteryTime;
     }
@@ -38,8 +40,11 @@ public class FlashlightController : MonoBehaviour
 
     
     //enables or disables the flashlight based on outside input
-    public void TriggerFlashLight()
+    public void TriggerFlashLight(InputAction.CallbackContext context)
     {
+        if (!context.performed) return;
+        Debug.Log("trigger");
+        
         flashlight.enabled = !flashlight.enabled;
 
         //if enabled turn off
