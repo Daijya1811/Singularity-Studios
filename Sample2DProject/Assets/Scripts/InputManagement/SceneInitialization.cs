@@ -37,6 +37,9 @@ public class SceneInitialization : MonoBehaviour
             PlayerObjectHandler.shouldSpawnSelectedPlayers = false;
         }
     }
+    /// <summary>
+    /// Spawns the selected characters into the gameplay scene. 
+    /// </summary>
     private void SpawnSelectedPlayers()
     {
         foreach (var player in PlayerObjectHandler.playerControllers)
@@ -45,34 +48,21 @@ public class SceneInitialization : MonoBehaviour
             List<string> playerObjectName = PlayerObjectHandler.playerSelectionNames[player.Key];
             string playerControlScheme = PlayerObjectHandler.playerControlSchemes[player.Key];
 
-            GameObject parentPlayerObject = new GameObject();
             for (int i = 0; i < playerObjectName.Count; i++)
             {
                 GameObject currentObject = Resources.Load<GameObject>(playerObjectName[i]);
+                PlayerInput playerInput = PlayerInput.Instantiate(currentObject, player.Key, playerControlScheme, -1, playerController);
 
-                // Only activate PlayerInput component on the first object (it defines the "player")
-                if (i == 0)
-                {
-                    parentPlayerObject = currentObject;
-                    PlayerInput playerInput = PlayerInput.Instantiate(currentObject, player.Key, playerControlScheme, -1, playerController);
+                // Activates the player input component on the prefab we just instantiated
+                // We have the component disabled by default, otherwise it could not be a "selectable object" independent of the PlayerInput component on the cursor
+                // in the selection screen
+                currentObject.GetComponent<PlayerMovement>().SetPlayerInputActive(true, playerInput);
 
-                    // Activates the player input component on the prefab we just instantiated
-                    // We have the component disabled by default, otherwise it could not be a "selectable object" independent of the PlayerInput component on the cursor
-                    // in the selection screen
-                    currentObject.GetComponent<PlayerMovement>().SetPlayerInputActive(true, playerInput);
-
-                    //  *** It seems...that the above Instantiation doesn't exactly work... I'm assuming, because the PlayerInput component on the prefab is starting off
-                    // disabled, that it...doesn't work.  This code here will force it to keep the device/scheme/etc... that we tried to assign the wretch above!
-                    InputUser inputUser = playerInput.user;
-                    playerInput.SwitchCurrentControlScheme(playerControlScheme);
-                    InputUser.PerformPairingWithDevice(playerController, inputUser, InputUserPairingOptions.UnpairCurrentDevicesFromUser);
-                }
-                // Then, instantiate all of the player's child objects normally! 
-                else
-                {
-                    // Assuming that the last child of our players is the Character Selection Light, we don't need to keep that when changing scenes. 
-                    Instantiate(currentObject, parentPlayerObject.transform);
-                }
+                //  *** It seems...that the above Instantiation doesn't exactly work... I'm assuming, because the PlayerInput component on the prefab is starting off
+                // disabled, that it...doesn't work.  This code here will force it to keep the device/scheme/etc... that we tried to assign the wretch above!
+                InputUser inputUser = playerInput.user;
+                playerInput.SwitchCurrentControlScheme(playerControlScheme);
+                InputUser.PerformPairingWithDevice(playerController, inputUser, InputUserPairingOptions.UnpairCurrentDevicesFromUser);
             }
         }
     }
