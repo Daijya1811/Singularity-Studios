@@ -59,7 +59,7 @@ public class GamepadJoinBehavior : MonoBehaviour
         if (device.displayName.Contains("Controller") || device.displayName.Contains("Gamepad"))
             controlScheme = "Gamepad";
         else if (device.displayName.Contains("Keyboard"))
-            controlScheme = "Keyboard";
+            controlScheme = "Keyboard&Mouse";
 
         // *** Note this utilizes the NAME of the cursor prefabs to associate the player/player # ***
         // Loads in from the Resources folder and creates the cursor. DO NOT TOUCH THE RESOURCES FOLDER. 
