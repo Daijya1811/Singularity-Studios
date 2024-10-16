@@ -115,8 +115,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4527484665366863968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fefd03716d0069c44817fceb4ea488c7, type: 3}
+  m_Script: {fileID: 11500000, guid: b4a853affeb098044ba65852cd061e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prompt: Press (x) or E to charge the flashlight
+  prompt: Press E or (West-Button) to Interact
   flashlightChargeEventSO: {fileID: 11400000, guid: cbe09eaea6ecd0d4cbb5b276d09b790a, type: 2}

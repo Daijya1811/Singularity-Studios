@@ -209,7 +209,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8269321509216669845}
         m_TargetAssemblyTypeName: FlashlightController, Assembly-CSharp
         m_MethodName: ChargeFlashlight
         m_Mode: 1
@@ -233,9 +233,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aab7a25aef26022469555fd8d4cca177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startClip: {fileID: 0}
-  endClip: {fileID: 0}
-  chargeClip: {fileID: 0}
+  startClip: {fileID: 8300000, guid: d30c1113c49c9fd41aa2864ddabcce8d, type: 3}
+  endClip: {fileID: 8300000, guid: 7bf9e41d97d42c44fa866f6411a2cbe9, type: 3}
+  chargeClip: {fileID: 8300000, guid: 8a3406e315b05164184ecbbdb2b84754, type: 3}
   startBatteryTime: 100
   dimLightWithTime: 1
   currentBatteryTime: 100

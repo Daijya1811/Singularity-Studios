@@ -101,6 +101,7 @@ Transform:
   m_Children:
   - {fileID: 4296977696795550442}
   - {fileID: 4152395976049279872}
+  - {fileID: 3925645172455105260}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &696442165883878301
@@ -212,6 +213,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 4faa3dd9-aa07-4ed1-b5ca-d51298ffdcc2
     m_ActionName: Player/Start[/XInputControllerWindows/start,/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 478569348714606920}
+        m_TargetAssemblyTypeName: FlashlightController, Assembly-CSharp
+        m_MethodName: TriggerFlashLight
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5e4e719a-8329-4faf-831d-9a3d9b970113
+    m_ActionName: Player/Flashlight[/DualSenseGamepadHID/buttonNorth,/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -3157,3 +3174,76 @@ Transform:
   - {fileID: 8689469313490172631}
   m_Father: {fileID: 7480465054122991862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &8387585217641931229
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7502838881874302485}
+    m_Modifications:
+    - target: {fileID: 905776718527608384, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_Name
+      value: Flashlight
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.213
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99999964
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0008726948
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+--- !u!114 &478569348714606920 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8269321509216669845, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+  m_PrefabInstance: {fileID: 8387585217641931229}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab7a25aef26022469555fd8d4cca177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &3925645172455105260 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+  m_PrefabInstance: {fileID: 8387585217641931229}
+  m_PrefabAsset: {fileID: 0}
