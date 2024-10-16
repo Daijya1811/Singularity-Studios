@@ -6,7 +6,7 @@ public class BillboardUIPrompt : MonoBehaviour
     [SerializeField] private TextMeshProUGUI promptText;
     [SerializeField] private GameObject uIPanel;
     
-    [SerializeField] private Camera playerSplitScreenCamera;
+    private Camera playerSplitScreenCamera;
 
     private Camera mainCam;
 
@@ -21,6 +21,7 @@ public class BillboardUIPrompt : MonoBehaviour
     {
         uIPanel.SetActive(false);
         mainCam = Camera.main;
+        playerSplitScreenCamera = transform.parent.parent.GetComponent<UnityEngine.InputSystem.PlayerInput>().camera;
     }
 
     private void LateUpdate()
