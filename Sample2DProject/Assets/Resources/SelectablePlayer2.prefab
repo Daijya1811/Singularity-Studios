@@ -99,6 +99,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8949234643443684192}
   - {fileID: 4296977696795550442}
   - {fileID: 4152395976049279872}
   m_Father: {fileID: 0}
@@ -206,12 +207,24 @@ MonoBehaviour:
     m_ActionName: Player/Interact[/Keyboard/e]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 7f333374-e02f-43fa-9644-37a300a94aae
-    m_ActionName: Player/Submit[/XInputControllerWindows/buttonSouth,/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 4faa3dd9-aa07-4ed1-b5ca-d51298ffdcc2
     m_ActionName: Player/Start[/XInputControllerWindows/start,/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7431553117476982456}
+        m_TargetAssemblyTypeName: FlashlightController, Assembly-CSharp
+        m_MethodName: TriggerFlashLight
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 59a99ca2-1422-4b02-a899-1ab67a2735dc
+    m_ActionName: Player/Flashlight[/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -3157,3 +3170,76 @@ Transform:
   - {fileID: 8689469313490172631}
   m_Father: {fileID: 7480465054122991862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4480536626079993937
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7502838881874302485}
+    m_Modifications:
+    - target: {fileID: 905776718527608384, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_Name
+      value: Flashlight
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.07877803
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.70013857
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99999964
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0008726948
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+--- !u!114 &7431553117476982456 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6416572276225449705, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+  m_PrefabInstance: {fileID: 4480536626079993937}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c4b98d69443b543a6d09f850ccc1cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &8949234643443684192 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4763683797272396593, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+  m_PrefabInstance: {fileID: 4480536626079993937}
+  m_PrefabAsset: {fileID: 0}

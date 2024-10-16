@@ -2206,12 +2206,12 @@ MonoBehaviour:
     m_ActionName: Player/Interact[/Keyboard/e]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 7f333374-e02f-43fa-9644-37a300a94aae
-    m_ActionName: Player/Submit[/XInputControllerWindows/buttonSouth,/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 4faa3dd9-aa07-4ed1-b5ca-d51298ffdcc2
     m_ActionName: Player/Start[/XInputControllerWindows/start,/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 59a99ca2-1422-4b02-a899-1ab67a2735dc
+    m_ActionName: Player/Flashlight[/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
