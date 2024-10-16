@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5204308366805389824
+--- !u!1 &4527484665366863968
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5473089294232908811}
-  - component: {fileID: 2725773183665776044}
-  - component: {fileID: 2828168378658593383}
-  - component: {fileID: 5529067092630765383}
-  - component: {fileID: 2380762105203601377}
+  - component: {fileID: 8351179645297140632}
+  - component: {fileID: 1008511916047580801}
+  - component: {fileID: 5923075890552955801}
+  - component: {fileID: 8661469788873307856}
+  - component: {fileID: 3140195281617490488}
   m_Layer: 6
   m_Name: FlashlightCharger
   m_TagString: Untagged
@@ -20,36 +20,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!4 &5473089294232908811
+--- !u!4 &8351179645297140632
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5204308366805389824}
+  m_GameObject: {fileID: 4527484665366863968}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.07393515, z: 3.014}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2725773183665776044
+--- !u!33 &1008511916047580801
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5204308366805389824}
+  m_GameObject: {fileID: 4527484665366863968}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &2828168378658593383
+--- !u!23 &5923075890552955801
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5204308366805389824}
+  m_GameObject: {fileID: 4527484665366863968}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,13 +85,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5529067092630765383
+--- !u!65 &8661469788873307856
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5204308366805389824}
+  m_GameObject: {fileID: 4527484665366863968}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -106,16 +106,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2380762105203601377
+--- !u!114 &3140195281617490488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5204308366805389824}
+  m_GameObject: {fileID: 4527484665366863968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d72b9965db129468aad9e4f34e9a4c, type: 3}
+  m_Script: {fileID: 11500000, guid: fefd03716d0069c44817fceb4ea488c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prompt: Hello
+  prompt: Press (x) or E to charge the flashlight
+  flashlightChargeEventSO: {fileID: 11400000, guid: cbe09eaea6ecd0d4cbb5b276d09b790a, type: 2}
