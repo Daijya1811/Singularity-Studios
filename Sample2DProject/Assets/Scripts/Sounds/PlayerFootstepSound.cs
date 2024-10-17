@@ -26,6 +26,7 @@ public class PlayerFootstepSound : MonoBehaviour
         animator = GetComponent<Animator>();
         audioSource.loop = false;
         audioSource.playOnAwake = false;
+        SetRandomFootstepSound();
     }
     
 
@@ -34,17 +35,19 @@ public class PlayerFootstepSound : MonoBehaviour
     /// </summary>
     public void PlayFootstep()
     {
-        Debug.Log("hellp");
-        if (/*!animator.IsInTransition(0) &&*/ footstepSounds.Length > 0)
-        {
-            // Pick a random footstep sound from the array
-            int index = Random.Range(0, footstepSounds.Length);
-            AudioClip footstepClip = footstepSounds[index];
+        if (footstepSounds.Length <= 0) return;
+        if (audioSource.isPlaying) return;
+       
+        //set random pitch
+        audioSource.pitch = Random.Range(pitchMin, pitchMax);
+        // Play the sound
+        audioSource.Play();
+    }
 
-            //set random pitch
-            audioSource.pitch = Random.Range(pitchMin, pitchMax);
-            // Play the sound
-            audioSource.PlayOneShot(footstepClip, footStepVolume);
-        }
+    private void SetRandomFootstepSound()
+    {
+        int index = Random.Range(0, footstepSounds.Length);
+        AudioClip footstepClip = footstepSounds[index];
+        audioSource.clip = footstepClip;
     }
 }

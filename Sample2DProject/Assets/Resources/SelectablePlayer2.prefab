@@ -3226,6 +3226,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8269321509216669845, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: endClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 88bb6a0d6e1fa6b44a0f21488cb4fb1a, type: 3}
+    - target: {fileID: 8269321509216669845, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: startClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bf1dc07c8e039064696a98a7b2c62994, type: 3}
+    - target: {fileID: 8269321509216669845, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: chargeClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6698d296254eb9141b6cc480825097d8, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
