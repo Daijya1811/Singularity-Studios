@@ -2439,8 +2439,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footstepSounds:
   - {fileID: 8300000, guid: c635be16b12b0df44acaea0a3f675a1f, type: 3}
-  animator: {fileID: 1967621281918679495}
-  footStepVolume: 0
+  movement: {fileID: 8825770351404935619}
+  footStepVolume: 100
   pitchMin: 0.8
   pitchMax: 1
 --- !u!1 &6734207256783398247
