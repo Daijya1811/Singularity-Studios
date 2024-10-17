@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -96,6 +97,7 @@ public class PlayerMovement : MonoBehaviour
             speed -= lerpSmoothingSpeed * Time.deltaTime;
         }
 
+        if (speed > 2.0f) speed = 2.0f; //had to cap at 2, sometimes was 2.0000001 which is funny
         animator.SetFloat("speed", speed);
     }
     /// <summary>
