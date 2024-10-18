@@ -23,7 +23,7 @@ public class DoorBehavior : MonoBehaviour, IInteractable
 
     public bool Interact(Interactor interactor)
     {
-        if (animator.IsInTransition(0)) return true; //return if interacted and in action layer 0
+        if (animator.IsInTransition(0)) return true;
         if (!isOpen)
         {
             animator.SetTrigger(triggerOpenName);
@@ -35,7 +35,6 @@ public class DoorBehavior : MonoBehaviour, IInteractable
             isOpen = false;
         }
         
-        Debug.Log("iNTERACTED");
         return true;
     }
 }
