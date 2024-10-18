@@ -44,11 +44,13 @@ public class DoorBehavior : MonoBehaviour, IInteractable
         {
             animator.SetTrigger(triggerOpenName);
             isOpen = true;
+            prompt = "Close";
         }
         else
         {
             animator.SetTrigger(triggerClosedName);
             isOpen = false;
+            prompt = "Open";
         }
         
         return true;
