@@ -12,6 +12,21 @@ public class DoorBehavior : MonoBehaviour, IInteractable
     [SerializeField] private string triggerOpenName = "OpenDoor";
     [SerializeField] private string triggerClosedName = "CloseDoor";
     private bool isOpen;
+    
+    [Header("Locked")]
+    [SerializeField] private bool isLocked = false;
+
+    //unlock the door
+    public void Unlock()
+    {
+        isLocked = false;
+    }
+    
+    //lock the door
+    public void Lock()
+    {
+        isLocked = true;
+    }
 
     private void Start()
     {
@@ -23,6 +38,7 @@ public class DoorBehavior : MonoBehaviour, IInteractable
 
     public bool Interact(Interactor interactor)
     {
+        if (isLocked) return true;
         if (animator.IsInTransition(0)) return true;
         if (!isOpen)
         {
