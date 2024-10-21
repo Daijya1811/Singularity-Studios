@@ -24,13 +24,13 @@ public class SoundPlayer : MonoBehaviour
     }
 
     //plays a sound OneShot
-    private void PlaySoundOneShot(AudioClip clip)
+    public void PlaySoundOneShot(AudioClip clip)
     {
         audioSource.PlayOneShot(clip);
     }
     
     //plays a sound OneShot with volume
-    private void PlaySoundOneShot(AudioClip clip, float volume)
+    public void PlaySoundOneShot(AudioClip clip, float volume)
     {
         audioSource.PlayOneShot(clip, volume);
     }
