@@ -44,6 +44,7 @@ public class FollowCamera : MonoBehaviour
     /// </summary>
     private void CenterCamera()
     {
+    
         if (players.Length == 1) 
         {
             Vector3 player1Pos = players[0].transform.position;
