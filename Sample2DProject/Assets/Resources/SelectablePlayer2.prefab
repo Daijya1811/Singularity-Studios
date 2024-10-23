@@ -451,10 +451,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footstepSounds:
-  - {fileID: 8300000, guid: c635be16b12b0df44acaea0a3f675a1f, type: 3}
-  footStepVolume: 1
-  pitchMin: 0.8
-  pitchMax: 1
+  - {fileID: 8300000, guid: d5eb5ae40e16a1d4083a5d460483cbe9, type: 3}
+  footStepVolume: 0.5
+  pitchMin: 0.85
+  pitchMax: 0.95
   walkThreshold: 0.5
   slowRunThreshold: 1.25
   sprintThreshold: 2
