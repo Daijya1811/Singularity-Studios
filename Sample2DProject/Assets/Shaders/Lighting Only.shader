@@ -7,7 +7,7 @@ Shader "Custom/Lighting Only" {
     SubShader {
         Tags { "Queue" = "Transparent" }
         Blend SrcAlpha OneMinusSrcAlpha
-        ZWrite Off
+        ZWrite On
         ColorMask RGB
         LOD 200
 
