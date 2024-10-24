@@ -19,7 +19,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2579674259267433076
 Transform:
@@ -122,6 +122,7 @@ MonoBehaviour:
   meshRenderer: {fileID: 5933223170402703909}
   incorrectColor: {r: 1, g: 0, b: 0, a: 0}
   correctColor: {r: 0, g: 0.89001656, b: 1, a: 0}
+  isCorrect: 0
 --- !u!114 &453215725540067987
 MonoBehaviour:
   m_ObjectHideFlags: 0
