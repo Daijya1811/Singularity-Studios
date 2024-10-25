@@ -48,6 +48,7 @@ public class FollowCamera : MonoBehaviour
         {
             Vector3 player1Pos = players[0].transform.position;
             transform.position = new Vector3(player1Pos.x, player1Pos.y, player1Pos.z);
+            midCameraPrefab.transform.position = new Vector3(player1Pos.x, player1Pos.y, player1Pos.z);
         }
         else if (players.Length == 2)
         {

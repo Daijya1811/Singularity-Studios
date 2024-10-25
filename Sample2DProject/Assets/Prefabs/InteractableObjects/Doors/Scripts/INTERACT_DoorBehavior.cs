@@ -41,7 +41,7 @@ public class DoorBehavior : MonoBehaviour, IInteractable
     {
         animator = GetComponent<Animator>();
         isOpen = false;
-        mat = screen.sharedMaterial;
+        mat = screen.material;
         SetLightColor();
     }
 
