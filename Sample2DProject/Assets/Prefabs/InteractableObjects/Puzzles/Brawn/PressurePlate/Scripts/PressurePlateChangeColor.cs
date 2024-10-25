@@ -8,6 +8,14 @@ public class ChangeColor : MonoBehaviour
     [SerializeField] private Color incorrectColor;
     [SerializeField] private Color correctColor;
     [SerializeField] private bool isCorrect = false;
+
+    public bool IsCorrect
+    {
+        get { return isCorrect; }
+    }
+
+    [Header("RAISE Event Channel for Pressure Plate")] 
+    [SerializeField] private VoidEventChannelSO voidEventChannelSo;
     
     private Material mat;
     
@@ -23,11 +31,14 @@ public class ChangeColor : MonoBehaviour
             
     }
 
-    //change material color
+    /// <summary>
+    /// Change the color of the pressure plate and raise an event that it got pushed.
+    /// </summary>
     public void CorrectMaterialColor()
     {
         isCorrect = true;
         mat.SetColor("_Color", correctColor);
+        voidEventChannelSo.RaiseEvent();
     }
     
     public void InCorrectMaterialColor()

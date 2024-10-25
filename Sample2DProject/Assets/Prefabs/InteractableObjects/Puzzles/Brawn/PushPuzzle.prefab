@@ -9,8 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4097810946153286045}
+  - component: {fileID: -7483971499588859377}
+  - component: {fileID: 481263334960519317}
   m_Layer: 0
-  m_Name: Puzzle
+  m_Name: PushPuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,6 +40,47 @@ Transform:
   - {fileID: 8670825369823954445}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7483971499588859377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979408822311337276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17c80de8147ee7409081edd4a0a2371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleCompleted: {fileID: 11400000, guid: 51b4fd7203790eb4eae95afbf85d67c8, type: 2}
+--- !u!114 &481263334960519317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979408822311337276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf14e1476444e642ae890e4d8b52398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventChannel: {fileID: 11400000, guid: 51b4fd7203790eb4eae95afbf85d67c8, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -7483971499588859377}
+        m_TargetAssemblyTypeName: BrawnPushPuzzleManager, Assembly-CSharp
+        m_MethodName: CheckPlates
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8452271716664870294
 GameObject:
   m_ObjectHideFlags: 0

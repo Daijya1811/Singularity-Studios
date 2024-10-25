@@ -34,8 +34,14 @@ public class FlashlightController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(flashlight.enabled) currentBatteryTime -= Time.deltaTime;
+        if (flashlight.enabled)
+        {
+            currentBatteryTime -= Time.deltaTime;
+            if (currentBatteryTime < 0) currentBatteryTime = 0;
+        }
         if(dimLightWithTime) flashlight.intensity = (currentBatteryTime) / startBatteryTime;
+        
+        
     }
 
     

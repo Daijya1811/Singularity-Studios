@@ -123,6 +123,7 @@ MonoBehaviour:
   incorrectColor: {r: 1, g: 0, b: 0, a: 0}
   correctColor: {r: 0, g: 0.89001656, b: 1, a: 0}
   isCorrect: 0
+  voidEventChannelSo: {fileID: 11400000, guid: c3a29fa1d98965e4aa477905e5be9631, type: 2}
 --- !u!114 &453215725540067987
 MonoBehaviour:
   m_ObjectHideFlags: 0
