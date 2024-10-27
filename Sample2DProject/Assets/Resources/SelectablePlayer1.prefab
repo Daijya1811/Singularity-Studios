@@ -2218,6 +2218,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 5e4e719a-8329-4faf-831d-9a3d9b970113
     m_ActionName: Player/Flashlight[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c85f57de-3e02-4a9c-8a39-a6e623d1eea9
+    m_ActionName: Hacking/Move[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0d0dc6e5-c8da-4ba2-83dd-d536cdb336ac
+    m_ActionName: Hacking/Advance[/Keyboard/space,/XInputControllerWindows/buttonSouth]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -2438,10 +2446,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footstepSounds:
-  - {fileID: 8300000, guid: c635be16b12b0df44acaea0a3f675a1f, type: 3}
-  footStepVolume: 1
-  pitchMin: 0.8
-  pitchMax: 1
+  - {fileID: 8300000, guid: d5eb5ae40e16a1d4083a5d460483cbe9, type: 3}
+  footStepVolume: 0.25
+  pitchMin: 0.85
+  pitchMax: 0.95
   walkThreshold: 0.5
   slowRunThreshold: 1.25
   sprintThreshold: 2
