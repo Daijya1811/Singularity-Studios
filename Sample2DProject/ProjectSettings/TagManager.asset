@@ -8,6 +8,8 @@ TagManager:
   - PlayerCursor
   - CharacterSelectionLight
   - Goal
+  - Hacking
+  - PlayerTriangle
   layers:
   - Default
   - TransparentFX

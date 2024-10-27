@@ -13,6 +13,7 @@ namespace Hacking
         float randomX;
         float randomY;
         float theta;
+        Vector3 center;
         Vector3 startPos;
 
         // Start is called before the first frame update
@@ -29,7 +30,8 @@ namespace Hacking
             startPos = new Vector3(randomX, randomY, 0);
 
             // Apply the new position with the radius
-            transform.position = Vector3.zero + startPos * radius;
+            center = GameObject.FindGameObjectWithTag("Goal").transform.position;
+            transform.position = center + startPos * radius;
             transform.LookAt(Vector3.zero);
         }
     }

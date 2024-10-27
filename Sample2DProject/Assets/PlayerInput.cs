@@ -789,6 +789,15 @@ public partial class @Input: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Advance"",
+                    ""type"": ""Button"",
+                    ""id"": ""0d0dc6e5-c8da-4ba2-83dd-d536cdb336ac"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -857,6 +866,28 @@ public partial class @Input: IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5ffce958-4787-448c-9e09-9a1fc64cdf17"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Advance"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f164e4df-dd69-496f-ba64-e82c1486116c"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Advance"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -947,6 +978,7 @@ public partial class @Input: IInputActionCollection2, IDisposable
         // Hacking
         m_Hacking = asset.FindActionMap("Hacking", throwIfNotFound: true);
         m_Hacking_Move = m_Hacking.FindAction("Move", throwIfNotFound: true);
+        m_Hacking_Advance = m_Hacking.FindAction("Advance", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1213,11 +1245,13 @@ public partial class @Input: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Hacking;
     private List<IHackingActions> m_HackingActionsCallbackInterfaces = new List<IHackingActions>();
     private readonly InputAction m_Hacking_Move;
+    private readonly InputAction m_Hacking_Advance;
     public struct HackingActions
     {
         private @Input m_Wrapper;
         public HackingActions(@Input wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Hacking_Move;
+        public InputAction @Advance => m_Wrapper.m_Hacking_Advance;
         public InputActionMap Get() { return m_Wrapper.m_Hacking; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1230,6 +1264,9 @@ public partial class @Input: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @Advance.started += instance.OnAdvance;
+            @Advance.performed += instance.OnAdvance;
+            @Advance.canceled += instance.OnAdvance;
         }
 
         private void UnregisterCallbacks(IHackingActions instance)
@@ -1237,6 +1274,9 @@ public partial class @Input: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @Advance.started -= instance.OnAdvance;
+            @Advance.performed -= instance.OnAdvance;
+            @Advance.canceled -= instance.OnAdvance;
         }
 
         public void RemoveCallbacks(IHackingActions instance)
@@ -1324,5 +1364,6 @@ public partial class @Input: IInputActionCollection2, IDisposable
     public interface IHackingActions
     {
         void OnMove(InputAction.CallbackContext context);
+        void OnAdvance(InputAction.CallbackContext context);
     }
 }

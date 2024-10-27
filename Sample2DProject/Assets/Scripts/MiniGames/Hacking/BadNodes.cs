@@ -13,7 +13,7 @@ namespace Hacking
         float radius = 0f;
         bool counterClockwise = false;
         float angle;
-        Vector3 center = Vector3.zero;
+        Vector3 center;
         Vector3 startPos;
 
         /// <summary>
@@ -21,6 +21,8 @@ namespace Hacking
         /// </summary>
         private void Start()
         {
+            center = GameObject.FindGameObjectWithTag("Goal").transform.position;
+
             radius = UnityEngine.Random.Range(2f, 9f);
             radius = Mathf.Floor(radius);
 
@@ -66,7 +68,7 @@ namespace Hacking
         /// <param name="other"></param>
         private void OnTriggerEnter(Collider other)
         {
-            if(other.gameObject.tag == "Player")
+            if(other.gameObject.tag == "PlayerTriangle")
             {
                 other.GetComponent<PlayerTriangleMovement>().ResetSpawn();
             }
