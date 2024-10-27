@@ -7,6 +7,9 @@ TagManager:
   - PlayerCamera
   - PlayerCursor
   - CharacterSelectionLight
+  - Goal
+  - Hacking
+  - PlayerTriangle
   layers:
   - Default
   - TransparentFX
@@ -16,7 +19,7 @@ TagManager:
   - UI
   - Interactable
   - PlayerObjects
-  - 
+  - BlockerNode
   - 
   - 
   - 

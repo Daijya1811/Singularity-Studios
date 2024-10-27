@@ -10,9 +10,13 @@ public class StickToPlayer : MonoBehaviour
 {
     [SerializeField] float posOffsetY = 5f;
     [SerializeField] float posOffsetZ = -2f;
+    [SerializeField] GameObject miniGameScene;
 
+    public static Dictionary<int, StickToPlayer> playerCameraReferences = new Dictionary<int, StickToPlayer>();
+    bool isInMiniGame = false;
     Transform playerTransform;
 
+    public bool IsInMiniGame { get { return isInMiniGame; } set { isInMiniGame = value; } }
     private void Start()
     {
         Camera thisCamera = GetComponent<Camera>();
@@ -22,11 +26,13 @@ public class StickToPlayer : MonoBehaviour
         if(playerInputs[0].camera == null)
         {
             playerInputs[0].camera = thisCamera;
+            playerCameraReferences.Add(playerInputs[0].playerIndex, this);
             playerTransform = playerInputs[0].transform;
         }
         else if(playerInputs.Length > 1)
         {
             playerInputs[1].camera = thisCamera;
+            playerCameraReferences.Add(playerInputs[1].playerIndex, this);
             playerTransform = playerInputs[1].transform;
         }
 
@@ -40,10 +46,27 @@ public class StickToPlayer : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        // Camera should follow the player
-        if(playerTransform != null)
+        // Camera should follow the player if they are not doing a minigame
+        if (!isInMiniGame) FollowPlayer();
+        else if (isInMiniGame) WatchMiniGame();
+    }
+    void FollowPlayer()
+    {
+        if (playerTransform != null)
+        {
             this.transform.position = new Vector3(playerTransform.position.x,
                                                   playerTransform.position.y + posOffsetY,
                                                   playerTransform.position.z + posOffsetZ);
+            this.transform.rotation = Quaternion.Euler(45, 0, 0);
+        }
+
+    }
+    void WatchMiniGame()
+    {
+        this.transform.position = new Vector3(miniGameScene.transform.position.x,
+                                              miniGameScene.transform.position.y,
+                                              miniGameScene.transform.position.z - 25f);
+        this.transform.rotation = Quaternion.Euler(0, 0, 0);
+        miniGameScene.GetComponentInChildren<Canvas>().worldCamera = this.GetComponent<Camera>();
     }
 }
