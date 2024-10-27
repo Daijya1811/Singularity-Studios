@@ -12,6 +12,13 @@ public class Interactor : MonoBehaviour
     [Header("Serialized : Code Assigned")]
     [SerializeField] private PlayerInput playerInput;
 
+    [SerializeField] private bool isBrawn;
+
+    public bool IsBrawn
+    {
+        get { return isBrawn; }
+    }
+
     private InputAction interactAction;
     private IInteractable interactable;
 

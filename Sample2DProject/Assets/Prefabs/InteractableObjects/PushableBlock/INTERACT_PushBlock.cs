@@ -18,7 +18,7 @@ public class PushableBlock : MonoBehaviour, IInteractable
     public bool Interact(Interactor interactor)
     {
         //is the interactor brain or brawn
-        
+        if (!interactor.IsBrawn) return true;
         //get the direction of the interactor
         Vector3 dir = transform.position - interactor.transform.position;
         dir.y = 0;
