@@ -1461,8 +1461,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2315,7 +2315,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &2218151593071466857
 MonoBehaviour:
@@ -2336,6 +2336,7 @@ MonoBehaviour:
     m_Bits: 64
   interactionUI: {fileID: 7229021218821450844}
   playerInput: {fileID: 280918871342735646}
+  isBrawn: 1
   numFound: 0
 --- !u!82 &2092408674350019600
 AudioSource:

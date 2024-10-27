@@ -16,7 +16,9 @@ public class DoorBehavior : MonoBehaviour, IInteractable
     [SerializeField] private Color lockedColor;
     [SerializeField] private Color transitionColor;
     [SerializeField] private MeshRenderer screen;
+    [SerializeField] private MeshRenderer screenBack;
     private Material mat;
+    private Material matBack;
 
 
 
@@ -42,6 +44,7 @@ public class DoorBehavior : MonoBehaviour, IInteractable
         animator = GetComponent<Animator>();
         isOpen = false;
         mat = screen.material;
+        matBack = screenBack.material;
         SetLightColor();
     }
 
@@ -92,6 +95,7 @@ public class DoorBehavior : MonoBehaviour, IInteractable
         {
             doorLight.color = targetColor;
             mat.SetColor("_EmissionColor", targetColor);
+            matBack.SetColor(("_EmissionColor"), targetColor);
         }
     }
 }
