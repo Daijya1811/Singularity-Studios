@@ -39,7 +39,7 @@ public class FlashlightController : MonoBehaviour
             currentBatteryTime -= Time.deltaTime;
             if (currentBatteryTime < 0) currentBatteryTime = 0;
         }
-        if(dimLightWithTime) flashlight.intensity = (currentBatteryTime) / startBatteryTime;
+        if(dimLightWithTime) flashlight.intensity =  Math.Min(currentBatteryTime, startBatteryTime) / startBatteryTime;
         
         
     }
