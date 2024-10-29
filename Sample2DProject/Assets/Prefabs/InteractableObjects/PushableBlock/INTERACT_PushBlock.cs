@@ -8,6 +8,11 @@ public class PushableBlock : MonoBehaviour, IInteractable
     [SerializeField] private float pushForce = 100f;
     
     public string InteractionPrompt => prompt;
+    [SerializeField] private InteractionAllowed interactionAllowed = InteractionAllowed.Brawn;
+    public InteractionAllowed WhoCanInteract => interactionAllowed;
+    
+    //only use if prompt is updated
+    public bool PromptUpdated { get; set; } 
 
 
     private void Start()
@@ -17,8 +22,6 @@ public class PushableBlock : MonoBehaviour, IInteractable
 
     public bool Interact(Interactor interactor)
     {
-        //is the interactor brain or brawn
-        if (!interactor.IsBrawn) return true;
         //get the direction of the interactor
         Vector3 dir = transform.position - interactor.transform.position;
         dir.y = 0;

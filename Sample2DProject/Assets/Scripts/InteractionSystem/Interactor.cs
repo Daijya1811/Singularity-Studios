@@ -9,15 +9,10 @@ public class Interactor : MonoBehaviour
     [SerializeField] private LayerMask interactableMask;
     [SerializeField] private BillboardUIPrompt interactionUI;
     
-    [Header("Serialized : Code Assigned")]
     [SerializeField] private PlayerInput playerInput;
 
-    [SerializeField] private bool isBrawn;
-
-    public bool IsBrawn
-    {
-        get { return isBrawn; }
-    }
+    [SerializeField] private InteractionAllowed brainOrBrawn;
+    
 
     private InputAction interactAction;
     private IInteractable interactable;
@@ -45,15 +40,23 @@ public class Interactor : MonoBehaviour
         if (numFound > 0)
         {
             interactable = colliders[0].GetComponent<IInteractable>();
+
+            if (interactable == null) return;
+
+            if (interactable.WhoCanInteract != InteractionAllowed.Both &&
+                interactable.WhoCanInteract != brainOrBrawn) return;
             
-            if (interactable != null) 
+            
+            //if updated or not displayed
+            if (!interactionUI.IsDisplayed || interactable.PromptUpdated)
             {
-                //if no ui enable it
-                if(!interactionUI.IsDisplayed) interactionUI.SetUp(interactable.InteractionPrompt);
-                
-                if(interactAction.WasPressedThisFrame())
-                    interactable.Interact(this);
+                interactionUI.SetUp(interactable.InteractionPrompt);
+                interactable.PromptUpdated = false; 
             }
+            
+            
+            if(interactAction.WasPressedThisFrame())
+                interactable.Interact(this);
         }
         else
         {

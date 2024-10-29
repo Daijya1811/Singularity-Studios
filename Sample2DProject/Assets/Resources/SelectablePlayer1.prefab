@@ -1160,7 +1160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptText: {fileID: 1237795912452262924}
-  uIPanel: {fileID: 7464306062953942024}
+  uIPanel: {fileID: 8604874321492357753}
 --- !u!1 &3510881198209988773
 GameObject:
   m_ObjectHideFlags: 0
@@ -2336,7 +2336,7 @@ MonoBehaviour:
     m_Bits: 64
   interactionUI: {fileID: 7229021218821450844}
   playerInput: {fileID: 280918871342735646}
-  isBrawn: 1
+  brainOrBrawn: 1
   numFound: 0
 --- !u!82 &2092408674350019600
 AudioSource:

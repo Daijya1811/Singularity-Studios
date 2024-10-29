@@ -10,6 +10,12 @@ namespace Hacking
     {
         [SerializeField] DoorBehavior doorToUnlock;
         [SerializeField] string prompt = "Hack";
+        [SerializeField] private InteractionAllowed interactionAllowed = InteractionAllowed.Brain;
+        public InteractionAllowed WhoCanInteract => interactionAllowed;
+        
+        //only use if prompt is updated
+        public bool PromptUpdated { get; set; } 
+        
         GameObject hackingScene;
 
         [Header("Player who has interacted info:")]
