@@ -13,6 +13,22 @@ public class FlashlightController : MonoBehaviour
     [Header("Battery Settings")]
     [SerializeField] private float startBatteryTime= 100f;
     [SerializeField] private bool dimLightWithTime = true;
+    [SerializeField] private bool flashlightEnabledOnStart = false;
+    
+    public float CurrentBatteryTime
+    {
+        get { return currentBatteryTime; }
+    }
+
+    public bool FlashlightEnabled
+    {
+        get { return flashlight ? flashlight.enabled : false; }
+    }
+    
+    public float TotalBatteryTime
+    {
+        get { return startBatteryTime; }
+    }
     
     // Private variables
     private Light flashlight;
@@ -22,7 +38,7 @@ public class FlashlightController : MonoBehaviour
     void Start()
     {
         flashlight = GetComponent<Light>();
-        flashlight.enabled = false;
+        flashlight.enabled = flashlightEnabledOnStart;
         
         audioSource = GetComponent<AudioSource>();
         audioSource.playOnAwake = false;
@@ -39,7 +55,7 @@ public class FlashlightController : MonoBehaviour
             currentBatteryTime -= Time.deltaTime;
             if (currentBatteryTime < 0) currentBatteryTime = 0;
         }
-        if(dimLightWithTime) flashlight.intensity = (currentBatteryTime) / startBatteryTime;
+        if(dimLightWithTime) flashlight.intensity =  Math.Min(currentBatteryTime, startBatteryTime) / startBatteryTime;
         
         
     }

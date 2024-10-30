@@ -1057,7 +1057,7 @@ GameObject:
   - component: {fileID: 5481657479477635803}
   - component: {fileID: 2185526347634907243}
   - component: {fileID: 7229021218821450844}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: InteractionUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1160,7 +1160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptText: {fileID: 1237795912452262924}
-  uIPanel: {fileID: 7464306062953942024}
+  uIPanel: {fileID: 8604874321492357753}
 --- !u!1 &3510881198209988773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,7 +1398,7 @@ GameObject:
   - component: {fileID: 1479404988193465767}
   - component: {fileID: 3229250501257605492}
   - component: {fileID: 1237795912452262924}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2336,7 +2336,7 @@ MonoBehaviour:
     m_Bits: 64
   interactionUI: {fileID: 7229021218821450844}
   playerInput: {fileID: 280918871342735646}
-  isBrawn: 1
+  brainOrBrawn: 1
   numFound: 0
 --- !u!82 &2092408674350019600
 AudioSource:
@@ -2688,7 +2688,7 @@ GameObject:
   - component: {fileID: 6965418318142442635}
   - component: {fileID: 572736452060369534}
   - component: {fileID: 8645270796746618076}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}

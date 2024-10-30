@@ -374,6 +374,7 @@ MonoBehaviour:
     m_Bits: 64
   interactionUI: {fileID: 159724551795302662}
   playerInput: {fileID: 696442165883878301}
+  brainOrBrawn: 2
   numFound: 0
 --- !u!82 &2874678485202348428
 AudioSource:
@@ -1747,7 +1748,7 @@ GameObject:
   - component: {fileID: 7550539764791982899}
   - component: {fileID: 665669751241533834}
   - component: {fileID: 3117582326596619895}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2079,7 +2080,7 @@ GameObject:
   - component: {fileID: 6711326513061803218}
   - component: {fileID: 2499879409162355267}
   - component: {fileID: 159724551795302662}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: InteractionUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2182,7 +2183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptText: {fileID: 5377606738305311091}
-  uIPanel: {fileID: 4254081388933925591}
+  uIPanel: {fileID: 5611530586002135130}
 --- !u!1 &5887073381414668827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2956,7 +2957,7 @@ GameObject:
   - component: {fileID: 6430370664159390526}
   - component: {fileID: 2393870517224206091}
   - component: {fileID: 5377606738305311091}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3541,6 +3542,10 @@ PrefabInstance:
       propertyPath: chargeClip
       value: 
       objectReference: {fileID: 8300000, guid: 6698d296254eb9141b6cc480825097d8, type: 3}
+    - target: {fileID: 8269321509216669845, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: flashlightEnabledOnStart
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

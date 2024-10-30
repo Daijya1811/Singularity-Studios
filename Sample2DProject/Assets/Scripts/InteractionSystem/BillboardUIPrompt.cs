@@ -4,7 +4,7 @@ using UnityEngine;
 public class BillboardUIPrompt : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI promptText;
-    [SerializeField] private GameObject uIPanel;
+    [SerializeField] private Canvas uIPanel;
     
     private Camera playerSplitScreenCamera;
 
@@ -19,7 +19,8 @@ public class BillboardUIPrompt : MonoBehaviour
 
     private void Start()
     {
-        uIPanel.SetActive(false);
+        uIPanel = GetComponent<Canvas>();
+        uIPanel.enabled = false;
         mainCam = Camera.main;
         playerSplitScreenCamera = transform.parent.parent.GetComponent<UnityEngine.InputSystem.PlayerInput>().camera;
     }
@@ -38,7 +39,7 @@ public class BillboardUIPrompt : MonoBehaviour
     public void SetUp(string promptText)
     {
         this.promptText.text = promptText;
-        uIPanel.SetActive(true);
+        uIPanel.enabled = true;
         isDisplayed = true;
     }
 
@@ -47,7 +48,7 @@ public class BillboardUIPrompt : MonoBehaviour
     /// </summary>
     public void Close()
     {
-        uIPanel.SetActive(false);
+        uIPanel.enabled = false;
         isDisplayed = false;
     }
 }

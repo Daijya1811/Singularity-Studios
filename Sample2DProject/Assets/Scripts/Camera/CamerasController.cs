@@ -11,6 +11,8 @@ public class CamerasController : MonoBehaviour
 {
     List<Camera> playerCameras = new List<Camera>();
     Camera mainCamera;
+
+    [SerializeField] private Camera uiCamera;
     void Awake()
     {
         mainCamera = Camera.main;
@@ -22,6 +24,8 @@ public class CamerasController : MonoBehaviour
         GameObject[] playerCams = GameObject.FindGameObjectsWithTag("PlayerCamera");
         playerCameras.Add(playerCams[0].GetComponent<Camera>());
         playerCameras.Add(playerCams[1].GetComponent<Camera>());
+        playerCameras.Add(playerCams[2].GetComponent<Camera>());
+        playerCameras.Add(playerCams[3].GetComponent<Camera>());
     }
 
     /// <summary>
@@ -30,6 +34,7 @@ public class CamerasController : MonoBehaviour
     public void ToggleCamera()
     {
         mainCamera.enabled = !mainCamera.enabled;
+        uiCamera.enabled = !uiCamera.enabled;
         foreach(Camera camera in playerCameras)
         {
             camera.enabled = !camera.enabled;

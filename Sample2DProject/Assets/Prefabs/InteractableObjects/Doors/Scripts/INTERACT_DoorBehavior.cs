@@ -9,6 +9,13 @@ public class DoorBehavior : MonoBehaviour, IInteractable
     [SerializeField] private Animator animator;
     [SerializeField] private string triggerOpenName = "OpenDoor";
     [SerializeField] private string triggerClosedName = "CloseDoor";
+    
+    [SerializeField] private InteractionAllowed interactionAllowed = InteractionAllowed.Both;
+    
+    //only use if prompt is updated
+    public bool PromptUpdated { get; set; }
+
+    public InteractionAllowed WhoCanInteract => interactionAllowed;
 
     [Header("Lighting")] 
     [SerializeField] private Light doorLight;
@@ -31,12 +38,14 @@ public class DoorBehavior : MonoBehaviour, IInteractable
     public void Unlock()
     {
         isLocked = false;
+        interactionAllowed = InteractionAllowed.Both;
     }
     
     //lock the door
     public void Lock()
     {
         isLocked = true;
+        interactionAllowed = InteractionAllowed.None;
     }
 
     private void Start()
@@ -45,6 +54,7 @@ public class DoorBehavior : MonoBehaviour, IInteractable
         isOpen = false;
         mat = screen.material;
         matBack = screenBack.material;
+        if(isLocked) interactionAllowed = InteractionAllowed.None;
         SetLightColor();
     }
 
@@ -64,14 +74,16 @@ public class DoorBehavior : MonoBehaviour, IInteractable
             animator.SetTrigger(triggerOpenName);
             isOpen = true;
             prompt = "Close";
+            PromptUpdated = true;
         }
         else
         {
             animator.SetTrigger(triggerClosedName);
             isOpen = false;
             prompt = "Open";
+            PromptUpdated = true;
         }
-        
+
         return true;
     }
 
