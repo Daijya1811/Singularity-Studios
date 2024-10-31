@@ -44,7 +44,6 @@ public class PushableBlock : MonoBehaviour, IInteractable
         Debug.Log(dir);
 
         rgB.AddForce(dir * pushForce, ForceMode.Impulse);
-        Debug.Log(interacted);
         return true;
     }
 
@@ -53,14 +52,12 @@ public class PushableBlock : MonoBehaviour, IInteractable
     {
         if (other.gameObject.layer != 6) return;
         if (!interacted) return;
-        Debug.Log("Hello it collided");
-        
+
         rgB.velocity = Vector3.zero;
         rgB.angularVelocity = Vector3.zero;
 
 
         rgB.drag = 100;
-        Debug.Log("hello kinematic disabled");
         interacted = false;
         StartCoroutine(DisableKinematicTemporarily());
     }
@@ -68,8 +65,7 @@ public class PushableBlock : MonoBehaviour, IInteractable
     private IEnumerator DisableKinematicTemporarily()
     {
         yield return new WaitForSeconds(1.0f);  
-
-        Debug.Log("hello kinematic enabled");
+        
         rgB.drag = 0;
         rgB.angularVelocity = Vector3.zero;
         rgB.velocity = Vector3.zero;
