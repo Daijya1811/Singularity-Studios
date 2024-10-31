@@ -1,4 +1,5 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PushableBlock : MonoBehaviour, IInteractable
@@ -6,7 +7,8 @@ public class PushableBlock : MonoBehaviour, IInteractable
     [SerializeField] private string prompt;
     [SerializeField] private Rigidbody rgB;
     [SerializeField] private float pushForce = 100f;
-    
+
+    private bool interacted = false;
     public string InteractionPrompt => prompt;
     [SerializeField] private InteractionAllowed interactionAllowed = InteractionAllowed.Brawn;
     public InteractionAllowed WhoCanInteract => interactionAllowed;
@@ -22,6 +24,7 @@ public class PushableBlock : MonoBehaviour, IInteractable
 
     public bool Interact(Interactor interactor)
     {
+        interacted = true;
         //get the direction of the interactor
         Vector3 dir = transform.position - interactor.transform.position;
         dir.y = 0;
@@ -38,21 +41,38 @@ public class PushableBlock : MonoBehaviour, IInteractable
         }
         
         dir = dir.normalized;
-
+        Debug.Log(dir);
 
         rgB.AddForce(dir * pushForce, ForceMode.Impulse);
-        
+        Debug.Log(interacted);
         return true;
     }
 
     //Stops the block, and the player on collision
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.layer != 7) return;
+        if (other.gameObject.layer != 6) return;
+        if (!interacted) return;
+        Debug.Log("Hello it collided");
+        
         rgB.velocity = Vector3.zero;
-        if (other.rigidbody != null)
-        {
-            other.rigidbody.velocity = Vector3.zero;
-        }
+        rgB.angularVelocity = Vector3.zero;
+
+
+        rgB.drag = 100;
+        Debug.Log("hello kinematic disabled");
+        interacted = false;
+        StartCoroutine(DisableKinematicTemporarily());
+    }
+
+    private IEnumerator DisableKinematicTemporarily()
+    {
+        yield return new WaitForSeconds(1.0f);  
+
+        Debug.Log("hello kinematic enabled");
+        rgB.drag = 0;
+        rgB.angularVelocity = Vector3.zero;
+        rgB.velocity = Vector3.zero;
+        interacted = false;
     }
 }
