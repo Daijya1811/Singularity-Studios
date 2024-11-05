@@ -3462,6 +3462,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flashlight
       objectReference: {fileID: 0}
+    - target: {fileID: 3251397926712598757, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251397926712598757, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_Color.g
+      value: 0.06461206
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251397926712598757, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3427825410437916356, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
       propertyPath: m_Volume
       value: 0.8

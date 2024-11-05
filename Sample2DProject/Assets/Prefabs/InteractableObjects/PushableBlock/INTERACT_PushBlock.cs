@@ -51,13 +51,13 @@ public class PushableBlock : MonoBehaviour, IInteractable
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.layer != 6) return;
-        if (!interacted) return;
+        //if (!interacted) return;
 
         rgB.velocity = Vector3.zero;
         rgB.angularVelocity = Vector3.zero;
 
 
-        rgB.drag = 100;
+        rgB.drag = 2000;
         interacted = false;
         StartCoroutine(DisableKinematicTemporarily());
     }

@@ -149,3 +149,4 @@ MonoBehaviour:
   prompt: Push
   rgB: {fileID: 7821103238577465960}
   pushForce: 1000
+  interactionAllowed: 1
