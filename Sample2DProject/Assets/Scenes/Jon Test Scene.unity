@@ -1543,6 +1543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressurePlate (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6305846593104736740, guid: d7cc2a23283600441b29091c7afb1e28, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1705,6 +1709,10 @@ PrefabInstance:
     - target: {fileID: 6305846593104736740, guid: d7cc2a23283600441b29091c7afb1e28, type: 3}
       propertyPath: m_Name
       value: PressurePlate (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305846593104736740, guid: d7cc2a23283600441b29091c7afb1e28, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2607,6 +2615,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressurePlate (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6305846593104736740, guid: d7cc2a23283600441b29091c7afb1e28, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2937,6 +2949,10 @@ PrefabInstance:
     - target: {fileID: 6305846593104736740, guid: d7cc2a23283600441b29091c7afb1e28, type: 3}
       propertyPath: m_Name
       value: PressurePlate (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305846593104736740, guid: d7cc2a23283600441b29091c7afb1e28, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3274,6 +3290,10 @@ PrefabInstance:
     - target: {fileID: 5517564495110223645, guid: c6899686cff669347b48a2de80a1d9ae, type: 3}
       propertyPath: m_Range
       value: 14.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517564495110223645, guid: c6899686cff669347b48a2de80a1d9ae, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5517564495110223645, guid: c6899686cff669347b48a2de80a1d9ae, type: 3}
       propertyPath: m_Intensity
