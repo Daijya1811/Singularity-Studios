@@ -5,24 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager instance;
+    [SerializeField] AudioClip[] sfx;
+
+    AudioSource audioSource;
 
     void Awake()
     {
-        if (instance != null)
-            Destroy(gameObject);
-        else
-        {
-            instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
+        audioSource = GetComponent<AudioSource>();
     }
 
-    /*private void Update()
+    public void PlayAudioClip(AudioClip audioClip, float volume)
     {
-        if (SceneManager.GetActiveScene().name == "Jon Test Scene")
-        {
-            AudioManager.instance.GetComponent<AudioSource>().Pause();
-        }
-    }*/
+        audioSource.PlayOneShot(audioClip, volume);
+    }
+    public IEnumerator PlayAudioClipAtRandom(AudioClip audioClip, float volume, float min, float max)
+    {
+        float randomSeconds = UnityEngine.Random.Range(min, max);
+        yield return new WaitForSeconds(randomSeconds);
+        PlayAudioClip(audioClip, volume);
+    }
 }
