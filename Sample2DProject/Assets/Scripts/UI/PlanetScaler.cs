@@ -11,6 +11,7 @@ public class PlanetScaler : MonoBehaviour
     
     void Update()
     {   
-        if(transform.localScale.x < maxScale) transform.localScale =  new Vector3(transform.localScale.x * scaler, transform.localScale.y * scaler, transform.localScale.z);
+        if(transform.localScale.x > maxScale) return;
+        transform.localScale =  new Vector3(transform.localScale.x * scaler, transform.localScale.y * scaler, transform.localScale.z);
     }
 }
