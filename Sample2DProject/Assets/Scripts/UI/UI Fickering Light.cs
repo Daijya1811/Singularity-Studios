@@ -12,11 +12,13 @@ public class UIFickeringLight : MonoBehaviour
     public float maxTime;
     public float timer;
 
+    [SerializeField] private bool consistent = false;
+    [SerializeField] private float timeToFlickerConsistent;
+
 
     void Start()
     {
         timer = 0.5f;
-
     }
 
     void Update()
@@ -26,14 +28,22 @@ public class UIFickeringLight : MonoBehaviour
 
     void LightsFlickering()
     {
+        
+        
         if (timer > 0)
             timer -= Time.deltaTime;
-
+        
+        
         if (timer <= 0)
         {
             lightOB.enabled = !lightOB.enabled;
-            timer = Random.Range(minTime, maxTime);
             lightSound.Play();
+            if (consistent)
+            {
+                timer = timeToFlickerConsistent;
+                return;
+            }
+            timer = Random.Range(minTime, maxTime);
         }
     }
 }
