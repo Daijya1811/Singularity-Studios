@@ -10,6 +10,12 @@ public class FollowCamera : MonoBehaviour
     [SerializeField] GameObject midCameraPrefab;
     GameObject[] players;
 
+    ScreenShake screenShake;
+
+    private void Awake()
+    {
+        screenShake = GetComponent<ScreenShake>();
+    }
     void Start()
     {
         players = GetPlayers();
@@ -28,6 +34,9 @@ public class FollowCamera : MonoBehaviour
         if(players.Length < 2)
             players = GetPlayers();
         CenterCamera();
+
+        // If can shake the camera, then shake the camera
+        screenShake.ShakeScreen(midCameraPrefab);
     }
 
     /// <summary>
@@ -38,7 +47,7 @@ public class FollowCamera : MonoBehaviour
     {
         return GameObject.FindGameObjectsWithTag("Player");
     }
-
+    
     /// <summary>
     /// Centers the camera on the midpoint position of both players. 
     /// </summary>
