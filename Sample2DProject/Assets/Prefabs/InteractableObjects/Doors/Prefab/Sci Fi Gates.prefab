@@ -39,7 +39,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090940426327721665}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
@@ -253,6 +253,7 @@ MonoBehaviour:
   animator: {fileID: 8044518595073241447}
   triggerOpenName: OpenDoor
   triggerClosedName: CloseDoor
+  interactionAllowed: 3
   doorLight: {fileID: 1391684157673081723}
   unlockedColor: {r: 0.44313726, g: 0.8235294, b: 0.80784315, a: 0}
   lockedColor: {r: 1, g: 0, b: 0, a: 0}
