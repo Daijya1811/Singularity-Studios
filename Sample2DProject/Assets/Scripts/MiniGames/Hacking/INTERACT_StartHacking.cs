@@ -6,6 +6,10 @@ using UnityEngine.InputSystem;
 
 namespace Hacking
 {
+    /// <summary>
+    /// This script checks for if the Brain Player interacts with the Hacking Console. If an interaction is detected, then the split screen cameras get toggled, 
+    /// and the Brain Player's Action Map switches over from Player to Hacking (transferring input over to the minigame's Player Triangle from the Player). 
+    /// </summary>
     public class StartHacking : MonoBehaviour, IInteractable
     {
         [SerializeField] DoorBehavior doorToUnlock;
