@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   badNodePrefab: {fileID: 6926001371340079536, guid: 1ded7bacf7ab223449356593d89ec408, type: 3}
-  amountToSpawn: 7
+  amountToSpawn: 9
 --- !u!114 &4823374461690967185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,4 +60,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockerNodePrefab: {fileID: 484948290034448932, guid: 5ab4acc8964323c48b1bc9dce2470dd1, type: 3}
-  amountToSpawn: 10
+  amountToSpawn: 9
