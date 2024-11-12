@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 8666886113754589551}
   - component: {fileID: 1462001977262649135}
   - component: {fileID: 8267451396577225954}
+  - component: {fileID: 5918303900005777908}
   m_Layer: 6
   m_Name: Sci Fi Gates
   m_TagString: Untagged
@@ -391,6 +392,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1462001977262649135}
+--- !u!114 &5918303900005777908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4972167997025983191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7276277d2ce3345bcb86e047a593cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  objectPosition: {x: 0, y: 0, z: 0}
+  materials: []
+  initialAlpha: 0
 --- !u!1 &4972167997025983193
 GameObject:
   m_ObjectHideFlags: 0
