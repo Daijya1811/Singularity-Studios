@@ -59,6 +59,7 @@ Shader "Custom/StencilReaderStandard"
 
             // Apply normal map if provided
             o.Normal = UnpackNormal(tex2D(_NormalMap, IN.uv_NormalMap));
+            
         }
         ENDCG
     }
