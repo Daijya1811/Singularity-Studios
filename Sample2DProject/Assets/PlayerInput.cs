@@ -890,6 +890,34 @@ public partial class @Input: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""DisableInput"",
+            ""id"": ""38ed328d-dacf-4ef0-acdc-33379a49d669"",
+            ""actions"": [
+                {
+                    ""name"": ""New action"",
+                    ""type"": ""Button"",
+                    ""id"": ""86edda7f-df7a-40da-a8c8-b79f1b510350"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""269896ad-86f7-470e-94db-bd7818101dff"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""New action"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -979,6 +1007,9 @@ public partial class @Input: IInputActionCollection2, IDisposable
         m_Hacking = asset.FindActionMap("Hacking", throwIfNotFound: true);
         m_Hacking_Move = m_Hacking.FindAction("Move", throwIfNotFound: true);
         m_Hacking_Advance = m_Hacking.FindAction("Advance", throwIfNotFound: true);
+        // DisableInput
+        m_DisableInput = asset.FindActionMap("DisableInput", throwIfNotFound: true);
+        m_DisableInput_Newaction = m_DisableInput.FindAction("New action", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1294,6 +1325,52 @@ public partial class @Input: IInputActionCollection2, IDisposable
         }
     }
     public HackingActions @Hacking => new HackingActions(this);
+
+    // DisableInput
+    private readonly InputActionMap m_DisableInput;
+    private List<IDisableInputActions> m_DisableInputActionsCallbackInterfaces = new List<IDisableInputActions>();
+    private readonly InputAction m_DisableInput_Newaction;
+    public struct DisableInputActions
+    {
+        private @Input m_Wrapper;
+        public DisableInputActions(@Input wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Newaction => m_Wrapper.m_DisableInput_Newaction;
+        public InputActionMap Get() { return m_Wrapper.m_DisableInput; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(DisableInputActions set) { return set.Get(); }
+        public void AddCallbacks(IDisableInputActions instance)
+        {
+            if (instance == null || m_Wrapper.m_DisableInputActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_DisableInputActionsCallbackInterfaces.Add(instance);
+            @Newaction.started += instance.OnNewaction;
+            @Newaction.performed += instance.OnNewaction;
+            @Newaction.canceled += instance.OnNewaction;
+        }
+
+        private void UnregisterCallbacks(IDisableInputActions instance)
+        {
+            @Newaction.started -= instance.OnNewaction;
+            @Newaction.performed -= instance.OnNewaction;
+            @Newaction.canceled -= instance.OnNewaction;
+        }
+
+        public void RemoveCallbacks(IDisableInputActions instance)
+        {
+            if (m_Wrapper.m_DisableInputActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IDisableInputActions instance)
+        {
+            foreach (var item in m_Wrapper.m_DisableInputActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_DisableInputActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public DisableInputActions @DisableInput => new DisableInputActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -1365,5 +1442,9 @@ public partial class @Input: IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnAdvance(InputAction.CallbackContext context);
+    }
+    public interface IDisableInputActions
+    {
+        void OnNewaction(InputAction.CallbackContext context);
     }
 }

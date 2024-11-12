@@ -5,6 +5,10 @@ using UnityEngine.InputSystem;
 
 namespace Hacking
 {
+    /// <summary>
+    /// This class toggles the cameras back to the Main Camera and gives the Player who interacted with the Hacking Minigame back control. 
+    /// This only happens if a Lose or Win condition happens. 
+    /// </summary>
     public class HackingFinished : MonoBehaviour
     {
         Interactor interactorInstance;
