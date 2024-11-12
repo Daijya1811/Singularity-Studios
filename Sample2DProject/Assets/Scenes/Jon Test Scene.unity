@@ -1344,6 +1344,8 @@ MonoBehaviour:
   renderers: []
   objectPosition: {x: 0, y: 0, z: 0}
   materials: []
+  transparentMaterials:
+  - {fileID: 2100000, guid: c786044d3f8cbde42a953f66fe30bb0c, type: 2}
   initialAlpha: 0
 --- !u!65 &758702872
 BoxCollider:
@@ -1447,6 +1449,8 @@ MonoBehaviour:
   renderers: []
   objectPosition: {x: 0, y: 0, z: 0}
   materials: []
+  transparentMaterials:
+  - {fileID: 2100000, guid: 9510953a1144530419496e4c38b09586, type: 2}
   initialAlpha: 0
 --- !u!4 &964744089 stripped
 Transform:
@@ -1503,6 +1507,8 @@ MonoBehaviour:
   renderers: []
   objectPosition: {x: 0, y: 0, z: 0}
   materials: []
+  transparentMaterials:
+  - {fileID: 2100000, guid: c786044d3f8cbde42a953f66fe30bb0c, type: 2}
   initialAlpha: 0
 --- !u!65 &1089046484
 BoxCollider:
@@ -1545,7 +1551,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9185f235cc6ccf2429b3714934b3e97c, type: 2}
+  - {fileID: 2100000, guid: 3004f05b13f291c49831b57089640c63, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1667,6 +1673,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sci Fi Gates (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4972167997028172829, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7474aa6baee1fc84ea7882a1a652b09c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

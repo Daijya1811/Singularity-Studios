@@ -5,7 +5,6 @@ using UnityEngine;
 public class FadingObject : MonoBehaviour, IEquatable<FadingObject>
 {
     //renderers and their materials
-    //field names don't follow case as they would override unity fields
     public List<Renderer> renderers = new List<Renderer>();
     public Vector3 objectPosition;
     public List<Material> materials = new List<Material>();
@@ -41,6 +40,7 @@ public class FadingObject : MonoBehaviour, IEquatable<FadingObject>
 
             materials.AddRange(renderers[i].materials);
         }
+        
         initialAlpha = materials[0].color.a;
     }
 }
