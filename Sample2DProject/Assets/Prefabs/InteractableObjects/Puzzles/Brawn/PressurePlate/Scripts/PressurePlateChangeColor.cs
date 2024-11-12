@@ -37,6 +37,7 @@ public class ChangeColor : MonoBehaviour
     public void CorrectMaterialColor()
     {
         isCorrect = true;
+        mat.shader = Shader.Find("Standard");//swap shader
         mat.SetColor("_Color", correctColor);
         voidEventChannelSo.RaiseEvent();
     }
