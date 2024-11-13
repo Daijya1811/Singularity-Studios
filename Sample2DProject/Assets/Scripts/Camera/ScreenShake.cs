@@ -24,6 +24,8 @@ public class ScreenShake : MonoBehaviour
     AudioSource audioSource;
     bool isPlayingAudio;
 
+    [SerializeField] bool isMainMenu = false;
+
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -37,6 +39,9 @@ public class ScreenShake : MonoBehaviour
     private void Update()
     {
         RunTimers();
+
+        // isMainMenu should be false during gameplay scenes.
+        if (isMainMenu) ShakeScreen(this.gameObject);
     }
     /// <summary>
     /// Shakes the "screen." Really, it shakes the position of the midCameraPoint instead (as the camera is always looking at it). 
@@ -59,6 +64,8 @@ public class ScreenShake : MonoBehaviour
             timerForShaking = 0f;
             timeUntilNextShake = Random.Range(rngMin, rngMax);
             isPlayingAudio = false;
+
+            if (isMainMenu) midCameraPrefab.transform.position = Vector3.zero;
         }
     }
     /// <summary>
