@@ -13,9 +13,14 @@ public class Break : MonoBehaviour
         rbs = GetComponentsInChildren<Rigidbody>();
     }
 
-    public void Destroy()
+    public void Destroy(Material mat)
     {
         if (hasBroken) return;
+        Renderer[] renderers = GetComponentsInChildren<Renderer>();
+        foreach (Renderer renderer in renderers )
+        {
+            renderer.material = mat;
+        }
         foreach (Rigidbody rb in rbs)
         {
             rb.isKinematic = false;

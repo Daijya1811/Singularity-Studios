@@ -6,6 +6,8 @@ public class BreakCryopod : MonoBehaviour, IInteractable
 {
     [SerializeField] string prompt = "SMASH!";
     [SerializeField] private InteractionAllowed interactionAllowed = InteractionAllowed.Brawn;
+    [SerializeField] private Material notGlowMat;
+    private bool destroyed = false;
 
     public string InteractionPrompt => prompt;
     public InteractionAllowed WhoCanInteract => interactionAllowed;
@@ -15,7 +17,11 @@ public class BreakCryopod : MonoBehaviour, IInteractable
 
     public bool Interact(Interactor interactor)
     {
-        GetComponentInChildren<Break>().Destroy();
+        if (destroyed) return false;
+        destroyed = true;
+        GetComponentInChildren<Break>().Destroy(notGlowMat);
+        prompt = "";
+        PromptUpdated = true;
         return true;
     }
 }
