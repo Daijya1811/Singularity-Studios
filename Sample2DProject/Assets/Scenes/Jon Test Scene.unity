@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 6def504044d57f949ab0b35921deef3d, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 3e4d58585242f1e4aabe6071409ab2b0, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 23128749}
   - component: {fileID: 23128748}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Sun Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -209,13 +209,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23128747}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.9906051, y: -0, z: -0, w: 0.13675362}
-  m_LocalPosition: {x: 16.9, y: 2.95, z: 22.48}
+  m_LocalRotation: {x: 0.9627659, y: -0.032192804, z: -0.23319572, w: 0.13291045}
+  m_LocalPosition: {x: 19.79, y: 2.66, z: 21.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 164.28, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 166.06, y: 28.130005, z: 7.3390045}
 --- !u!4 &105160181 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4592413915255197524, guid: 44d38fb834debc34e991bf87efc97a4c, type: 3}
@@ -359,7 +359,7 @@ Transform:
   m_GameObject: {fileID: 220809175}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.28, y: 0.86, z: -0.4}
+  m_LocalPosition: {x: 1.27, y: 0.86, z: -0.4}
   m_LocalScale: {x: 0.24775909, y: 0.24775909, z: 0.24775909}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2249,7 +2249,7 @@ PrefabInstance:
     - target: {fileID: 3363210898710837502, guid: bbbebd5fe5debac45a1f8fb3aa1c45ca, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
       value: 
-      objectReference: {fileID: 8433191460183426007}
+      objectReference: {fileID: 0}
     - target: {fileID: 3363210898710837502, guid: bbbebd5fe5debac45a1f8fb3aa1c45ca, type: 3}
       propertyPath: m_ExposedReferences.m_References.Array.size
       value: 4
@@ -3264,6 +3264,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 8.12
       objectReference: {fileID: 0}
+    - target: {fileID: 9046495645822205718, guid: c6899686cff669347b48a2de80a1d9ae, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9063168286309462254, guid: c6899686cff669347b48a2de80a1d9ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.8500004
@@ -3354,6 +3358,14 @@ PrefabInstance:
       propertyPath: uiCamera
       value: 
       objectReference: {fileID: 1526204782}
+    - target: {fileID: 1940991582116002351, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940991582116002351, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1940991582116002351, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
       propertyPath: orthographic
       value: 1
@@ -3500,17 +3512,6 @@ MonoBehaviour:
   fadeMode: 1
   objectsBlockingView: []
   mainCamera: {fileID: 482555683}
---- !u!114 &8433191460183426007 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1458801527228923489, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
-  m_PrefabInstance: {fileID: 8433191460183425987}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8433191460183425988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &8433191460183426008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4719317708820588740, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
@@ -3570,8 +3571,8 @@ MonoBehaviour:
       colorBlindnessType: 0
       colorBlindnessStrength: 1
   m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
+  m_ShowToolkit: 1
+  m_ShowCustomSorter: 1
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []

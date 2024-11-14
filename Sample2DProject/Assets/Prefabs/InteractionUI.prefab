@@ -193,7 +193,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptText: {fileID: 5439422926138180778}
   uIPanel: {fileID: 4239056001174318862}
-  playerSplitScreenCamera: {fileID: 0}
 --- !u!1 &8162486134465008139
 GameObject:
   m_ObjectHideFlags: 0
