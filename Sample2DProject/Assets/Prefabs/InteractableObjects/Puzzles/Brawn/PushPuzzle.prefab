@@ -229,7 +229,7 @@ Transform:
   m_GameObject: {fileID: 8452271716664870294}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7319667, y: -0, z: -0, w: 0.68134046}
-  m_LocalPosition: {x: 0, y: 22.11, z: 0}
+  m_LocalPosition: {x: 1.55, y: 21.93, z: 2.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -247,9 +247,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 0.76
-  m_Range: 70.74
-  m_SpotAngle: 23
+  m_Intensity: 1
+  m_Range: 70.01
+  m_SpotAngle: 46
   m_InnerSpotAngle: 14
   m_CookieSize: 10
   m_Shadows:
@@ -286,7 +286,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -311,8 +311,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightOB: {fileID: 5517564495110223645}
   lightSound: {fileID: 5478555408697504569}
-  minTime: 0.5
-  maxTime: 5
+  minTime: 1
+  maxTime: 15
   timer: 0
   consistent: 0
   timeToFlickerConsistent: 0
@@ -328,7 +328,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 69d7be015bd5f6744a74825f096b7991, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.542
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -337,7 +337,7 @@ AudioSource:
   Priority: 198
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 20
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -470,7 +470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6305846593104736740, guid: d7cc2a23283600441b29091c7afb1e28, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -540,7 +540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6305846593104736740, guid: d7cc2a23283600441b29091c7afb1e28, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -610,7 +610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6305846593104736740, guid: d7cc2a23283600441b29091c7afb1e28, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -680,7 +680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6305846593104736740, guid: d7cc2a23283600441b29091c7afb1e28, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
