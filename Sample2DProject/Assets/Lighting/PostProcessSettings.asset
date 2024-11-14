@@ -74,7 +74,7 @@ MonoBehaviour:
     value: 0
   contrast:
     overrideState: 1
-    value: 14
+    value: 25
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
@@ -1329,7 +1329,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.64
+    value: 0.09
   threshold:
     overrideState: 0
     value: 1
@@ -1346,8 +1346,8 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   color:
-    overrideState: 0
-    value: {r: 1, g: 1, b: 1, a: 1}
+    overrideState: 1
+    value: {r: 2.433572, g: 2.433572, b: 2.433572, a: 1}
   fastMode:
     overrideState: 0
     value: 0
