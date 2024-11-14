@@ -6,6 +6,7 @@ public class Break : MonoBehaviour
 {
     [SerializeField] float force;
     Rigidbody[] rbs;
+    bool hasBroken = false;
 
     private void Awake()
     {
@@ -14,10 +15,12 @@ public class Break : MonoBehaviour
 
     public void Destroy()
     {
+        if (hasBroken) return;
         foreach (Rigidbody rb in rbs)
         {
             rb.isKinematic = false;
             rb.AddExplosionForce(force, transform.position, 10f, 1f, ForceMode.Impulse);
         }
+        hasBroken = true;
     }
 }

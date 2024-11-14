@@ -63,9 +63,10 @@ public class CursorBehavior : MonoBehaviour
             // The cursor does a raycast to see if it hits a Character Selection. If successful, that character gets assigned to the player!
             if (Physics.Raycast(transform.position, Vector3.forward, out target, 1000f, LayerMask.GetMask("PlayerObjects")))
             {
-                if (!objectSelected)
+                if (!objectSelected && !target.transform.GetComponent<PlayerMovement>().IsAlreadySelected)
                 {
                     objectSelected = true;
+                    target.transform.GetComponent<PlayerMovement>().IsAlreadySelected = true;
                     playerSelection = target.transform.gameObject;
                     // Highlight the character when they get selected
                     playerSelection.GetComponentInChildren<Light>().intensity += 1;
@@ -75,9 +76,10 @@ public class CursorBehavior : MonoBehaviour
 
             // If the player already selected a character, but wants to let go and try to pick a different character,
             // they can press the button again to deselect too! 
-            if (objectSelected)
+            if (objectSelected && target.transform.GetComponent<PlayerMovement>().IsAlreadySelected)
             {
                 objectSelected = false;
+                target.transform.GetComponent<PlayerMovement>().IsAlreadySelected = false;
                 // Darken the character when they get deselected
                 playerSelection.GetComponentInChildren<Light>().intensity -= 1;
                 playerSelection = null;
