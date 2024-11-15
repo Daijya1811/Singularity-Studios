@@ -156,6 +156,10 @@ namespace Hacking
                 hasWon = true;
                 GetComponent<HackingFinished>().ToggleMiniGameOff();
                 doorToUnlock.Unlock();
+
+                StartHacking hack = FindObjectOfType<StartHacking>();
+                hack.prompt = "";
+                hack.PromptUpdated = true;
             }
         }
     }

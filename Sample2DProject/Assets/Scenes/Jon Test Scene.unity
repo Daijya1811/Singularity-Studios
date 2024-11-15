@@ -2092,7 +2092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8029548946349402284, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_Name
-      value: CryopodBase
+      value: Player 2 Cryo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3158,11 +3158,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8029548946349402284, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_Name
-      value: CryopodBase (4)
+      value: Player 1 Cryo
       objectReference: {fileID: 0}
     - target: {fileID: 8029548946349402284, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029548946349402284, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8239118220460397353, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_IsKinematic
@@ -7215,6 +7219,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4300176853220694197, guid: e0ae5f1cb1a82d7429c53d05eabf9099, type: 3}
+      propertyPath: timeForTask
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280938324668716903, guid: e0ae5f1cb1a82d7429c53d05eabf9099, type: 3}
+      propertyPath: amountToSpawn
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302988681250475446, guid: e0ae5f1cb1a82d7429c53d05eabf9099, type: 3}
+      propertyPath: amountToSpawn
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6142667458614655215, guid: e0ae5f1cb1a82d7429c53d05eabf9099, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -7570,6 +7586,10 @@ PrefabInstance:
     - target: {fileID: 5654044298554916224, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845324316493955127, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
+      propertyPath: rngMax
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8482375361255159832, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits

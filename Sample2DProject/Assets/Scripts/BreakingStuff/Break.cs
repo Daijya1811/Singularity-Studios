@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Break : MonoBehaviour
 {
     [SerializeField] float force;
@@ -16,6 +17,7 @@ public class Break : MonoBehaviour
     public void Destroy(Material mat)
     {
         if (hasBroken) return;
+
         Renderer[] renderers = GetComponentsInChildren<Renderer>();
         foreach (Renderer renderer in renderers )
         {
@@ -27,5 +29,6 @@ public class Break : MonoBehaviour
             rb.AddExplosionForce(force, transform.position, 10f, 1f, ForceMode.Impulse);
         }
         hasBroken = true;
+        GetComponent<AudioSource>().Play();
     }
 }
