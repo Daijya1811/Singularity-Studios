@@ -1103,7 +1103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shakeDuration: 3
-  shakeIntensity: 0.005
+  shakeIntensity: 0.1
   rngMin: 1
   rngMax: 4
   isMainMenu: 1

@@ -8,8 +8,8 @@ using UnityEngine;
 public class ScreenShake : MonoBehaviour
 {
     [Header("Shake Modifiers")]
-    [SerializeField] float shakeDuration;
-    [SerializeField] float shakeIntensity;
+    [SerializeField] float shakeDuration = 3f;
+    float shakeIntensity = 1f;
 
     [Header("RNG Frequency Values")]
     [Tooltip("Sets the minimum amount of time to wait in seconds until the next shake when put through a Random function.")]
@@ -26,9 +26,12 @@ public class ScreenShake : MonoBehaviour
 
     [SerializeField] bool isMainMenu = false;
 
+    PlanetScaler planet;
+
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        planet = FindObjectOfType<PlanetScaler>();
     }
 
     // Start is called before the first frame update
@@ -49,6 +52,7 @@ public class ScreenShake : MonoBehaviour
     /// <param name="midCameraPrefab"> midCameraPrefab GameObject instance. </param>
     public void ShakeScreen(GameObject midCameraPrefab)
     {
+        if (isMainMenu) shakeIntensity = 0.0125f;
         if (CanShake() && timerForShaking < shakeDuration)
         {
             midCameraPrefab.transform.position += (Vector3) Random.insideUnitCircle * shakeIntensity;
@@ -66,6 +70,16 @@ public class ScreenShake : MonoBehaviour
             isPlayingAudio = false;
 
             if (isMainMenu) midCameraPrefab.transform.position = Vector3.zero;
+        }
+
+        if(!isMainMenu)
+        {
+            if(planet.transform.localScale.x < 10f) shakeIntensity = 1f;
+            else if (planet.transform.localScale.x < 25f) shakeIntensity = 1.25f;
+            else if (planet.transform.localScale.x < 50f) shakeIntensity = 1.5f;
+            else if (planet.transform.localScale.x < 100f) shakeIntensity = 1.75f;
+            else if (planet.transform.localScale.x < 200f) shakeIntensity = 2f;
+            else shakeIntensity = 3f;
         }
     }
     /// <summary>
