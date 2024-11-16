@@ -2,16 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static System.Net.Mime.MediaTypeNames;
 
 public class Menu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("CharacterSelectionScene");
     }
 
-    public void BackToMainMenu()
+    public void OnCreditClicked()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene("CreditScene");
+    }
+
+    public void OnSettingClicked()
+    {
+        SceneManager.LoadScene("SettingsScene");
+    }
+
+    public void OnBackClicked()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void OnQuitClicked()
+    {
+        UnityEngine.Application.Quit();
     }
 }
