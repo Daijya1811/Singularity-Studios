@@ -72,5 +72,6 @@ public class GamepadJoinBehavior : MonoBehaviour
             theCursor.transform.parent = currentCanvas.transform;
             theCursor.transform.localScale = new Vector3(1f, 1f, 1f);
         }
+
     }
 }

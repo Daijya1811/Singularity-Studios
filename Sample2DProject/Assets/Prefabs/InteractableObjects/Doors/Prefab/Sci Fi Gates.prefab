@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5648835202144174595
 Transform:
@@ -110,7 +110,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1798635568890133345
 Transform:
@@ -121,8 +121,8 @@ Transform:
   m_GameObject: {fileID: 3025921907939476546}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.706444, z: -0, w: 0.707769}
-  m_LocalPosition: {x: 0.0051, y: 0.03646, z: -0.040319}
-  m_LocalScale: {x: 0.06754011, y: 0.07545022, z: 0.0023265998}
+  m_LocalPosition: {x: 0.002, y: 0.03669473, z: -0.03988501}
+  m_LocalScale: {x: 0.061917953, y: 0.053507, z: 0.0023265998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4972167997025879807}
@@ -197,7 +197,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4972167997025879799
 Transform:
@@ -304,7 +304,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -425,7 +425,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4972167997025879801
 Transform:
@@ -530,7 +530,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4972167997025879805
 Transform:
@@ -636,7 +636,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4972167997025879807
 Transform:
@@ -743,7 +743,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &9029071207800440813
 Transform:
@@ -754,8 +754,8 @@ Transform:
   m_GameObject: {fileID: 6532002656758940163}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.706444, z: -0, w: 0.707769}
-  m_LocalPosition: {x: -0.0061, y: 0.036735, z: -0.039881}
-  m_LocalScale: {x: 0.06754011, y: 0.07545022, z: 0.0023265998}
+  m_LocalPosition: {x: -0.0017502506, y: 0.03669473, z: -0.03988501}
+  m_LocalScale: {x: 0.061917953, y: 0.053507, z: 0.0023265998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4972167997025879807}

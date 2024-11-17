@@ -5,14 +5,13 @@ using UnityEngine;
 public class PlanetScaler : MonoBehaviour
 {
     [SerializeField] private float maxScale;
-    [SerializeField] private float scaler;
-
-    bool sizeLimitReached;
-
-    public bool SizeLimitReached { get { return sizeLimitReached; } }
+    [SerializeField] private float scaler; 
+    
+    
+    
     void Update()
-    {
-        if (transform.localScale.x > maxScale) { sizeLimitReached = true; return; }
+    {   
+        if(transform.localScale.x > maxScale) return;
         transform.localScale =  new Vector3(transform.localScale.x * scaler, transform.localScale.y * scaler, transform.localScale.z);
     }
 }
