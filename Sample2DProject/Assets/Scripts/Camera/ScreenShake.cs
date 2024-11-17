@@ -28,6 +28,8 @@ public class ScreenShake : MonoBehaviour
 
     PlanetScaler planet;
 
+    public float ShakeIntensity { get { return shakeIntensity; } }
+
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -44,19 +46,20 @@ public class ScreenShake : MonoBehaviour
         RunTimers();
 
         // isMainMenu should be false during gameplay scenes.
-        if (isMainMenu) ShakeScreen(this.gameObject);
+        if (isMainMenu) ShakeScreen(this.gameObject, this.shakeIntensity);
     }
     /// <summary>
     /// Shakes the "screen." Really, it shakes the position of the midCameraPoint instead (as the camera is always looking at it). 
     /// </summary>
     /// <param name="midCameraPrefab"> midCameraPrefab GameObject instance. </param>
-    public void ShakeScreen(GameObject midCameraPrefab)
+    public void ShakeScreen(GameObject midCameraPrefab, float shakeIntensity)
     {
         if (isMainMenu) shakeIntensity = 0.0125f;
+        
         if (CanShake() && timerForShaking < shakeDuration)
         {
             midCameraPrefab.transform.position += (Vector3) Random.insideUnitCircle * shakeIntensity;
-            if(!isPlayingAudio)
+            if (!isPlayingAudio)
             {
                 isPlayingAudio = true;
                 audioSource.Play();
@@ -86,7 +89,7 @@ public class ScreenShake : MonoBehaviour
     /// Determines if the screen is allowed to shake or not depending on the time since last shake. 
     /// </summary>
     /// <returns> true if can shake, false if cannot shake yet. </returns>
-    bool CanShake()
+    public bool CanShake()
     {
         if (timerForWaiting < timeUntilNextShake) return false;
 

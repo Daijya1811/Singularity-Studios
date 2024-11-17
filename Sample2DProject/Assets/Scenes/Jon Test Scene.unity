@@ -2228,6 +2228,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 2 Cryo
       objectReference: {fileID: 0}
+    - target: {fileID: 8029548946349402284, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7921,6 +7925,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5287095166165832956, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5654044298554916224, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7936,6 +7944,10 @@ PrefabInstance:
     - target: {fileID: 6845324316493955127, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
       propertyPath: rngMax
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845324316493955127, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
+      propertyPath: rngMin
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8482375361255159832, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
