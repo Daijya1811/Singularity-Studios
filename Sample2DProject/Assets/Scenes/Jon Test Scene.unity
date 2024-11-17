@@ -7943,11 +7943,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6845324316493955127, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
       propertyPath: rngMax
-      value: 3
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6845324316493955127, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
       propertyPath: rngMin
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8482375361255159832, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
