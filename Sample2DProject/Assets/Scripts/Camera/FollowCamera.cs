@@ -12,6 +12,9 @@ public class FollowCamera : MonoBehaviour
 
     ScreenShake screenShake;
 
+    public Vector3 MidCamPos { get { return midCameraPrefab.transform.position; } }
+    public GameObject[] Players { get { return players; } }
+
     private void Awake()
     {
         screenShake = GetComponent<ScreenShake>();
@@ -36,7 +39,7 @@ public class FollowCamera : MonoBehaviour
         CenterCamera();
 
         // If can shake the camera, then shake the camera
-        screenShake.ShakeScreen(midCameraPrefab);
+        screenShake.ShakeScreen(midCameraPrefab, screenShake.ShakeIntensity);
     }
 
     /// <summary>

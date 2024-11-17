@@ -13,7 +13,7 @@ namespace Hacking
     public class StartHacking : MonoBehaviour, IInteractable
     {
         [SerializeField] DoorBehavior doorToUnlock;
-        [SerializeField] string prompt = "Hack";
+        public string prompt = "Hack";
         [SerializeField] private InteractionAllowed interactionAllowed = InteractionAllowed.Brain;
         public InteractionAllowed WhoCanInteract => interactionAllowed;
         

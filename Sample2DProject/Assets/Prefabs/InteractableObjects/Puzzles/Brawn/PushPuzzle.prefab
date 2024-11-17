@@ -229,7 +229,7 @@ Transform:
   m_GameObject: {fileID: 8452271716664870294}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7319667, y: -0, z: -0, w: 0.68134046}
-  m_LocalPosition: {x: -3.8499985, y: 10.75, z: 8.039999}
+  m_LocalPosition: {x: 1.55, y: 21.93, z: 2.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -247,9 +247,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 0.6
-  m_Range: 71.4
-  m_SpotAngle: 17
+  m_Intensity: 1
+  m_Range: 70.01
+  m_SpotAngle: 46
   m_InnerSpotAngle: 14
   m_CookieSize: 10
   m_Shadows:
@@ -286,7 +286,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -311,9 +311,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightOB: {fileID: 5517564495110223645}
   lightSound: {fileID: 5478555408697504569}
-  minTime: 0.5
-  maxTime: 5
+  minTime: 1
+  maxTime: 15
   timer: 0
+  consistent: 0
+  timeToFlickerConsistent: 0
 --- !u!82 &5478555408697504569
 AudioSource:
   m_ObjectHideFlags: 0
@@ -324,9 +326,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6698d296254eb9141b6cc480825097d8, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 69d7be015bd5f6744a74825f096b7991, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.542
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -335,7 +337,7 @@ AudioSource:
   Priority: 198
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 20
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -494,7 +496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2579674259267433076, guid: d7cc2a23283600441b29091c7afb1e28, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.85
+      value: -3.87
       objectReference: {fileID: 0}
     - target: {fileID: 2579674259267433076, guid: d7cc2a23283600441b29091c7afb1e28, type: 3}
       propertyPath: m_LocalPosition.y
@@ -634,7 +636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2579674259267433076, guid: d7cc2a23283600441b29091c7afb1e28, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.15
+      value: 5.104
       objectReference: {fileID: 0}
     - target: {fileID: 2579674259267433076, guid: d7cc2a23283600441b29091c7afb1e28, type: 3}
       propertyPath: m_LocalPosition.y
@@ -700,11 +702,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1646957638773792535, guid: 2b734bf84fc865d4087f9d5c946f2e8b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3.8500004
       objectReference: {fileID: 0}
     - target: {fileID: 1646957638773792535, guid: 2b734bf84fc865d4087f9d5c946f2e8b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 1646957638773792535, guid: 2b734bf84fc865d4087f9d5c946f2e8b, type: 3}
       propertyPath: m_LocalPosition.z
