@@ -9,6 +9,8 @@ public class FadingObject : MonoBehaviour, IEquatable<FadingObject>
     public Vector3 objectPosition;
     public List<Material> materials = new List<Material>();
 
+    [SerializeField] private bool ignoreChildrenRenderers = false;
+
     [HideInInspector] public float initialAlpha;
 
     
@@ -34,7 +36,11 @@ public class FadingObject : MonoBehaviour, IEquatable<FadingObject>
     {
         objectPosition = transform.position;
         if (renderers.Count == 0)
-            renderers.AddRange(GetComponentsInChildren<Renderer>());
+        {
+            if(!ignoreChildrenRenderers)  renderers.AddRange(GetComponentsInChildren<Renderer>());
+            else{renderers.Add(GetComponent<Renderer>());}
+        }
+            
         for (int i = 0; i < renderers.Count; i++)
         {
 

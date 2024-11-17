@@ -15,8 +15,14 @@ public class StickToPlayer : MonoBehaviour
     public static Dictionary<int, StickToPlayer> playerCameraReferences = new Dictionary<int, StickToPlayer>();
     bool isInMiniGame = false;
     Transform playerTransform;
+    ScreenShake screenShake;
 
     public bool IsInMiniGame { get { return isInMiniGame; } set { isInMiniGame = value; } }
+
+    private void Awake()
+    {
+        screenShake = FindObjectOfType<ScreenShake>();
+    }
     private void Start()
     {
         Camera thisCamera = GetComponent<Camera>();
@@ -60,6 +66,10 @@ public class StickToPlayer : MonoBehaviour
             this.transform.rotation = Quaternion.Euler(45, 0, 0);
         }
 
+        if(screenShake.CanShake())
+        {
+            screenShake.ShakeScreen(this.gameObject, screenShake.ShakeIntensity / 25f);
+        }
     }
     void WatchMiniGame()
     {
