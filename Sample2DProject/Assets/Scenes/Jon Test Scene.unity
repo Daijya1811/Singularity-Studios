@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.16226411, g: 0.14175147, b: 0.14175147, a: 1}
+  m_AmbientSkyColor: {r: 0.18867922, g: 0.17337129, b: 0.17337129, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -3539,7 +3539,7 @@ MonoBehaviour:
   renderers: []
   objectPosition: {x: 0, y: 0, z: 0}
   materials: []
-  ignoreChildrenRenderers: 0
+  ignoreChildrenRenderers: 1
   initialAlpha: 0
 --- !u!1001 &883862005
 PrefabInstance:
