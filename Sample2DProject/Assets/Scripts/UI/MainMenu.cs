@@ -11,21 +11,6 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("CharacterSelectionScene");
     }
 
-    public void OnCreditClicked()
-    {
-        SceneManager.LoadScene("CreditScene");
-    }
-
-    public void OnSettingClicked()
-    {
-        SceneManager.LoadScene("SettingsScene");
-    }
-
-    public void OnBackClicked()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
-
     public void OnQuitClicked()
     {
         UnityEngine.Application.Quit();
