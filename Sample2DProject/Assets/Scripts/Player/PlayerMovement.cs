@@ -19,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movementInput = Vector2.zero;
     Animator animator;
     PlayerInput pi;
+    bool isAlreadySelected = false;
+
+    public bool IsAlreadySelected { get { return isAlreadySelected; } set { isAlreadySelected = value; } }
 
     void Awake()
     {

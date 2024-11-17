@@ -14,6 +14,8 @@ public class FlashlightUI : MonoBehaviour
 
         if (flashlightController) ToggleFlashLightUI();
 
+        else image.enabled = false;
+
     }
 
     private bool ToggleFlashLightUI()

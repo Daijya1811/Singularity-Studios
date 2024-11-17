@@ -265,6 +265,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0d0dc6e5-c8da-4ba2-83dd-d536cdb336ac
     m_ActionName: Hacking/Advance[/Keyboard/space,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 86edda7f-df7a-40da-a8c8-b79f1b510350
+    m_ActionName: DisableInput/New action
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -3556,6 +3560,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3251397926712598757, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251397926712598757, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3427825410437916356, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
