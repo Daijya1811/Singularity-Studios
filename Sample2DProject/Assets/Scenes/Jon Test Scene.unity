@@ -1979,6 +1979,8 @@ PrefabInstance:
     - {fileID: 1474803122408825929, guid: 5ce3a4066e81a274ca840fa778a81573, type: 3}
     - {fileID: 5664824299284998720, guid: 5ce3a4066e81a274ca840fa778a81573, type: 3}
     - {fileID: 3788086738296758869, guid: 5ce3a4066e81a274ca840fa778a81573, type: 3}
+    - {fileID: 1414585138877347080, guid: 5ce3a4066e81a274ca840fa778a81573, type: 3}
+    - {fileID: 7423060728344893016, guid: 5ce3a4066e81a274ca840fa778a81573, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1807483696068820155, guid: 5ce3a4066e81a274ca840fa778a81573, type: 3}
       insertIndex: 1
@@ -7326,11 +7328,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 621712565549254719, guid: c6899686cff669347b48a2de80a1d9ae, type: 3}
       propertyPath: incorrectColor.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 621712565549254719, guid: c6899686cff669347b48a2de80a1d9ae, type: 3}
       propertyPath: incorrectColor.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 621712565549254719, guid: c6899686cff669347b48a2de80a1d9ae, type: 3}
       propertyPath: incorrectColor.r
@@ -7338,11 +7340,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168792350093248846, guid: c6899686cff669347b48a2de80a1d9ae, type: 3}
       propertyPath: incorrectColor.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1168792350093248846, guid: c6899686cff669347b48a2de80a1d9ae, type: 3}
       propertyPath: incorrectColor.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1168792350093248846, guid: c6899686cff669347b48a2de80a1d9ae, type: 3}
       propertyPath: incorrectColor.r
@@ -7350,11 +7352,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1398596280615625229, guid: c6899686cff669347b48a2de80a1d9ae, type: 3}
       propertyPath: incorrectColor.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1398596280615625229, guid: c6899686cff669347b48a2de80a1d9ae, type: 3}
       propertyPath: incorrectColor.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1398596280615625229, guid: c6899686cff669347b48a2de80a1d9ae, type: 3}
       propertyPath: incorrectColor.r
@@ -7402,11 +7404,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4159523444438144911, guid: c6899686cff669347b48a2de80a1d9ae, type: 3}
       propertyPath: incorrectColor.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4159523444438144911, guid: c6899686cff669347b48a2de80a1d9ae, type: 3}
       propertyPath: incorrectColor.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4159523444438144911, guid: c6899686cff669347b48a2de80a1d9ae, type: 3}
       propertyPath: incorrectColor.r
