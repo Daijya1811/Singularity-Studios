@@ -4,13 +4,16 @@ using UnityEngine.UI;
 public class FlashlightUI : MonoBehaviour
 {
     private FlashlightController flashlightController;
-
     private Image image;
+    private bool imageEnabled;
+
+    [SerializeField] private float disabledAlpha = .1f;
 
     private void Start()
     {
         image = GetComponent<Image>();
         flashlightController = FindObjectOfType<FlashlightController>();
+        imageEnabled = image.enabled;
 
         if (flashlightController) ToggleFlashLightUI();
 
@@ -20,9 +23,14 @@ public class FlashlightUI : MonoBehaviour
 
     private bool ToggleFlashLightUI()
     {
-        image.enabled = flashlightController.FlashlightEnabled;
+        imageEnabled = flashlightController.FlashlightEnabled;
+        Color color = image.color;
 
-        return image.enabled;
+        color.a = disabledAlpha;
+        
+        image.color = color;
+        
+        return imageEnabled;
     }
 
     private void Update()
@@ -30,6 +38,8 @@ public class FlashlightUI : MonoBehaviour
         //if something went wrong and it isn't present
         if (!flashlightController) return;
 
+        image.fillAmount = flashlightController.CurrentBatteryTime / flashlightController.TotalBatteryTime;
+        
         //if the image is not active, ignore further logic
         if (!ToggleFlashLightUI()) return;
         
@@ -38,5 +48,7 @@ public class FlashlightUI : MonoBehaviour
         color.a = Mathf.Clamp01(flashlightController.CurrentBatteryTime / flashlightController.TotalBatteryTime);
         
         image.color = color;
+
+        
     }
 }

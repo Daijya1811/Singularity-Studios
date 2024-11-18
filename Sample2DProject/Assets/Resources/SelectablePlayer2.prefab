@@ -3648,7 +3648,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 6698d296254eb9141b6cc480825097d8, type: 3}
     - target: {fileID: 8269321509216669845, guid: d2234649ba7e4e04c84862f96532e848, type: 3}
       propertyPath: flashlightEnabledOnStart
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -46,7 +46,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0.61960787, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
   m_Range: 21.48
   m_SpotAngle: 56.5
@@ -238,4 +238,7 @@ MonoBehaviour:
   chargeClip: {fileID: 8300000, guid: 6698d296254eb9141b6cc480825097d8, type: 3}
   startBatteryTime: 100
   dimLightWithTime: 1
+  flashlightEnabledOnStart: 0
+  rechargeScaler: 1
+  batteryChargeDepletionScaler: 3
   currentBatteryTime: 100

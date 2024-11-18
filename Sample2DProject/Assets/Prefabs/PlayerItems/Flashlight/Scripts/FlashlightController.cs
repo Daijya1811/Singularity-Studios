@@ -14,6 +14,8 @@ public class FlashlightController : MonoBehaviour
     [SerializeField] private float startBatteryTime= 100f;
     [SerializeField] private bool dimLightWithTime = true;
     [SerializeField] private bool flashlightEnabledOnStart = false;
+    [SerializeField] private float rechargeScaler = 1;
+    [SerializeField] private float batteryChargeDepletionScaler = 3;
     
     public float CurrentBatteryTime
     {
@@ -52,12 +54,16 @@ public class FlashlightController : MonoBehaviour
     {
         if (flashlight.enabled)
         {
-            currentBatteryTime -= Time.deltaTime;
+            currentBatteryTime -= Time.deltaTime * batteryChargeDepletionScaler;
             if (currentBatteryTime < 0) currentBatteryTime = 0;
         }
         if(dimLightWithTime) flashlight.intensity =  Math.Min(currentBatteryTime, startBatteryTime) / startBatteryTime;
-        
-        
+
+        if (!flashlight.enabled)
+        {
+            currentBatteryTime += Time.deltaTime / rechargeScaler;
+            if (currentBatteryTime > startBatteryTime) currentBatteryTime = startBatteryTime;
+        }
     }
 
     
