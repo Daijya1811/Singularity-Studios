@@ -65,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
         else isSprinting = context.performed;
     }
 
+    
     /// <summary>
     /// Animates the player to smoothly move within their animation blend tree. 
     /// </summary>
