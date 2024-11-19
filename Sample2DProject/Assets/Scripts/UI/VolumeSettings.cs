@@ -7,7 +7,7 @@ public class VolumeSettings : MonoBehaviour
     [SerializeField] private AudioMixer mixer;
     [SerializeField] private Slider masterSlider;
 
-    private const string MIXER_MASTER = "Master";
+    private const string MIXER_MASTER = "MasterVolume";
     void Awake()
     {
         masterSlider.onValueChanged.AddListener(SetMasterVolume);
