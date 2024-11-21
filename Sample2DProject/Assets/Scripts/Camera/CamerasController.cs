@@ -45,7 +45,7 @@ public class CamerasController : MonoBehaviour
     private void Update()
     {
         // If there is only one player in the scene, then don't do anything. Return. 
-        if (followCamera.Players[1] == null) return;
+        if (followCamera.Players.Length < 2) return;
 
         // Check if the hacking minigame is active. If it is, then the cameras should not be able to toggle. 
         bool isHackingActive = hackingState.IsHackingActive;

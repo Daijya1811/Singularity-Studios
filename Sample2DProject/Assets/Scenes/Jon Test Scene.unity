@@ -2848,6 +2848,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4142061959012725217, guid: 38528346abd47314993090ba6d4d10f3, type: 3}
   m_PrefabInstance: {fileID: 1767364673}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &487465403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8911465946149364472, guid: 385057344d43d9a4cb38ee568c54de65, type: 3}
+  m_PrefabInstance: {fileID: 598611173715266336}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &555253945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6662,11 +6667,15 @@ PrefabInstance:
       objectReference: {fileID: 482555682}
     - target: {fileID: 3380163059087017169, guid: bbbebd5fe5debac45a1f8fb3aa1c45ca, type: 3}
       propertyPath: m_PathPosition
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5712171364826497737, guid: bbbebd5fe5debac45a1f8fb3aa1c45ca, type: 3}
+      propertyPath: planet
+      value: 
+      objectReference: {fileID: 487465403}
     - target: {fileID: 5997007164055473056, guid: bbbebd5fe5debac45a1f8fb3aa1c45ca, type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 39.68166
+      value: 28.1
       objectReference: {fileID: 0}
     - target: {fileID: 6036190742681846567, guid: bbbebd5fe5debac45a1f8fb3aa1c45ca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8175,15 +8184,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5099837644796858787, guid: 385057344d43d9a4cb38ee568c54de65, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 35
+      value: 78.5
       objectReference: {fileID: 0}
     - target: {fileID: 5099837644796858787, guid: 385057344d43d9a4cb38ee568c54de65, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 29.5
       objectReference: {fileID: 0}
     - target: {fileID: 5099837644796858787, guid: 385057344d43d9a4cb38ee568c54de65, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.1
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 5356044547225062494, guid: 385057344d43d9a4cb38ee568c54de65, type: 3}
       propertyPath: m_Enabled
