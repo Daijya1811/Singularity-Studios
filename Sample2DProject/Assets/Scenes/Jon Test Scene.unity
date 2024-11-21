@@ -3080,6 +3080,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8029548946349402284, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8239118220460397353, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -6658,11 +6662,11 @@ PrefabInstance:
       objectReference: {fileID: 482555682}
     - target: {fileID: 3380163059087017169, guid: bbbebd5fe5debac45a1f8fb3aa1c45ca, type: 3}
       propertyPath: m_PathPosition
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5997007164055473056, guid: bbbebd5fe5debac45a1f8fb3aa1c45ca, type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 28.1
+      value: 39.68166
       objectReference: {fileID: 0}
     - target: {fileID: 6036190742681846567, guid: bbbebd5fe5debac45a1f8fb3aa1c45ca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8179,7 +8183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5099837644796858787, guid: 385057344d43d9a4cb38ee568c54de65, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5356044547225062494, guid: 385057344d43d9a4cb38ee568c54de65, type: 3}
       propertyPath: m_Enabled
@@ -8248,7 +8252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4300176853220694197, guid: e0ae5f1cb1a82d7429c53d05eabf9099, type: 3}
       propertyPath: timeForTask
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5280938324668716903, guid: e0ae5f1cb1a82d7429c53d05eabf9099, type: 3}
       propertyPath: amountToSpawn

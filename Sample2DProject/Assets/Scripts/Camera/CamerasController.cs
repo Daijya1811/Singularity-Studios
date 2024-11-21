@@ -23,10 +23,12 @@ public class CamerasController : MonoBehaviour
     float midPointZ;
 
     [SerializeField] private Camera uiCamera;
+    Hacking.CountdownTimer hackingState; 
     void Awake()
     {
         mainCamera = Camera.main;
         followCamera = GetComponent<FollowCamera>();
+        hackingState = FindObjectOfType<Hacking.CountdownTimer>();
     }
 
     private void Start()
@@ -45,6 +47,14 @@ public class CamerasController : MonoBehaviour
         // If there is only one player in the scene, then don't do anything. Return. 
         if (followCamera.Players[1] == null) return;
 
+        // Check if the hacking minigame is active. If it is, then the cameras should not be able to toggle. 
+        bool isHackingActive = hackingState.IsHackingActive;
+        if (isHackingActive)
+        {
+            // We want to force the Split camera to be the active camera during hacking. 
+            if (isMain) { ToggleCamera(); return; }
+            else return;
+        }
         p1Pos = followCamera.Players[0].transform.position;
         p2Pos = followCamera.Players[1].transform.position;
         midPointX = (p2Pos.x + p1Pos.x) / 2f;

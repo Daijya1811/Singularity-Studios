@@ -15,6 +15,10 @@ namespace Hacking
         float timeLeft;
         [SerializeField] TextMeshProUGUI tmpObject;
         PlayerTriangleMovement player;
+
+        private bool isHackingActive;
+
+        public bool IsHackingActive { get { return isHackingActive; } }
         private void OnEnable()
         {
             timeLeft = timeForTask;
@@ -28,7 +32,8 @@ namespace Hacking
         void Update()
         {
             // If the player has not won the minigame yet, then the timer should be counting down.
-            if(!player.HasWon) Countdown();
+            if (!player.HasWon) Countdown();
+            CheckForHackingActiveState();
         }
         /// <summary>
         /// Countsdown from timeForTask to 0 seconds, displaying to only 2 decimal places. If timeForTask reaches 0, then lose condition. 
@@ -43,6 +48,11 @@ namespace Hacking
                 if (!player.HasLost) player.HasLost = true;
             }
             tmpObject.text = timeLeft.ToString("F2");
+        }
+        private void CheckForHackingActiveState()
+        {
+            if (timeLeft > 0.05 && timeLeft < timeForTask) isHackingActive = true;
+            else isHackingActive = false;
         }
     }
 }
