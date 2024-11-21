@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 4089510325351240528}
   - component: {fileID: 5510262886256295315}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: SeeThroughSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2310,6 +2310,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 0d0dc6e5-c8da-4ba2-83dd-d536cdb336ac
     m_ActionName: Hacking/Advance[/Keyboard/space,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 86edda7f-df7a-40da-a8c8-b79f1b510350
+    m_ActionName: DisableInput/New action
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GetComponent<PlayerInput>().enabled)
+        if (pi.enabled)
         {
             Vector3 movement = new Vector3(movementInput.x, 0f, movementInput.y);
             AnimateMovement(movement, isSprinting);
@@ -65,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
         else isSprinting = context.performed;
     }
 
+    
     /// <summary>
     /// Animates the player to smoothly move within their animation blend tree. 
     /// </summary>

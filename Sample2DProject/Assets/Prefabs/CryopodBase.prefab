@@ -205,6 +205,7 @@ MonoBehaviour:
   renderers: []
   objectPosition: {x: 0, y: 0, z: 0}
   materials: []
+  ignoreChildrenRenderers: 0
   initialAlpha: 0
 --- !u!1001 &6138033697307025480
 PrefabInstance:
@@ -910,7 +911,7 @@ AudioSource:
   m_GameObject: {fileID: 4128684521164566197}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 30df924e4b66f4040a9ace8c6f007643, type: 2}
   m_audioClip: {fileID: 8300000, guid: dd9ce454a73943847a43c9ecdca8c430, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
