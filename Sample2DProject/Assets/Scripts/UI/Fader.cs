@@ -28,7 +28,7 @@ public class Fader : MonoBehaviour
     {
         while (!Mathf.Approximately(canvasGroup.alpha, target))
         {
-            canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, target, (((Time.deltaTime * Time.deltaTime) / time) * (3.0f - 2.0f * (Time.deltaTime / time))) / time);
+            canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, target, Time.deltaTime * Time.deltaTime * (3.0f - 2.0f * Time.deltaTime));
             yield return null;
         }
     }
