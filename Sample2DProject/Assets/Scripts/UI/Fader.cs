@@ -9,7 +9,7 @@ using System;
 [RequireComponent(typeof(CanvasGroup))]
 public class Fader : MonoBehaviour
 {
-    [SerializeField] float fadeDuration = 5f;
+    [SerializeField] float fadeDuration = 1f;
     CanvasGroup canvasGroup;
 
     public float FadeDuration { get { return fadeDuration; } }
@@ -28,7 +28,7 @@ public class Fader : MonoBehaviour
     {
         while (!Mathf.Approximately(canvasGroup.alpha, target))
         {
-            canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, target, Time.deltaTime * Time.deltaTime * (3.0f - 2.0f * Time.deltaTime));
+            canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, target, (((Time.deltaTime * Time.deltaTime) / time) * (3.0f - 2.0f * (Time.deltaTime / time))) / time);
             yield return null;
         }
     }

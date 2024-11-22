@@ -10,6 +10,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayableDirector))]
 public class CinematicControlRemover : MonoBehaviour
 {
+    [SerializeField] GameObject planet;
     GameObject[] players;
     private void Start()
     {
@@ -38,5 +39,6 @@ public class CinematicControlRemover : MonoBehaviour
         {
             player.GetComponent<PlayerInput>().SwitchCurrentActionMap("Player");
         }
+        planet.transform.localPosition = new Vector3(36f, -22f, -0.1f);
     }
 }
