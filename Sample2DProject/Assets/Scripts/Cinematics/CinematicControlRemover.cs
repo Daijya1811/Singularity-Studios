@@ -39,6 +39,6 @@ public class CinematicControlRemover : MonoBehaviour
         {
             player.GetComponent<PlayerInput>().SwitchCurrentActionMap("Player");
         }
-        planet.transform.localPosition = new Vector3(25f, -22f, 0f);
+        planet.transform.localPosition = new Vector3(36f, -22f, -0.1f);
     }
 }
