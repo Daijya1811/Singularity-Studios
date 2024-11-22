@@ -8199,6 +8199,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6306907323053886701, guid: 385057344d43d9a4cb38ee568c54de65, type: 3}
+      propertyPath: maxScale
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306907323053886701, guid: 385057344d43d9a4cb38ee568c54de65, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}

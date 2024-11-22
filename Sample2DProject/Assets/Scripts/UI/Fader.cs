@@ -9,7 +9,7 @@ using System;
 [RequireComponent(typeof(CanvasGroup))]
 public class Fader : MonoBehaviour
 {
-    [SerializeField] float fadeDuration = 2f;
+    [SerializeField] float fadeDuration = 1f;
     CanvasGroup canvasGroup;
 
     public float FadeDuration { get { return fadeDuration; } }

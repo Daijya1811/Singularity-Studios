@@ -32,5 +32,6 @@ public class LoseSequence : MonoBehaviour
         yield return fader.FadeRoutine(1f, fader.FadeDuration);
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(0);
+        yield return null;
     }
 }
