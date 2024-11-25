@@ -2566,7 +2566,7 @@ PrefabInstance:
     - target: {fileID: 7330562027300912958, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 665722ffa117c8546a943452beed6801, type: 2}
+      objectReference: {fileID: 2100000, guid: b47cd35c042dce844add48e14931924d, type: 2}
     - target: {fileID: 7407382559585317979, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3072,7 +3072,7 @@ PrefabInstance:
     - target: {fileID: 7330562027300912958, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 665722ffa117c8546a943452beed6801, type: 2}
+      objectReference: {fileID: 2100000, guid: b47cd35c042dce844add48e14931924d, type: 2}
     - target: {fileID: 7407382559585317979, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6056,6 +6056,10 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7330562027300912958, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 665722ffa117c8546a943452beed6801, type: 2}
     - target: {fileID: 8029548946349402284, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_Name
       value: CryopodBase (8)
@@ -6253,6 +6257,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934129955}
     m_Modifications:
+    - target: {fileID: 435262540039460375, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09050288
+      objectReference: {fileID: 0}
+    - target: {fileID: 435262540039460375, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.037785023
+      objectReference: {fileID: 0}
+    - target: {fileID: 435262540039460375, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.09898638
+      objectReference: {fileID: 0}
+    - target: {fileID: 435262540039460375, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.53979284
+      objectReference: {fileID: 0}
+    - target: {fileID: 435262540039460375, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.510675
+      objectReference: {fileID: 0}
+    - target: {fileID: 435262540039460375, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.48909205
+      objectReference: {fileID: 0}
+    - target: {fileID: 435262540039460375, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.45675343
+      objectReference: {fileID: 0}
+    - target: {fileID: 435262540039460375, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 86.473
+      objectReference: {fileID: 0}
     - target: {fileID: 1060508962187024723, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -6405,6 +6441,10 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7330562027300912958, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 665722ffa117c8546a943452beed6801, type: 2}
     - target: {fileID: 8029548946349402284, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_Name
       value: CryopodBase (2)
@@ -6478,6 +6518,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1934129955}
     m_Modifications:
+    - target: {fileID: 435262540039460375, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09060996
+      objectReference: {fileID: 0}
+    - target: {fileID: 435262540039460375, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.038802397
+      objectReference: {fileID: 0}
+    - target: {fileID: 435262540039460375, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.09881996
+      objectReference: {fileID: 0}
+    - target: {fileID: 435262540039460375, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.5546999
+      objectReference: {fileID: 0}
+    - target: {fileID: 435262540039460375, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.49410886
+      objectReference: {fileID: 0}
+    - target: {fileID: 435262540039460375, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5058226
+      objectReference: {fileID: 0}
+    - target: {fileID: 435262540039460375, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.4385293
+      objectReference: {fileID: 0}
+    - target: {fileID: 435262540039460375, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 82.658
+      objectReference: {fileID: 0}
     - target: {fileID: 1060508962187024723, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -8538,6 +8610,10 @@ PrefabInstance:
     - target: {fileID: 74429358362864891, guid: 7a95793c4cc297f4aae4fb1d8f82c64b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705512428214630179, guid: 7a95793c4cc297f4aae4fb1d8f82c64b, type: 3}
+      propertyPath: startTime
+      value: 199
       objectReference: {fileID: 0}
     - target: {fileID: 7942595476546181537, guid: 7a95793c4cc297f4aae4fb1d8f82c64b, type: 3}
       propertyPath: m_Name
