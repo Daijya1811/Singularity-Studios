@@ -11,6 +11,7 @@ using UnityEngine.InputSystem;
 public class CinematicControlRemover : MonoBehaviour
 {
     [SerializeField] GameObject planet;
+    [SerializeField] bool repositionPlanet = true;
     GameObject[] players;
     private void Start()
     {
@@ -39,6 +40,7 @@ public class CinematicControlRemover : MonoBehaviour
         {
             player.GetComponent<PlayerInput>().SwitchCurrentActionMap("Player");
         }
-        planet.transform.localPosition = new Vector3(36f, -22f, -0.1f);
+        if(repositionPlanet)
+            planet.transform.localPosition = new Vector3(36f, -22f, -0.1f);
     }
 }
