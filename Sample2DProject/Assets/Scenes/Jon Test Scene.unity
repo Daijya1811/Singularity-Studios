@@ -708,7 +708,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 320373953235749056, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: ignoreChildrenRenderers
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1060508962187024723, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_IsKinematic
@@ -4040,7 +4040,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 320373953235749056, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: ignoreChildrenRenderers
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1060508962187024723, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_IsKinematic
@@ -4317,7 +4317,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d4e2fa47992891848be1a8ca4e3e5bdd, type: 2}
     - target: {fileID: 320373953235749056, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: ignoreChildrenRenderers
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 881739940783167470, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_ReceiveShadows
@@ -4834,7 +4834,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 320373953235749056, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: ignoreChildrenRenderers
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1060508962187024723, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_IsKinematic
@@ -5943,7 +5943,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 320373953235749056, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: ignoreChildrenRenderers
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1060508962187024723, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_IsKinematic
@@ -8793,7 +8793,8 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4278190335
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 438483257194420918, guid: 7a95793c4cc297f4aae4fb1d8f82c64b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
