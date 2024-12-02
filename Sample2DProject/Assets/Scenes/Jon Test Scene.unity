@@ -10507,6 +10507,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 413298084134725106, guid: 6214ff6f5b45ce44884176032885b9a5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0042182
+      objectReference: {fileID: 0}
+    - target: {fileID: 413298084134725106, guid: 6214ff6f5b45ce44884176032885b9a5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0042186
+      objectReference: {fileID: 0}
+    - target: {fileID: 413298084134725106, guid: 6214ff6f5b45ce44884176032885b9a5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0042183
+      objectReference: {fileID: 0}
     - target: {fileID: 1371893503459769150, guid: 6214ff6f5b45ce44884176032885b9a5, type: 3}
       propertyPath: m_Name
       value: PlanetRendering
@@ -10550,6 +10562,10 @@ PrefabInstance:
     - target: {fileID: 5376469169818856162, guid: 6214ff6f5b45ce44884176032885b9a5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417996634568905452, guid: 6214ff6f5b45ce44884176032885b9a5, type: 3}
+      propertyPath: orthographic size
+      value: 620
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11016,6 +11032,6 @@ SceneRoots:
   - {fileID: 1535559911}
   - {fileID: 1236943490}
   - {fileID: 8087604557791927911}
-  - {fileID: 8073452240247372322}
   - {fileID: 1156301336}
   - {fileID: 598611173715266336}
+  - {fileID: 8073452240247372322}
