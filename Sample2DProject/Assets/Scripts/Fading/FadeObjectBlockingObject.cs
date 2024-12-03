@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,6 +14,9 @@ public class FadeObjectBlockingObject : MonoBehaviour
     [SerializeField] private float checksPerSecond = 10;
     [SerializeField] private int fadeFPS = 30;
     [SerializeField] private FadeMode fadeMode = FadeMode.Fade;
+    [Range(0,1)]
+    [SerializeField] private int playerNum;
+    [SerializeField] private bool isMainCamera;
 
     [Header("Read Only Data")]
     [SerializeField] private List<FadingObject> objectsBlockingView = new List<FadingObject>();
@@ -21,16 +26,31 @@ public class FadeObjectBlockingObject : MonoBehaviour
 
     private RaycastHit[] hits = new RaycastHit[10];
     [SerializeField] private Transform mainCamera;
+    [SerializeField] private Camera cam;
 
     private void Start()
     {
+        cam = GetComponent<Camera>();
         PlayerInput[] playerInputs = FindObjectsOfType<PlayerInput>();
         List<Transform> playerTransforms = new List<Transform>();
-        foreach (PlayerInput input in playerInputs)
+        if(isMainCamera) //both
         {
+            foreach (PlayerInput input in playerInputs)
+            {
+                playerTransforms.Add(input.transform);
+                playerBlockedObjects.Add(input.transform, new List<FadingObject>());
+            }
+        }
+        else if(playerNum < playerInputs.Length)
+        {
+            
+            PlayerInput input = playerInputs[playerNum];
+            if(input){}
             playerTransforms.Add(input.transform);
             playerBlockedObjects.Add(input.transform, new List<FadingObject>());
         }
+        
+        
         StartCoroutine(CheckForObjects(playerTransforms));
     }
 
@@ -39,38 +59,40 @@ public class FadeObjectBlockingObject : MonoBehaviour
     private IEnumerator CheckForObjects(List<Transform> playerTransforms)
     {
         WaitForSeconds wait = new WaitForSeconds(1f / checksPerSecond);
-
+        
         while (true)
         {
             // Track objects that are currently hit for each player
             Dictionary<FadingObject, bool> currentHits = new Dictionary<FadingObject, bool>();
-
-            foreach (Transform player in playerTransforms)
+            if (cam.enabled)
             {
-                // Raycast from camera to each player
-                int numHits = Physics.RaycastNonAlloc(
-                    mainCamera.position,
-                    (player.position - mainCamera.position).normalized,
-                    hits,
-                    Vector3.Distance(mainCamera.position, player.position),
-                    layerMask
-                );
-
-                Debug.DrawRay(mainCamera.position, (player.position - mainCamera.position), Color.green);
-
-                if (numHits > 0)
+                foreach (Transform player in playerTransforms)
                 {
-                    for (int i = 0; i < numHits; i++)
-                    {
-                        FadingObject fadingObject = GetFadingObjectFromHit(hits[i]);
-                        if (fadingObject != null)
-                        {
-                            currentHits[fadingObject] = true;
+                    // Raycast from camera to each player
+                    int numHits = Physics.RaycastNonAlloc(
+                        mainCamera.position,
+                        (player.position - mainCamera.position).normalized,
+                        hits,
+                        Vector3.Distance(mainCamera.position, player.position),
+                        layerMask
+                    );
 
-                            if (!playerBlockedObjects[player].Contains(fadingObject))
+                    Debug.DrawRay(mainCamera.position, (player.position - mainCamera.position), Color.green);
+
+                    if (numHits > 0)
+                    {
+                        for (int i = 0; i < numHits; i++)
+                        {
+                            FadingObject fadingObject = GetFadingObjectFromHit(hits[i]);
+                            if (fadingObject != null)
                             {
-                                StartFadeOut(fadingObject);
-                                playerBlockedObjects[player].Add(fadingObject);
+                                currentHits[fadingObject] = true;
+
+                                if (!playerBlockedObjects[player].Contains(fadingObject))
+                                {
+                                    StartFadeOut(fadingObject);
+                                    playerBlockedObjects[player].Add(fadingObject);
+                                }
                             }
                         }
                     }
