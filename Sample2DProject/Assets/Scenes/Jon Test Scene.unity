@@ -2998,6 +2998,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 662b421b5a99a4340b76c43582a9c6cb, type: 2}
+    - target: {fileID: 320373953235749056, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: ignoreChildrenRenderers
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 881739940783167470, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6604,7 +6608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 913938817722336579, guid: 1d999ca10daf22246bf72b3992e53960, type: 3}
       propertyPath: m_Name
-      value: Monitor (4)
+      value: PlanetScreen
       objectReference: {fileID: 0}
     - target: {fileID: 913938817722336579, guid: 1d999ca10daf22246bf72b3992e53960, type: 3}
       propertyPath: m_IsActive
@@ -6684,7 +6688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8709696513227336130, guid: 1d999ca10daf22246bf72b3992e53960, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.8508058
+      value: 6.44
       objectReference: {fileID: 0}
     - target: {fileID: 8709696513227336130, guid: 1d999ca10daf22246bf72b3992e53960, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6692,27 +6696,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8709696513227336130, guid: 1d999ca10daf22246bf72b3992e53960, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.622004
+      value: 11.14
       objectReference: {fileID: 0}
     - target: {fileID: 8709696513227336130, guid: 1d999ca10daf22246bf72b3992e53960, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.88078505
+      value: 0.90233195
       objectReference: {fileID: 0}
     - target: {fileID: 8709696513227336130, guid: 1d999ca10daf22246bf72b3992e53960, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.21440887
+      value: -0.009333348
       objectReference: {fileID: 0}
     - target: {fileID: 8709696513227336130, guid: 1d999ca10daf22246bf72b3992e53960, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.41475335
+      value: -0.43049657
       objectReference: {fileID: 0}
     - target: {fileID: 8709696513227336130, guid: 1d999ca10daf22246bf72b3992e53960, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.07890676
+      value: 0.019562937
       objectReference: {fileID: 0}
     - target: {fileID: 8709696513227336130, guid: 1d999ca10daf22246bf72b3992e53960, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -26.305
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8709696513227336130, guid: 1d999ca10daf22246bf72b3992e53960, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -7769,7 +7773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 913938817722336579, guid: 1d999ca10daf22246bf72b3992e53960, type: 3}
       propertyPath: m_Name
-      value: Monitor (3)
+      value: TimerScreen
       objectReference: {fileID: 0}
     - target: {fileID: 913938817722336579, guid: 1d999ca10daf22246bf72b3992e53960, type: 3}
       propertyPath: m_IsActive
@@ -10659,7 +10663,7 @@ Transform:
   m_GameObject: {fileID: 4527484664793234555}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.71674275, z: -0, w: 0.69733775}
-  m_LocalPosition: {x: 0.08945465, y: 0.25800037, z: -6.7962036}
+  m_LocalPosition: {x: -0.447, y: 0.25800037, z: -6.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
