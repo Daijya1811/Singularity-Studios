@@ -1666,6 +1666,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1252384150}
     m_Modifications:
+    - target: {fileID: -3356103884616808235, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090940426327721665, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025921907939476546, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4972167997025879799, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4505501
@@ -1721,6 +1733,18 @@ PrefabInstance:
     - target: {fileID: 4972167997025983191, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
       propertyPath: m_Name
       value: Sci Fi Gates (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972167997025983193, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972167997025983199, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6532002656758940163, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
