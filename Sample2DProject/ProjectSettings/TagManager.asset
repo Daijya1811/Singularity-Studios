@@ -25,8 +25,8 @@ TagManager:
   - BlockerNode
   - WorldUI
   - PostProcess
-  - 
-  - 
+  - TimerUI
+  - PlanetUI
   - 
   - 
   - 

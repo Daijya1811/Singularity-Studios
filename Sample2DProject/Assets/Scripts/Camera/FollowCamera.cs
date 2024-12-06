@@ -10,6 +10,8 @@ public class FollowCamera : MonoBehaviour
     [SerializeField] GameObject midCameraPrefab;
     GameObject[] players;
 
+    [SerializeField] private Vector3 offset;
+
     ScreenShake screenShake;
 
     public Vector3 MidCamPos { get { return midCameraPrefab.transform.position; } }
@@ -59,8 +61,8 @@ public class FollowCamera : MonoBehaviour
         if (players.Length == 1) 
         {
             Vector3 player1Pos = players[0].transform.position;
-            transform.position = new Vector3(player1Pos.x, player1Pos.y, player1Pos.z);
-            midCameraPrefab.transform.position = new Vector3(player1Pos.x, player1Pos.y, player1Pos.z);
+            midCameraPrefab.transform.position = new Vector3(player1Pos.x + offset.x , player1Pos.y + offset.y, player1Pos.z + offset.z );
+            transform.position = midCameraPrefab.transform.position;
         }
         else if (players.Length == 2)
         {
@@ -69,8 +71,8 @@ public class FollowCamera : MonoBehaviour
             float midPointX = (player2Pos.x + player1Pos.x) / 2f;
             float midPointY = (player2Pos.y + player1Pos.y) / 2f;
             float midPointZ = (player2Pos.z + player1Pos.z) / 2f;
-            transform.position = new Vector3(midPointX, midPointY, midPointZ);
-            midCameraPrefab.transform.position = new Vector3(midPointX, midPointY, midPointZ);
+            midCameraPrefab.transform.position = new Vector3(midPointX  + offset.x, midPointY + offset.y, midPointZ + offset.z);
+            transform.position = midCameraPrefab.transform.position;
         }
         else
         {
