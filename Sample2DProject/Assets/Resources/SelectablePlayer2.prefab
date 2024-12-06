@@ -3587,10 +3587,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8675863857646170215, guid: 7e9489ed693a82047b6765604cfc3478, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 499de596a43d7cc419e2f8a5ecba3a14, type: 2}
+    - target: {fileID: -6086072822249827373, guid: 7e9489ed693a82047b6765604cfc3478, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 499de596a43d7cc419e2f8a5ecba3a14, type: 2}
     - target: {fileID: 919132149155446097, guid: 7e9489ed693a82047b6765604cfc3478, type: 3}
       propertyPath: m_Name
       value: Brain
       objectReference: {fileID: 0}
+    - target: {fileID: 1024570816113628811, guid: 7e9489ed693a82047b6765604cfc3478, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 499de596a43d7cc419e2f8a5ecba3a14, type: 2}
+    - target: {fileID: 3491518227490589552, guid: 7e9489ed693a82047b6765604cfc3478, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 499de596a43d7cc419e2f8a5ecba3a14, type: 2}
     - target: {fileID: 5866666021909216657, guid: 7e9489ed693a82047b6765604cfc3478, type: 3}
       propertyPath: m_Avatar
       value: 
