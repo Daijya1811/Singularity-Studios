@@ -29,6 +29,7 @@ public class ScreenShake : MonoBehaviour
     [SerializeField] CinematicControlRemover introCinematic;
 
     PlanetScaler planet;
+    FallingObjects fallingObjects;
 
     public float ShakeIntensity { get { return shakeIntensity; } }
 
@@ -36,6 +37,7 @@ public class ScreenShake : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         planet = FindObjectOfType<PlanetScaler>();
+        fallingObjects = FindObjectOfType<FallingObjects>();
     }
 
     // Start is called before the first frame update
@@ -46,7 +48,6 @@ public class ScreenShake : MonoBehaviour
     private void Update()
     {
         if (introCinematic != null && !introCinematic.DonePlaying) return;
-        print("amogus");
         RunTimers();
 
         // isMainMenu should be false during gameplay scenes.
@@ -77,6 +78,10 @@ public class ScreenShake : MonoBehaviour
             isPlayingAudio = false;
 
             if (isMainMenu) midCameraPrefab.transform.position = Vector3.zero;
+            else if(!isMainMenu)
+            {
+                fallingObjects.DropRandomItem();
+            }
         }
 
         if(!isMainMenu)
