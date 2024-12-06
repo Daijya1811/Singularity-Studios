@@ -7713,7 +7713,7 @@ PrefabInstance:
       objectReference: {fileID: 482555682}
     - target: {fileID: 3380163059087017169, guid: bbbebd5fe5debac45a1f8fb3aa1c45ca, type: 3}
       propertyPath: m_PathPosition
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5712171364826497737, guid: bbbebd5fe5debac45a1f8fb3aa1c45ca, type: 3}
       propertyPath: planet
@@ -7721,7 +7721,7 @@ PrefabInstance:
       objectReference: {fileID: 487465403}
     - target: {fileID: 5997007164055473056, guid: bbbebd5fe5debac45a1f8fb3aa1c45ca, type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 11.83417
+      value: 28.1
       objectReference: {fileID: 0}
     - target: {fileID: 6036190742681846567, guid: bbbebd5fe5debac45a1f8fb3aa1c45ca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7769,7 +7769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7819717975683781837, guid: bbbebd5fe5debac45a1f8fb3aa1c45ca, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8566,6 +8566,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 307112734}
   m_SourcePrefab: {fileID: 100100000, guid: dc8724e63e64bca4eb3fffdee38dc6f7, type: 3}
+--- !u!114 &1710331944 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5712171364826497737, guid: bbbebd5fe5debac45a1f8fb3aa1c45ca, type: 3}
+  m_PrefabInstance: {fileID: 1324165385}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3270431626834d343afdf04d2cd90e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1714000924 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4972167997025879799, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
@@ -13287,12 +13298,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6845324316493955127, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
       propertyPath: rngMax
-      value: 30
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6845324316493955127, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
       propertyPath: rngMin
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6845324316493955127, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
+      propertyPath: introCinematic
+      value: 
+      objectReference: {fileID: 1710331944}
     - target: {fileID: 7024538790063751958, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
       propertyPath: orthographic
       value: 0
