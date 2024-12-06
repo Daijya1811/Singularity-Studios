@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
         // If running against a wall, do not play a running animation. 
         if(Physics.Raycast(transform.position, transform.forward, 0.25f, 3))
         {
-            speed -= lerpSmoothingSpeed * Time.deltaTime;
+           // speed -= lerpSmoothingSpeed * Time.deltaTime;
         }
 
         // Prevents weird lerp jitters if speed and target are the same values.
