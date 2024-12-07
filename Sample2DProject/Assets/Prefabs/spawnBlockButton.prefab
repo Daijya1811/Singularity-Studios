@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7390334485961695604}
   - component: {fileID: 873540400007825266}
   - component: {fileID: 905201906991544306}
+  - component: {fileID: 3328023039610435048}
   m_Layer: 6
   m_Name: spawnBlockButton
   m_TagString: Untagged
@@ -105,8 +106,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 3, z: 3}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 1.25, y: 2, z: 1.25}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &905201906991544306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +124,27 @@ MonoBehaviour:
   interactionAllowed: 3
   blockToSpawn: {fileID: 8594311515964136852, guid: d69dd10dbec4282419a906cfb8c8ebc1, type: 3}
   spawnPos: {x: 0, y: 0, z: 0}
+--- !u!65 &3328023039610435048
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5099719356690232112}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6041199225516800879
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +156,6 @@ GameObject:
   - component: {fileID: 7914383292740608195}
   - component: {fileID: 5373604519651654313}
   - component: {fileID: 5484340103651818044}
-  - component: {fileID: 347267006428696513}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
@@ -207,24 +228,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &347267006428696513
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6041199225516800879}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
