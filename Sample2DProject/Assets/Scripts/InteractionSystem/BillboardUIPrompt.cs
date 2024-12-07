@@ -54,20 +54,30 @@ public class BillboardUIPrompt : MonoBehaviour
     /// <param name="promptText">The text that the panel Displays</param>
     public void SetUp(string promptText)
     {
-        if(deviceManufacturer != null && deviceManufacturer.Equals("Sony Interactive Entertainment"))
+        if (promptText == "")
         {
-            buttonPrompt.sprite = interactButtons[PlayStationPrompt];
-        }
-        else if(deviceName != null && deviceName.Equals("Keyboard"))
-        {
-            buttonPrompt.sprite = interactButtons[KeyboardPrompt];
-        }
-        else
-        {
-            buttonPrompt.sprite = interactButtons[XboxPrompt];
+            this.promptText.text = promptText;
+            buttonPrompt.enabled = false;
         }
 
-        this.promptText.text = "Press      to " + promptText;
+        else
+        {
+            buttonPrompt.enabled = true;
+            if (deviceManufacturer != null && deviceManufacturer.Equals("Sony Interactive Entertainment"))
+            {
+                buttonPrompt.sprite = interactButtons[PlayStationPrompt];
+            }
+            else if (deviceName != null && deviceName.Equals("Keyboard"))
+            {
+                buttonPrompt.sprite = interactButtons[KeyboardPrompt];
+            }
+            else
+            {
+                buttonPrompt.sprite = interactButtons[XboxPrompt];
+            }
+
+            this.promptText.text = "Press      to " + promptText;
+        }
         uIPanel.enabled = true;
         isDisplayed = true;
     }
