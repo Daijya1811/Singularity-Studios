@@ -781,12 +781,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240532130}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7, y: 1, z: 27}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.099999964, y: 1, z: 6.0300007}
   m_LocalScale: {x: 0.7, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 885186826}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &262019607 stripped
 GameObject:
@@ -2333,6 +2333,10 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6672505200610975676, guid: 5fed7265616d8bf48ad14eefce01fa66, type: 3}
+      propertyPath: m_Size.z
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6304182116301526110, guid: 5fed7265616d8bf48ad14eefce01fa66, type: 3}
@@ -2343,6 +2347,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4568836946356869673, guid: 5fed7265616d8bf48ad14eefce01fa66, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2070622358}
+    - targetCorrespondingSourceObject: {fileID: 4568836946356869673, guid: 5fed7265616d8bf48ad14eefce01fa66, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 240532132}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fed7265616d8bf48ad14eefce01fa66, type: 3}
 --- !u!1001 &437591920
@@ -2355,7 +2362,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3356103884616808235, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
       propertyPath: isLocked
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1090940426327721665, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12309,7 +12316,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 45
+    FieldOfView: 59.84555
     OrthographicSize: 5
     NearClipPlane: 0.01
     FarClipPlane: 1000
@@ -15704,4 +15711,3 @@ SceneRoots:
   - {fileID: 1358344324}
   - {fileID: 337890468}
   - {fileID: 424358407}
-  - {fileID: 240532132}

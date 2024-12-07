@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class WinSequence : MonoBehaviour
 {
-    [SerializeField] Fader winFader;
-
+    int numPlayersInWinTrigger = 0;
     private void OnEnable()
     {
         GetComponent<PlayableDirector>().stopped += ReturnToMainMenu;
@@ -18,8 +17,17 @@ public class WinSequence : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        GetComponent<PlayableDirector>().Play();
-        GetComponentInChildren<Animator>().enabled = true;
+        if(other.gameObject.tag == "Player") numPlayersInWinTrigger++;
+        if (numPlayersInWinTrigger < 2) return; 
+        else
+        {
+            GetComponent<PlayableDirector>().Play();
+            GetComponentInChildren<Animator>().enabled = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player") numPlayersInWinTrigger--;
     }
 
     void ReturnToMainMenu(PlayableDirector pd)
