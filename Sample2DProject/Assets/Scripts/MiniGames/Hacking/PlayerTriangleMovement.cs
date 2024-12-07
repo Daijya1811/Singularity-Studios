@@ -154,6 +154,7 @@ namespace Hacking
             if(other.gameObject.tag == "Goal")
             {
                 hasWon = true;
+                FindObjectOfType<CountdownTimer>().IsHackingActive = false;
                 GetComponent<HackingFinished>().ToggleMiniGameOff();
                 doorToUnlock.Unlock();
 

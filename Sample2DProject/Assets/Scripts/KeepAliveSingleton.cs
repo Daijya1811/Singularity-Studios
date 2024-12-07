@@ -8,14 +8,20 @@ using UnityEngine;
 /// </summary>
 public class KeepAliveSingleton : MonoBehaviour
 {
-    private static GameObject instance;
+    private static GameObject audioInstance;
+    private static GameObject coOpManagerInstance;
 
     private void Awake()
     {
-        if (instance == null)
+        if (audioInstance == null && this.gameObject.tag == "Audio")
         {
-            instance = gameObject;
+            audioInstance = gameObject;
             DontDestroyOnLoad(gameObject); // Prevent this object from being destroyed across scenes
+        }
+        else if(coOpManagerInstance == null && this.gameObject.tag == "Co Op")
+        {
+            coOpManagerInstance = gameObject;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {

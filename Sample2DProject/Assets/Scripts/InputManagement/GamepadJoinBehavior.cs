@@ -12,9 +12,6 @@ using UnityEngine.InputSystem;
 /// </summary>
 public class GamepadJoinBehavior : MonoBehaviour
 {
-    // Reference to the Character Selection canvas initialized in the editor
-    [SerializeField] Canvas currentCanvas;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -69,7 +66,7 @@ public class GamepadJoinBehavior : MonoBehaviour
             // This creates the PlayerInput component.
             // In Unity's new input system, the creation of this component is what defines the existence of the "player"
             PlayerInput theCursor = PlayerInput.Instantiate(playerCursor, -1, controlScheme, -1, device);
-            theCursor.transform.parent = currentCanvas.transform;
+            theCursor.transform.parent = GameObject.FindGameObjectWithTag("CharacterSelectCanvas").transform;
             theCursor.transform.localScale = new Vector3(1f, 1f, 1f);
         }
     }

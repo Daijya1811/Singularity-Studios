@@ -25,8 +25,11 @@ public class ScreenShake : MonoBehaviour
     bool isPlayingAudio;
 
     [SerializeField] bool isMainMenu = false;
+    [Header("Reference to Cinematic To Prevent Shaking During Cutscene")]
+    [SerializeField] CinematicControlRemover introCinematic;
 
     PlanetScaler planet;
+    FallingObjects fallingObjects;
 
     public float ShakeIntensity { get { return shakeIntensity; } }
 
@@ -34,6 +37,7 @@ public class ScreenShake : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         planet = FindObjectOfType<PlanetScaler>();
+        fallingObjects = FindObjectOfType<FallingObjects>();
     }
 
     // Start is called before the first frame update
@@ -43,6 +47,7 @@ public class ScreenShake : MonoBehaviour
     }
     private void Update()
     {
+        if (introCinematic != null && !introCinematic.DonePlaying) return;
         RunTimers();
 
         // isMainMenu should be false during gameplay scenes.
@@ -73,6 +78,10 @@ public class ScreenShake : MonoBehaviour
             isPlayingAudio = false;
 
             if (isMainMenu) midCameraPrefab.transform.position = Vector3.zero;
+            else if(!isMainMenu)
+            {
+                fallingObjects.DropRandomItem();
+            }
         }
 
         if(!isMainMenu)
@@ -80,9 +89,9 @@ public class ScreenShake : MonoBehaviour
             if(planet.transform.localScale.x < 10f) shakeIntensity = 1f;
             else if (planet.transform.localScale.x < 25f) shakeIntensity = 1.25f;
             else if (planet.transform.localScale.x < 50f) shakeIntensity = 1.5f;
-            else if (planet.transform.localScale.x < 100f) shakeIntensity = 1.75f;
-            else if (planet.transform.localScale.x < 200f) shakeIntensity = 2f;
-            else shakeIntensity = 3f;
+            else if (planet.transform.localScale.x < 100f) shakeIntensity = 2f;
+            else if (planet.transform.localScale.x < 200f) shakeIntensity = 2.5f;
+            else shakeIntensity = 4f;
         }
     }
     /// <summary>
