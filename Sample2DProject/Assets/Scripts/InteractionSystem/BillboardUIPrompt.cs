@@ -36,9 +36,7 @@ public class BillboardUIPrompt : MonoBehaviour
         playerSplitScreenCamera = transform.parent.parent.GetComponent<UnityEngine.InputSystem.PlayerInput>().camera;
 
         deviceName = transform.parent.parent.GetComponent<UnityEngine.InputSystem.PlayerInput>().devices[0].name;
-        print(deviceName);
         deviceManufacturer = transform.parent.parent.GetComponent<UnityEngine.InputSystem.PlayerInput>().devices[0].description.manufacturer;
-        print(deviceManufacturer);
     }
 
     private void LateUpdate()
