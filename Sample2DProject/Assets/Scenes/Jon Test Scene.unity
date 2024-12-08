@@ -7348,6 +7348,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hacking Minigame Scene
       objectReference: {fileID: 0}
+    - target: {fileID: 4943141913635681028, guid: a7a0090dd07f8ad4a8393779ca3eba52, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 87d6786227062544489ba2cabeff9b05, type: 2}
+    - target: {fileID: 4943141913635681028, guid: a7a0090dd07f8ad4a8393779ca3eba52, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -261199663134533442, guid: 87d6786227062544489ba2cabeff9b05, type: 2}
+    - target: {fileID: 4943141913635681028, guid: a7a0090dd07f8ad4a8393779ca3eba52, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8082959899190649724, guid: a7a0090dd07f8ad4a8393779ca3eba52, type: 3}
       propertyPath: m_LocalPosition.x
       value: -999
