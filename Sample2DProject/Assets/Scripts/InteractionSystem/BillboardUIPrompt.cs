@@ -16,6 +16,9 @@ public class BillboardUIPrompt : MonoBehaviour
     const int XboxPrompt = 1;
     const int KeyboardPrompt = 2;
 
+    public string DeviceManufacturer { get { return deviceManufacturer; } }
+    public string DeviceName { get { return deviceName; } }
+
     
     private Camera playerSplitScreenCamera;
 
