@@ -10,12 +10,11 @@ using UnityEngine.SceneManagement;
 public class LoseSequence : MonoBehaviour
 {
     PlanetScaler planet;
-    Fader fader;
+    [SerializeField] Fader loseFader;
 
     private void Awake()
     {
         planet = FindObjectOfType<PlanetScaler>();
-        fader = FindObjectOfType<Fader>();
     }
 
     // Update is called once per frame
@@ -29,7 +28,7 @@ public class LoseSequence : MonoBehaviour
 
     IEnumerator GameOver()
     {
-        yield return fader.FadeRoutine(1f, fader.FadeDuration);
+        yield return loseFader.FadeRoutine(1f, loseFader.FadeDuration);
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(0);
         yield return null;
