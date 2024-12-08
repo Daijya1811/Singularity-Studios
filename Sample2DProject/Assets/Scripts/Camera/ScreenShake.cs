@@ -23,6 +23,7 @@ public class ScreenShake : MonoBehaviour
 
     AudioSource audioSource;
     bool isPlayingAudio;
+    bool screenShakeDisabled;
 
     [SerializeField] bool isMainMenu = false;
 
@@ -54,8 +55,8 @@ public class ScreenShake : MonoBehaviour
     /// <param name="midCameraPrefab"> midCameraPrefab GameObject instance. </param>
     public void ShakeScreen(GameObject midCameraPrefab, float shakeIntensity)
     {
-        if (isMainMenu) shakeIntensity = 0.0125f;
-        
+        if (isMainMenu && !screenShakeDisabled) shakeIntensity = 0.0125f;
+        else if (isMainMenu && screenShakeDisabled) shakeIntensity = 0f;
         if (CanShake() && timerForShaking < shakeDuration)
         {
             midCameraPrefab.transform.position += (Vector3) Random.insideUnitCircle * shakeIntensity;
@@ -103,5 +104,9 @@ public class ScreenShake : MonoBehaviour
         {
             timerForShaking += Time.deltaTime;
         }
+    }
+    public void ToggleScreenShake()
+    {
+        screenShakeDisabled = !screenShakeDisabled;
     }
 }

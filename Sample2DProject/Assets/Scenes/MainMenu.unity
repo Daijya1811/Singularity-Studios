@@ -774,7 +774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Toggle Screen Rumble
+  m_text: Disable Screen Rumble?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 87d6786227062544489ba2cabeff9b05, type: 2}
   m_sharedMaterial: {fileID: -261199663134533442, guid: 87d6786227062544489ba2cabeff9b05, type: 2}
@@ -837,7 +837,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -57.64171, w: 0}
+  m_margin: {x: 0, y: 0, z: -77.246475, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1179,7 +1179,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294411742}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -8371,10 +8371,10 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 1874c53466bfa8a47a4f943475d00e8d, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 825668018}
+        m_TargetAssemblyTypeName: ScreenShake, Assembly-CSharp
+        m_MethodName: ToggleScreenShake
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8383,7 +8383,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &2007844468
 GameObject:
   m_ObjectHideFlags: 0
