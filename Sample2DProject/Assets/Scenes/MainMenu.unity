@@ -4929,6 +4929,7 @@ MonoBehaviour:
   rngMin: 1
   rngMax: 4
   isMainMenu: 1
+  introCinematic: {fileID: 0}
 --- !u!82 &825668019
 AudioSource:
   m_ObjectHideFlags: 0
