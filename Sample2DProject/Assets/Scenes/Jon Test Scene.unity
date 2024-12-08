@@ -2918,17 +2918,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22d2c44fed4ffa743aac7afe4d993905, type: 3}
---- !u!114 &460475718 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5170008804632379135, guid: b36b659ceb428414b90420171d00105c, type: 3}
-  m_PrefabInstance: {fileID: 992433260}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &478710085
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7157,6 +7146,10 @@ PrefabInstance:
       propertyPath: m_Lens.FieldOfView
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 3274561603259679018, guid: b36b659ceb428414b90420171d00105c, type: 3}
+      propertyPath: m_Path
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5469923598613741015, guid: b36b659ceb428414b90420171d00105c, type: 3}
       propertyPath: m_Name
       value: Cinematics
@@ -7208,7 +7201,7 @@ PrefabInstance:
     - target: {fileID: 5520224632497443542, guid: b36b659ceb428414b90420171d00105c, type: 3}
       propertyPath: m_ExposedReferences.m_References.Array.data[5].second
       value: 
-      objectReference: {fileID: 460475718}
+      objectReference: {fileID: 0}
     - target: {fileID: 5826233889228417591, guid: b36b659ceb428414b90420171d00105c, type: 3}
       propertyPath: m_PathPosition
       value: 7
@@ -7254,7 +7247,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8318078459623696834, guid: b36b659ceb428414b90420171d00105c, type: 3}
+    - {fileID: 9169247436764216616, guid: b36b659ceb428414b90420171d00105c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b36b659ceb428414b90420171d00105c, type: 3}
@@ -9354,6 +9349,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5399109442500508501, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
   m_PrefabInstance: {fileID: 1299299192}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1351181730 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 710154271989400515, guid: b36b659ceb428414b90420171d00105c, type: 3}
+  m_PrefabInstance: {fileID: 992433260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3270431626834d343afdf04d2cd90e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1358344324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15230,7 +15236,7 @@ PrefabInstance:
     - target: {fileID: 6845324316493955127, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
       propertyPath: introCinematic
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1351181730}
     - target: {fileID: 7024538790063751958, guid: a9f069375f582ed468190ee87b6d4ada, type: 3}
       propertyPath: orthographic
       value: 0

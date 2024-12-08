@@ -54,8 +54,8 @@ public class SceneInitialization : MonoBehaviour
                 GameObject currentObject = Resources.Load<GameObject>(playerObjectName[i]);
 
                 // Spawn the players in their specific starting positions
-                if (!firstSpawnDone) { currentObject.transform.position = new Vector3(10.8f, 0f, -4.6f); currentObject.transform.rotation = Quaternion.Euler(0f, 150f, 0f); firstSpawnDone = true; }
-                else { currentObject.transform.position = new Vector3(10.4f, 0f, 1.1f); currentObject.transform.rotation = Quaternion.Euler(0f, 140f, 0f); }
+                if (!firstSpawnDone) { currentObject.transform.position = new Vector3(10.8f, 0f, -4.3f); currentObject.transform.rotation = Quaternion.Euler(0f, -90f, 0f); firstSpawnDone = true; }
+                else { currentObject.transform.position = new Vector3(10.4f, 0f, 1.1f); currentObject.transform.rotation = Quaternion.Euler(0f, -105f, 0f); }
                 currentObject.transform.localScale = new Vector3(1,1,1);
                 PlayerInput playerInput = PlayerInput.Instantiate(currentObject, player.Key, playerControlScheme, -1, playerController);
 
