@@ -4926,8 +4926,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shakeDuration: 3
-  rngMin: 1
-  rngMax: 4
+  rngMin: 2
+  rngMax: 5
   isMainMenu: 1
   introCinematic: {fileID: 0}
 --- !u!82 &825668019
@@ -9974,7 +9974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3042216830582579818, guid: d5054a6e5e31c3346b54240520eaabdf, type: 3}
       propertyPath: scaler
-      value: 1.0002
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 4285387856495591204, guid: d5054a6e5e31c3346b54240520eaabdf, type: 3}
       propertyPath: m_LocalPosition.x
