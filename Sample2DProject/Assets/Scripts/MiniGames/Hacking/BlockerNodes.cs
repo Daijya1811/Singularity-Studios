@@ -15,7 +15,16 @@ namespace Hacking
         float theta;
         Vector3 center;
         Vector3 startPos;
+        PlayerTriangleMovement playerTriangle;
+        MeshRenderer mesh;
 
+        // Don't display during the tutorial popup. 
+        private void OnEnable()
+        {
+            playerTriangle = FindObjectOfType<PlayerTriangleMovement>();
+            mesh = GetComponent<MeshRenderer>();
+            if (playerTriangle.FirstTimePlaying) mesh.enabled = false;
+        }
         // Start is called before the first frame update
         void Start()
         {
@@ -33,6 +42,11 @@ namespace Hacking
             center = GameObject.FindGameObjectWithTag("Goal").transform.position;
             transform.position = center + startPos * radius;
             transform.LookAt(Vector3.zero);
+        }
+
+        void Update()
+        {
+            if (!playerTriangle.FirstTimePlaying) mesh.enabled = true;
         }
     }
 }

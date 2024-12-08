@@ -19,6 +19,7 @@ namespace Hacking
         private bool isHackingActive;
 
         public bool IsHackingActive { get { return isHackingActive; } set { isHackingActive = value; } }
+        public float TimeForTask { get { return timeForTask; } set { timeForTask = value; } }
         private void OnEnable()
         {
             timeLeft = timeForTask;
@@ -31,6 +32,9 @@ namespace Hacking
         // Update is called once per frame
         void Update()
         {
+            // Don't countdown while the player is reading the tutorial screen.
+            if (player.FirstTimePlaying) return;
+
             // If the player has not won the minigame yet, then the timer should be counting down.
             if (!player.HasWon) Countdown();
             CheckForHackingActiveState();
@@ -40,6 +44,7 @@ namespace Hacking
         /// </summary>
         void Countdown()
         {
+            if (timeLeft > TimeForTask) timeLeft = timeForTask;
             timeLeft -= Time.deltaTime;
             if (timeLeft <= 0)
             {
