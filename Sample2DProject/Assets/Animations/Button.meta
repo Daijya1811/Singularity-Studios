@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Sample2DProject/Assets/Animations/Button.meta
 guid: cd71205819ba2b44f949786f4725c090
+========
+guid: 84688ebb5c0c75343ab4e4d6ddefc2e5
+>>>>>>>> 4eca59a1fb780af0a7a1f8ef6d8fe66573e94f42:Sample2DProject/Assets/Models/Cryopod.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
