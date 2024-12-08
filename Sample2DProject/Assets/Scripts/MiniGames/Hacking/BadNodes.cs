@@ -15,16 +15,7 @@ namespace Hacking
         float angle;
         Vector3 center;
         Vector3 startPos;
-        PlayerTriangleMovement playerTriangle;
-        MeshRenderer mesh;
 
-        // Don't display during the tutorial popup. 
-        private void OnEnable()
-        {
-            playerTriangle = FindObjectOfType<PlayerTriangleMovement>();
-            mesh = GetComponent<MeshRenderer>();
-            if (playerTriangle.FirstTimePlaying) mesh.enabled = false;
-        }
         /// <summary>
         /// Assigns random values to the radius, speed, the startPos, and whether or not its CW or CCW.
         /// </summary>
@@ -48,7 +39,6 @@ namespace Hacking
         // Update is called once per frame
         void Update()
         {
-            if(!playerTriangle.FirstTimePlaying) mesh.enabled = true;
             RotateObject(center, radius, rotSpeed);
         }
 

@@ -10,7 +10,6 @@ namespace Hacking
     /// </summary>
     public class PlayerTriangleMovement : MonoBehaviour
     {
-        GameObject goal;
         [SerializeField] float rotSpeed = 50f;
         [SerializeField] float radius = 10f;
         float startingRadius;
@@ -22,21 +21,12 @@ namespace Hacking
         bool CCW = false;
         bool hasWon = false;
         bool hasLost = false;
-        bool firstTimePlaying = true;
-        int timesWon = 0;
 
         public bool HasWon { get { return hasWon; } set { hasWon = value; } }
         public bool HasLost { get { return hasLost; } set { hasLost = value; } }
-        public bool FirstTimePlaying { get { return firstTimePlaying; } }
 
-        StartHacking hackTerminal;
         DoorBehavior doorToUnlock;
-        DisplayHackOnboarding hackTutorial;
-        CountdownTimer countdownTimer;
         public DoorBehavior DoorToUnlock { set { doorToUnlock = value; } }
-        public StartHacking HackTerminal { set { hackTerminal = value; } }
-        public CountdownTimer CountdownTimer { get { return countdownTimer; } }
-        public int TimesWon { get { return timesWon; } }
 
 
         private void OnDisable()
@@ -46,13 +36,9 @@ namespace Hacking
         // Start is called before the first frame update
         void Start()
         {
-            goal = GameObject.FindGameObjectWithTag("Goal");
-            center = goal.transform.position;
-            goal.GetComponent<MeshRenderer>().enabled = false;
+            center = GameObject.FindGameObjectWithTag("Goal").transform.position;
             startingRadius = radius;
             spawnPos = center + Vector3.left * startingRadius;
-            hackTutorial = FindObjectOfType<DisplayHackOnboarding>();
-            countdownTimer = FindObjectOfType<CountdownTimer>();
         }
 
         // Update is called once per frame
@@ -134,13 +120,6 @@ namespace Hacking
         /// </summary>
         public void OnAdvance(InputAction.CallbackContext context)
         {
-            if(firstTimePlaying)
-            {
-                firstTimePlaying = false;
-                Destroy(hackTutorial.gameObject);
-                GetComponent<MeshRenderer>().enabled = true;
-                goal.GetComponent<MeshRenderer>().enabled = true;
-            }
             if (BlockerNodeDetected(transform.up, 1f))
             {
                 return;
@@ -175,14 +154,13 @@ namespace Hacking
             if(other.gameObject.tag == "Goal")
             {
                 hasWon = true;
-                timesWon++;
-                countdownTimer.IsHackingActive = false;
+                FindObjectOfType<CountdownTimer>().IsHackingActive = false;
                 GetComponent<HackingFinished>().ToggleMiniGameOff();
                 doorToUnlock.Unlock();
-                hackTerminal.prompt = "";
-                hackTerminal.PromptUpdated = true;
-                hackTerminal.HackInstanceHasWon = true;
-                hasWon = false;
+
+                StartHacking hack = FindObjectOfType<StartHacking>();
+                hack.prompt = "";
+                hack.PromptUpdated = true;
             }
         }
     }

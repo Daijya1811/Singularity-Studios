@@ -17,8 +17,6 @@ public class Interactor : MonoBehaviour
     private InputAction interactAction;
     private IInteractable interactable;
 
-    public BillboardUIPrompt InteractionUI { get { return interactionUI; } }
-
     //colliders
     private readonly Collider[] colliders = new Collider[3]; // 3 max
 

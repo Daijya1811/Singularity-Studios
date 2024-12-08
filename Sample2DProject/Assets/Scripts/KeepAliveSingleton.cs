@@ -6,7 +6,7 @@ using UnityEngine;
 /// This script makes the GameObject it is attached to persist through scenes. 
 /// In essence, this is just a Singleton class. 
 /// </summary>
-public class KeepAlive : MonoBehaviour
+public class KeepAliveSingleton : MonoBehaviour
 {
     private static GameObject audioInstance;
     private static GameObject coOpManagerInstance;

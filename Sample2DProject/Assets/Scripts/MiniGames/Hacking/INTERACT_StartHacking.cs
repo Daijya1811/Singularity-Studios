@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
 namespace Hacking
@@ -25,25 +26,12 @@ namespace Hacking
         Interactor interactorInstance;
         CamerasController cameraController;
 
-        bool thisHackInstanceHasWon = false;
-        public bool HackInstanceHasWon { set { thisHackInstanceHasWon = value; } }
-
         public string InteractionPrompt => prompt;
-
-        [SerializeField] int amountOfBlockersFirstGame;
-        [SerializeField] int amountOfBlockersSecondGame;
-
-        BlockerNodesSpawner blockerSpawner;
-        BadNodesSpawner badSpawner;
-        CountdownTimer countdownTimer;
 
         private void Awake()
         {
             cameraController = FindObjectOfType<CamerasController>();
             hackingScene = GameObject.FindGameObjectWithTag("Hacking");
-            blockerSpawner = FindObjectOfType<BlockerNodesSpawner>();
-            badSpawner = FindObjectOfType<BadNodesSpawner>();
-            countdownTimer = FindObjectOfType<CountdownTimer>();
         }
         private void Start()
         {
@@ -56,14 +44,11 @@ namespace Hacking
             // When done, stick the camera back to the player mesh after re-enabling player mesh. 
 
             // Check to see if the player is the Brain and not the Brawn. If so, start hacking!
-            if(interactor.GetComponentInChildren<PlayerTriangleMovement>() != null && !thisHackInstanceHasWon)
+            if(interactor.GetComponentInChildren<PlayerTriangleMovement>() != null && !interactor.GetComponentInChildren<PlayerTriangleMovement>().HasWon)
             {
                 interactorInstance = interactor;
-                PlayerTriangleMovement playerTriangle = interactorInstance.GetComponentInChildren<PlayerTriangleMovement>();
-                playerTriangle.DoorToUnlock = doorToUnlock;
-                playerTriangle.HackTerminal = this;
+                interactorInstance.GetComponentInChildren<PlayerTriangleMovement>().DoorToUnlock = doorToUnlock;
                 ToggleMiniGameOn(interactorInstance);
-                SetHackingDifficulty(playerTriangle);
                 interactor.GetComponentInChildren<HackingFinished>().InteractorInstance = interactorInstance;
                 return true;
             }
@@ -79,22 +64,6 @@ namespace Hacking
             interactorInstance.GetComponentInChildren<PlayerTriangleMovement>().GetComponent<MeshRenderer>().enabled = true;
             hackingScene.SetActive(true);
             interactorInstance.GetComponent<PlayerInput>().SwitchCurrentActionMap("Hacking");
-        }
-        void SetHackingDifficulty(PlayerTriangleMovement playerTriangle)
-        {
-            if (playerTriangle.TimesWon == 0)
-            {
-                countdownTimer.TimeForTask = 30f;
-                countdownTimer.IsHackingActive = true;
-                badSpawner.SpawnNodes(amountOfBlockersFirstGame);
-                blockerSpawner.SpawnNodes(amountOfBlockersFirstGame);
-            }
-            else if(playerTriangle.TimesWon == 1)
-            {
-                countdownTimer.TimeForTask = 15f;
-                badSpawner.SpawnNodes(amountOfBlockersSecondGame);
-                blockerSpawner.SpawnNodes(amountOfBlockersSecondGame);
-            }
         }
     }
 }

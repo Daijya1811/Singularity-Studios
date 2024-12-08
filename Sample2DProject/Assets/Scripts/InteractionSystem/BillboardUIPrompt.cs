@@ -16,9 +16,6 @@ public class BillboardUIPrompt : MonoBehaviour
     const int XboxPrompt = 1;
     const int KeyboardPrompt = 2;
 
-    public string DeviceManufacturer { get { return deviceManufacturer; } }
-    public string DeviceName { get { return deviceName; } }
-
     
     private Camera playerSplitScreenCamera;
 
@@ -39,7 +36,9 @@ public class BillboardUIPrompt : MonoBehaviour
         playerSplitScreenCamera = transform.parent.parent.GetComponent<UnityEngine.InputSystem.PlayerInput>().camera;
 
         deviceName = transform.parent.parent.GetComponent<UnityEngine.InputSystem.PlayerInput>().devices[0].name;
+        print(deviceName);
         deviceManufacturer = transform.parent.parent.GetComponent<UnityEngine.InputSystem.PlayerInput>().devices[0].description.manufacturer;
+        print(deviceManufacturer);
     }
 
     private void LateUpdate()
