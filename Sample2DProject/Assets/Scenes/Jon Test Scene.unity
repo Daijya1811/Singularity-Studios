@@ -1227,7 +1227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8029548946349402284, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8115014858137560463, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7157,9 +7157,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2278742308791012955, guid: b36b659ceb428414b90420171d00105c, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 59.89133
+      objectReference: {fileID: 0}
     - target: {fileID: 5469923598613741015, guid: b36b659ceb428414b90420171d00105c, type: 3}
       propertyPath: m_Name
       value: CinematicsDupe
+      objectReference: {fileID: 0}
+    - target: {fileID: 5469923598613741015, guid: b36b659ceb428414b90420171d00105c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5520224632497443542, guid: b36b659ceb428414b90420171d00105c, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
@@ -7205,6 +7213,10 @@ PrefabInstance:
       propertyPath: m_ExposedReferences.m_References.Array.data[5].second
       value: 
       objectReference: {fileID: 460475718}
+    - target: {fileID: 5826233889228417591, guid: b36b659ceb428414b90420171d00105c, type: 3}
+      propertyPath: m_PathPosition
+      value: 0.4972831
+      objectReference: {fileID: 0}
     - target: {fileID: 6731452673380315492, guid: b36b659ceb428414b90420171d00105c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.20000076
