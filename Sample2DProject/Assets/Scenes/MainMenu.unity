@@ -3592,6 +3592,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea09f5898888f2b42a33e4bad2099ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brightnessSlider: {fileID: 690928946}
+  brightness: {fileID: 11400000, guid: 3a36895eb9fbd394a9e78e37f3726c44, type: 2}
+  layer: {fileID: 825668020}
 --- !u!1 &660098982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3812,7 +3815,7 @@ GameObject:
   - component: {fileID: 690928945}
   - component: {fileID: 690928946}
   m_Layer: 5
-  m_Name: BrightnessSlider (1)
+  m_Name: BrightnessSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7952,19 +7955,7 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1702593141}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!224 &1702593143
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8366,9 +8357,9 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 825668018}
+      - m_Target: {fileID: 11500000, guid: 1874c53466bfa8a47a4f943475d00e8d, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
