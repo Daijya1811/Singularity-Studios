@@ -11,6 +11,9 @@ using UnityEngine.InputSystem;
 public class CinematicControlRemover : MonoBehaviour
 {
     GameObject[] players;
+    [SerializeField] BoxCollider cryoPod1InteractTrigger;
+    [SerializeField] BoxCollider cryoPod2InteractTrigger;
+
 
     private bool donePlaying = true;
     public bool DonePlaying { get { return donePlaying; } }
@@ -38,6 +41,8 @@ public class CinematicControlRemover : MonoBehaviour
         {
             player.GetComponent<PlayerInput>().SwitchCurrentActionMap("DisableInput");
         }
+        cryoPod1InteractTrigger.enabled = false;
+        cryoPod2InteractTrigger.enabled = false;
     }
     void EnableControl(PlayableDirector pd)
     {
@@ -46,5 +51,7 @@ public class CinematicControlRemover : MonoBehaviour
         {
             player.GetComponent<PlayerInput>().SwitchCurrentActionMap("Player");
         }
+        cryoPod1InteractTrigger.enabled = true;
+        cryoPod2InteractTrigger.enabled = true;
     }
 }

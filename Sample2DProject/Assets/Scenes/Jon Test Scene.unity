@@ -1227,7 +1227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8029548946349402284, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8115014858137560463, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1245,6 +1245,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d4e2fa47992891848be1a8ca4e3e5bdd, type: 2}
+    - target: {fileID: 8324464773845466756, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8343313448545973571, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1268,42 +1272,18 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8029548946349402284, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 337338823}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
 --- !u!4 &337338821 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5399109442500508501, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
   m_PrefabInstance: {fileID: 337338820}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &337338822 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8029548946349402284, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+--- !u!65 &337338827 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8324464773845466756, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
   m_PrefabInstance: {fileID: 337338820}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &337338823
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337338822}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.08000021, y: 0.08000023, z: 0.12000023}
-  m_Center: {x: -0.089999996, y: -0.02, z: 0.06000001}
 --- !u!1 &337629927
 GameObject:
   m_ObjectHideFlags: 0
@@ -2666,6 +2646,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 575362988587887940, guid: 5fed7265616d8bf48ad14eefce01fa66, type: 3}
+      propertyPath: cryoPod1InteractTrigger
+      value: 
+      objectReference: {fileID: 337338827}
+    - target: {fileID: 575362988587887940, guid: 5fed7265616d8bf48ad14eefce01fa66, type: 3}
+      propertyPath: cryoPod2InteractTrigger
+      value: 
+      objectReference: {fileID: 1085718972}
     - target: {fileID: 987901449077384663, guid: 5fed7265616d8bf48ad14eefce01fa66, type: 3}
       propertyPath: winFader
       value: 
@@ -7157,17 +7145,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 710154271989400515, guid: b36b659ceb428414b90420171d00105c, type: 3}
+      propertyPath: cryoPod1InteractTrigger
+      value: 
+      objectReference: {fileID: 337338827}
+    - target: {fileID: 710154271989400515, guid: b36b659ceb428414b90420171d00105c, type: 3}
+      propertyPath: cryoPod2InteractTrigger
+      value: 
+      objectReference: {fileID: 1085718972}
     - target: {fileID: 2278742308791012955, guid: b36b659ceb428414b90420171d00105c, type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 59.89133
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5469923598613741015, guid: b36b659ceb428414b90420171d00105c, type: 3}
       propertyPath: m_Name
-      value: CinematicsDupe
+      value: Cinematics
       objectReference: {fileID: 0}
     - target: {fileID: 5469923598613741015, guid: b36b659ceb428414b90420171d00105c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5520224632497443542, guid: b36b659ceb428414b90420171d00105c, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
@@ -7215,7 +7211,7 @@ PrefabInstance:
       objectReference: {fileID: 460475718}
     - target: {fileID: 5826233889228417591, guid: b36b659ceb428414b90420171d00105c, type: 3}
       propertyPath: m_PathPosition
-      value: 0.4972831
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6731452673380315492, guid: b36b659ceb428414b90420171d00105c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7743,6 +7739,11 @@ PrefabInstance:
 --- !u!4 &1085718971 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5399109442500508501, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
+  m_PrefabInstance: {fileID: 1085718970}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1085718972 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8324464773845466756, guid: 6a326249f7a57814b9f8b75b1f831c52, type: 3}
   m_PrefabInstance: {fileID: 1085718970}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1089933194 stripped
@@ -14605,6 +14606,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FallingObjects
       objectReference: {fileID: 0}
+    - target: {fileID: 8696709089651604622, guid: c84885fca14a01b4aa8ca9a6394c8280, type: 3}
+      propertyPath: fallingObjectPrefabs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696709089651604622, guid: c84885fca14a01b4aa8ca9a6394c8280, type: 3}
+      propertyPath: fallingObjectPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 892707281032501988, guid: 2413b43e3ba3b24458612d69dac96780, type: 3}
+    - target: {fileID: 8696709089651604622, guid: c84885fca14a01b4aa8ca9a6394c8280, type: 3}
+      propertyPath: fallingObjectPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 7662493711540190464, guid: a393b5351c61061469d4b6f95d7c2fd3, type: 3}
     - target: {fileID: 9110031209986578136, guid: c84885fca14a01b4aa8ca9a6394c8280, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
