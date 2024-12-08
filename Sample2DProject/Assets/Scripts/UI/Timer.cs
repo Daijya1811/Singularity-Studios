@@ -27,8 +27,7 @@ public class TimerUI : MonoBehaviour
     private void UpdateTimer()
     {
         currentTime -= Time.deltaTime;
-
-        if (currentTime <= 0) currentTime = 0;
+        
         DisplayTime(currentTime);
     }
 

@@ -10,24 +10,13 @@ namespace Hacking
     public class BlockerNodesSpawner : MonoBehaviour
     {
         [SerializeField] GameObject blockerNodePrefab;
-        List<GameObject> nodes;
+        [SerializeField] float amountToSpawn = 5f;
         // Start is called before the first frame update
         void Start()
         {
-            nodes = new List<GameObject>();
-        }
-
-        public void SpawnNodes(int amountToSpawn)
-        {
-            foreach (GameObject node in nodes)
-            {
-                Destroy(node);
-            }
-            nodes.Clear();
             for (int i = 0; i < amountToSpawn; i++)
             {
                 GameObject newBlockerNode = Instantiate(blockerNodePrefab, transform);
-                nodes.Add(newBlockerNode);
             }
         }
     }

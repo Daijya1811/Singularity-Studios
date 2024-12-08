@@ -55,12 +55,7 @@ public class FlashlightController : MonoBehaviour
         if (flashlight.enabled)
         {
             currentBatteryTime -= Time.deltaTime * batteryChargeDepletionScaler;
-            if (currentBatteryTime <= 0)
-            {
-                currentBatteryTime = 0;
-                flashlight.enabled = false;
-                PlayAudioEffect(endClip);
-            }
+            if (currentBatteryTime < 0) currentBatteryTime = 0;
         }
         if(dimLightWithTime) flashlight.intensity =  Math.Min(currentBatteryTime, startBatteryTime) / startBatteryTime;
 

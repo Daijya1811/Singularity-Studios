@@ -6,16 +6,9 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class Menu : MonoBehaviour
 {
-    private void Start()
-    {
-        PlayerObjectHandler.playerControllers.Clear();
-        PlayerObjectHandler.playerSelectionNames.Clear();
-        PlayerObjectHandler.playerControlSchemes.Clear();
-        StickToPlayer.playerCameraReferences.Clear();
-    }
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("CharacterSelectionScene");
     }
 
     public void OnQuitClicked()
