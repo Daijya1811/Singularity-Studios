@@ -3591,8 +3591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brightnessSlider: {fileID: 690928946}
-  brightness: {fileID: 11400000, guid: 3a36895eb9fbd394a9e78e37f3726c44, type: 2}
-  layer: {fileID: 825668020}
+  ppf: {fileID: 11400000, guid: 3a36895eb9fbd394a9e78e37f3726c44, type: 2}
 --- !u!1 &660098982
 GameObject:
   m_ObjectHideFlags: 0
