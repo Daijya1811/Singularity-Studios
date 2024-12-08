@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 23d972728d9734b41b4e61c0b6f0abcb
+guid: 79c6cd35047531a4199017e636df488c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Camera
-    second: {fileID: 2800000, guid: 3c01675fcafef234a9d93ab53a4694a0, type: 3}
+      name: ExitSign
+    second: {fileID: 2800000, guid: 4a3530c694e78dd438588da16535f469, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,7 +40,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.5
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -95,7 +95,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.005
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
