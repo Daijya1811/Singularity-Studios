@@ -7,26 +7,35 @@ using UnityEngine.UI;
 public class BrightnessSetting : MonoBehaviour
 {
     [SerializeField] private Slider brightnessSlider;
-    [SerializeField] private PostProcessProfile brightness;
-    [SerializeField] private PostProcessLayer layer;
+    [SerializeField] private PostProcessProfile ppf;
+    //[SerializeField] private PostProcessLayer layer;
 
-    AutoExposure exposure;
+    float gamma = 0f;
+    ColorGrading colorGrading;
 
     void Start()
     {
-        brightness.TryGetSettings(out exposure);
-        AdjustBrighness(1f);
+        colorGrading = ppf.GetSetting<ColorGrading>();
+        colorGrading.gamma.value = new Vector4(1f, 1f, 1f, gamma);
+
+        //AdjustBrighness(1f);
     }
 
-    public void AdjustBrighness(float value)
+    private void Update()
     {
-        if(value != 0)
-        {
-            exposure.keyValue.value = value;
-        }
-        else
-        {
-            exposure.keyValue.value = 0.05f;
-        }
+        gamma = brightnessSlider.value;
+        colorGrading.gamma.value = new Vector4(1f, 1f, 1f, gamma);
     }
+
+    /* public void AdjustBrighness(float value)
+     {
+         if(value != 0)
+         {
+             exposure.keyValue.value = value;
+         }
+         else
+         {
+             exposure.keyValue.value = 0.05f;
+         }
+     }*/
 }
