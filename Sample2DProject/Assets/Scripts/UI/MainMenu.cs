@@ -15,4 +15,15 @@ public class Menu : MonoBehaviour
     {
         UnityEngine.Application.Quit();
     }
+
+    public GameObject button;
+    public void DisableButton()
+    {
+        button.SetActive(false);
+    }
+
+    public void EnableButton()
+    {
+        button.SetActive(true);
+    }
 }
