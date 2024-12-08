@@ -15,7 +15,7 @@ public class PlanetScaler : MonoBehaviour
         if (transform.localScale.x > maxScale) 
         { 
             sizeLimitReached = true; 
-            print(Time.timeSinceLevelLoad);  
+            // print(Time.timeSinceLevelLoad);  
             return; 
         }
         transform.localScale += Vector3.one * scaler * Time.deltaTime;

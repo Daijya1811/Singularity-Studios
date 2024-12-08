@@ -8,7 +8,7 @@ public class TimerUI : MonoBehaviour
     private TextMeshProUGUI timerText; 
 
     [SerializeField]
-    private float startTime = 266f; 
+    private float startTime = 198f; 
 
     private float currentTime;
 
