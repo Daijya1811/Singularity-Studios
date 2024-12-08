@@ -10,9 +10,6 @@ TagManager:
   - Goal
   - Hacking
   - PlayerTriangle
-  - Audio
-  - Co Op
-  - CharacterSelectCanvas
   layers:
   - Default
   - TransparentFX

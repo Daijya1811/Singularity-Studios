@@ -11,14 +11,9 @@ using UnityEngine.InputSystem;
 public class CinematicControlRemover : MonoBehaviour
 {
     [SerializeField] GameObject planet;
-    [SerializeField] bool repositionPlanet = true;
     GameObject[] players;
-
-    private bool donePlaying = true;
-    public bool DonePlaying { get { return donePlaying; } }
     private void Start()
     {
-        donePlaying = false;
         players = GameObject.FindGameObjectsWithTag("Player");
     }
     private void OnEnable()
@@ -40,12 +35,10 @@ public class CinematicControlRemover : MonoBehaviour
     }
     void EnableControl(PlayableDirector pd)
     {
-        donePlaying = true;
         foreach (GameObject player in players)
         {
             player.GetComponent<PlayerInput>().SwitchCurrentActionMap("Player");
         }
-        if(repositionPlanet)
-            planet.transform.localPosition = new Vector3(36f, -22f, -0.1f);
+        planet.transform.localPosition = new Vector3(36f, -22f, -0.1f);
     }
 }

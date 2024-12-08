@@ -1,21 +1,10 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BillboardUIPrompt : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI promptText;
     [SerializeField] private Canvas uIPanel;
-
-    [SerializeField] private Image buttonPrompt;
-    [SerializeField] private Sprite[] interactButtons;
-    private string deviceManufacturer;
-    private string deviceName;
-
-    const int PlayStationPrompt = 0;
-    const int XboxPrompt = 1;
-    const int KeyboardPrompt = 2;
-
     
     private Camera playerSplitScreenCamera;
 
@@ -34,11 +23,6 @@ public class BillboardUIPrompt : MonoBehaviour
         uIPanel.enabled = false;
         mainCam = Camera.main;
         playerSplitScreenCamera = transform.parent.parent.GetComponent<UnityEngine.InputSystem.PlayerInput>().camera;
-
-        deviceName = transform.parent.parent.GetComponent<UnityEngine.InputSystem.PlayerInput>().devices[0].name;
-        print(deviceName);
-        deviceManufacturer = transform.parent.parent.GetComponent<UnityEngine.InputSystem.PlayerInput>().devices[0].description.manufacturer;
-        print(deviceManufacturer);
     }
 
     private void LateUpdate()
@@ -54,30 +38,7 @@ public class BillboardUIPrompt : MonoBehaviour
     /// <param name="promptText">The text that the panel Displays</param>
     public void SetUp(string promptText)
     {
-        if (promptText == "")
-        {
-            this.promptText.text = promptText;
-            buttonPrompt.enabled = false;
-        }
-
-        else
-        {
-            buttonPrompt.enabled = true;
-            if (deviceManufacturer != null && deviceManufacturer.Equals("Sony Interactive Entertainment"))
-            {
-                buttonPrompt.sprite = interactButtons[PlayStationPrompt];
-            }
-            else if (deviceName != null && deviceName.Equals("Keyboard"))
-            {
-                buttonPrompt.sprite = interactButtons[KeyboardPrompt];
-            }
-            else
-            {
-                buttonPrompt.sprite = interactButtons[XboxPrompt];
-            }
-
-            this.promptText.text = "Press      to " + promptText;
-        }
+        this.promptText.text = promptText;
         uIPanel.enabled = true;
         isDisplayed = true;
     }

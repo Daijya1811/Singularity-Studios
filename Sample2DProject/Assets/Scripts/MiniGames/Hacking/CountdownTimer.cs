@@ -18,7 +18,7 @@ namespace Hacking
 
         private bool isHackingActive;
 
-        public bool IsHackingActive { get { return isHackingActive; } set { isHackingActive = value; } }
+        public bool IsHackingActive { get { return isHackingActive; } }
         private void OnEnable()
         {
             timeLeft = timeForTask;

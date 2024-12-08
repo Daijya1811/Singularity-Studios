@@ -23,13 +23,11 @@ public class ScreenShake : MonoBehaviour
 
     AudioSource audioSource;
     bool isPlayingAudio;
+    bool screenShakeDisabled;
 
     [SerializeField] bool isMainMenu = false;
-    [Header("Reference to Cinematic To Prevent Shaking During Cutscene")]
-    [SerializeField] CinematicControlRemover introCinematic;
 
     PlanetScaler planet;
-    FallingObjects fallingObjects;
 
     public float ShakeIntensity { get { return shakeIntensity; } }
 
@@ -37,7 +35,6 @@ public class ScreenShake : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         planet = FindObjectOfType<PlanetScaler>();
-        fallingObjects = FindObjectOfType<FallingObjects>();
     }
 
     // Start is called before the first frame update
@@ -47,7 +44,6 @@ public class ScreenShake : MonoBehaviour
     }
     private void Update()
     {
-        if (introCinematic != null && !introCinematic.DonePlaying) return;
         RunTimers();
 
         // isMainMenu should be false during gameplay scenes.
@@ -59,8 +55,8 @@ public class ScreenShake : MonoBehaviour
     /// <param name="midCameraPrefab"> midCameraPrefab GameObject instance. </param>
     public void ShakeScreen(GameObject midCameraPrefab, float shakeIntensity)
     {
-        if (isMainMenu) shakeIntensity = 0.0125f;
-        
+        if (isMainMenu && !screenShakeDisabled) shakeIntensity = 0.0125f;
+        else if (isMainMenu && screenShakeDisabled) shakeIntensity = 0f;
         if (CanShake() && timerForShaking < shakeDuration)
         {
             midCameraPrefab.transform.position += (Vector3) Random.insideUnitCircle * shakeIntensity;
@@ -78,10 +74,6 @@ public class ScreenShake : MonoBehaviour
             isPlayingAudio = false;
 
             if (isMainMenu) midCameraPrefab.transform.position = Vector3.zero;
-            else if(!isMainMenu)
-            {
-                fallingObjects.DropRandomItem();
-            }
         }
 
         if(!isMainMenu)
@@ -89,9 +81,9 @@ public class ScreenShake : MonoBehaviour
             if(planet.transform.localScale.x < 10f) shakeIntensity = 1f;
             else if (planet.transform.localScale.x < 25f) shakeIntensity = 1.25f;
             else if (planet.transform.localScale.x < 50f) shakeIntensity = 1.5f;
-            else if (planet.transform.localScale.x < 100f) shakeIntensity = 2f;
-            else if (planet.transform.localScale.x < 200f) shakeIntensity = 2.5f;
-            else shakeIntensity = 4f;
+            else if (planet.transform.localScale.x < 100f) shakeIntensity = 1.75f;
+            else if (planet.transform.localScale.x < 200f) shakeIntensity = 2f;
+            else shakeIntensity = 3f;
         }
     }
     /// <summary>
@@ -112,5 +104,9 @@ public class ScreenShake : MonoBehaviour
         {
             timerForShaking += Time.deltaTime;
         }
+    }
+    public void ToggleScreenShake()
+    {
+        screenShakeDisabled = !screenShakeDisabled;
     }
 }
