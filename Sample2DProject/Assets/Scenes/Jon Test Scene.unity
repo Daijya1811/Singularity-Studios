@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 6def504044d57f949ab0b35921deef3d, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 3e4d58585242f1e4aabe6071409ab2b0, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -14468,6 +14468,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1197604194}
     m_Modifications:
+    - target: {fileID: 308697267354815116, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 308697267354815116, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 308697267354815116, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 308697267354815116, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2749304395013901587, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.498943
@@ -14508,12 +14524,56 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4970196640090715717, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970196640090715717, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970196640090715717, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838428118425500225, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838428118425500225, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 1.02e-43
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838428118425500225, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.7e-43
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838428118425500225, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 9.254e-42
+      objectReference: {fileID: 0}
     - target: {fileID: 8037669058751541406, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
       propertyPath: m_Name
       value: Props
       objectReference: {fileID: 0}
     - target: {fileID: 8117520576399716413, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751676599420189304, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751676599420189304, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751676599420189304, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751676599420189304, guid: cc8bde46ee627494b90b16513fd7146a, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
