@@ -162,41 +162,7 @@ Shader "Custom/StandardCopy"
         }
         // ------------------------------------------------------------------
         //  Deferred pass
-        Pass
-        {
-            Name "DEFERRED"
-            Tags { "LightMode" = "Deferred" }
-
-            CGPROGRAM
-            #pragma target 3.0
-            #pragma exclude_renderers nomrt
-
-
-            // -------------------------------------
-
-            #pragma shader_feature_local _NORMALMAP
-            #pragma shader_feature_local _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
-            #pragma shader_feature_fragment _EMISSION
-            #pragma shader_feature_local _METALLICGLOSSMAP
-            #pragma shader_feature_local_fragment _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-            #pragma shader_feature_local_fragment _SPECULARHIGHLIGHTS_OFF
-            #pragma shader_feature_local_fragment _DETAIL_MULX2
-            #pragma shader_feature_local _PARALLAXMAP
-
-            #pragma multi_compile_prepassfinal
-            #pragma multi_compile_instancing
-            // Uncomment the following line to enable dithering LOD crossfade. Note: there are more in the file to uncomment for other passes.
-            //#pragma multi_compile _ LOD_FADE_CROSSFADE
-
-            #pragma vertex vertDeferred
-            #pragma fragment fragDeferred
-
-            #include "UnityStandardCore.cginc"
-
-            ENDCG
-        }
-
-        // ------------------------------------------------------------------
+             // ------------------------------------------------------------------
         // Extracts information for lightmapping, GI (emission, albedo, ...)
         // This pass it not used during regular rendering.
         Pass
