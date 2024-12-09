@@ -20,3 +20,6 @@ _This README contains basic information about the project and its artifacts. If 
 - [Google Project Doc](https://docs.google.com/document/d/1BRZSJY17bVkzMYttxcc2F4zss3bqRwmTX_qmXMcCKwM/edit)
 
 https://daijya1811.github.io/Singularity-Studios/ 
+
+Itch: https://demon-slayer-75.itch.io/echo-breach
+
