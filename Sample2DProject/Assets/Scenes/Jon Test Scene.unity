@@ -2647,6 +2647,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 575362988587887940, guid: 5fed7265616d8bf48ad14eefce01fa66, type: 3}
+      propertyPath: skipCutsceneText
+      value: 
+      objectReference: {fileID: 2141792031}
+    - target: {fileID: 575362988587887940, guid: 5fed7265616d8bf48ad14eefce01fa66, type: 3}
       propertyPath: cryoPod1InteractTrigger
       value: 
       objectReference: {fileID: 337338827}
@@ -7237,7 +7241,7 @@ PrefabInstance:
       objectReference: {fileID: 1085718972}
     - target: {fileID: 2278742308791012955, guid: b36b659ceb428414b90420171d00105c, type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 57.75977
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3274561603259679018, guid: b36b659ceb428414b90420171d00105c, type: 3}
       propertyPath: m_Path
@@ -7297,7 +7301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5826233889228417591, guid: b36b659ceb428414b90420171d00105c, type: 3}
       propertyPath: m_PathPosition
-      value: 4.476168
+      value: 4.746605
       objectReference: {fileID: 0}
     - target: {fileID: 6731452673380315492, guid: b36b659ceb428414b90420171d00105c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7468,6 +7472,10 @@ PrefabInstance:
     - target: {fileID: 4943141913635681028, guid: a7a0090dd07f8ad4a8393779ca3eba52, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5139597198561796143, guid: a7a0090dd07f8ad4a8393779ca3eba52, type: 3}
+      propertyPath: crossFadeSpeed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8082959899190649724, guid: a7a0090dd07f8ad4a8393779ca3eba52, type: 3}
       propertyPath: m_LocalPosition.x

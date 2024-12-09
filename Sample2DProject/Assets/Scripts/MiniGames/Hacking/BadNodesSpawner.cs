@@ -13,7 +13,7 @@ namespace Hacking
         List<GameObject> nodes;
 
         // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
             nodes = new List<GameObject>();
         }
