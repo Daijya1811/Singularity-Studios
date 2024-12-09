@@ -874,7 +874,7 @@
             "id": "38ed328d-dacf-4ef0-acdc-33379a49d669",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "SkipCutscene",
                     "type": "Button",
                     "id": "86edda7f-df7a-40da-a8c8-b79f1b510350",
                     "expectedControlType": "Button",
@@ -887,11 +887,22 @@
                 {
                     "name": "",
                     "id": "269896ad-86f7-470e-94db-bd7818101dff",
-                    "path": "",
+                    "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "SkipCutscene",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "08860cca-2484-45c5-9241-84f649163059",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SkipCutscene",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

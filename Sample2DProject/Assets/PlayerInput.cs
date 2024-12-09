@@ -896,7 +896,7 @@ public partial class @Input: IInputActionCollection2, IDisposable
             ""id"": ""38ed328d-dacf-4ef0-acdc-33379a49d669"",
             ""actions"": [
                 {
-                    ""name"": ""New action"",
+                    ""name"": ""SkipCutscene"",
                     ""type"": ""Button"",
                     ""id"": ""86edda7f-df7a-40da-a8c8-b79f1b510350"",
                     ""expectedControlType"": ""Button"",
@@ -909,11 +909,22 @@ public partial class @Input: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""269896ad-86f7-470e-94db-bd7818101dff"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/enter"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""New action"",
+                    ""action"": ""SkipCutscene"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""08860cca-2484-45c5-9241-84f649163059"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SkipCutscene"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1009,7 +1020,7 @@ public partial class @Input: IInputActionCollection2, IDisposable
         m_Hacking_Advance = m_Hacking.FindAction("Advance", throwIfNotFound: true);
         // DisableInput
         m_DisableInput = asset.FindActionMap("DisableInput", throwIfNotFound: true);
-        m_DisableInput_Newaction = m_DisableInput.FindAction("New action", throwIfNotFound: true);
+        m_DisableInput_SkipCutscene = m_DisableInput.FindAction("SkipCutscene", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1329,12 +1340,12 @@ public partial class @Input: IInputActionCollection2, IDisposable
     // DisableInput
     private readonly InputActionMap m_DisableInput;
     private List<IDisableInputActions> m_DisableInputActionsCallbackInterfaces = new List<IDisableInputActions>();
-    private readonly InputAction m_DisableInput_Newaction;
+    private readonly InputAction m_DisableInput_SkipCutscene;
     public struct DisableInputActions
     {
         private @Input m_Wrapper;
         public DisableInputActions(@Input wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Newaction => m_Wrapper.m_DisableInput_Newaction;
+        public InputAction @SkipCutscene => m_Wrapper.m_DisableInput_SkipCutscene;
         public InputActionMap Get() { return m_Wrapper.m_DisableInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1344,16 +1355,16 @@ public partial class @Input: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_DisableInputActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_DisableInputActionsCallbackInterfaces.Add(instance);
-            @Newaction.started += instance.OnNewaction;
-            @Newaction.performed += instance.OnNewaction;
-            @Newaction.canceled += instance.OnNewaction;
+            @SkipCutscene.started += instance.OnSkipCutscene;
+            @SkipCutscene.performed += instance.OnSkipCutscene;
+            @SkipCutscene.canceled += instance.OnSkipCutscene;
         }
 
         private void UnregisterCallbacks(IDisableInputActions instance)
         {
-            @Newaction.started -= instance.OnNewaction;
-            @Newaction.performed -= instance.OnNewaction;
-            @Newaction.canceled -= instance.OnNewaction;
+            @SkipCutscene.started -= instance.OnSkipCutscene;
+            @SkipCutscene.performed -= instance.OnSkipCutscene;
+            @SkipCutscene.canceled -= instance.OnSkipCutscene;
         }
 
         public void RemoveCallbacks(IDisableInputActions instance)
@@ -1445,6 +1456,6 @@ public partial class @Input: IInputActionCollection2, IDisposable
     }
     public interface IDisableInputActions
     {
-        void OnNewaction(InputAction.CallbackContext context);
+        void OnSkipCutscene(InputAction.CallbackContext context);
     }
 }

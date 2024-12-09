@@ -13,6 +13,7 @@ public class CinematicControlRemover : MonoBehaviour
     GameObject[] players;
     [SerializeField] BoxCollider cryoPod1InteractTrigger;
     [SerializeField] BoxCollider cryoPod2InteractTrigger;
+    [SerializeField] GameObject skipCutsceneText;
 
 
     private bool donePlaying = true;
@@ -53,5 +54,6 @@ public class CinematicControlRemover : MonoBehaviour
         }
         cryoPod1InteractTrigger.enabled = true;
         cryoPod2InteractTrigger.enabled = true;
+        skipCutsceneText.SetActive(false);
     }
 }

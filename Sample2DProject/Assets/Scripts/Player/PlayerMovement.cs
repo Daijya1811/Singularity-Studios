@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
     PlayerInput pi;
     bool isAlreadySelected = false;
+    
 
     public bool IsAlreadySelected { get { return isAlreadySelected; } set { isAlreadySelected = value; } }
 
@@ -125,5 +126,9 @@ public class PlayerMovement : MonoBehaviour
             transform.position = new Vector3(transform.position.x, floatingHeight, transform.position.z);
         }
         else transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
+    }
+    public void OnSkipCutscene(InputAction.CallbackContext context)
+    {
+        FindObjectOfType<StopCinematic>().SkipCutscene();
     }
 }

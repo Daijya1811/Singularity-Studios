@@ -63,7 +63,7 @@ namespace Hacking
 
         void FadingUI(Image image)
         {
-            float oscillatingAlpha = 0.5f * (Mathf.Sin(Time.time - (Mathf.PI / 2)) + 1); //Normalizes oscillations between 0 and 1 instead of -1 and 1
+            float oscillatingAlpha = 0.5f * (Mathf.Sin((Time.time * crossFadeSpeed) - (Mathf.PI / 2)) + 1); //Normalizes oscillations between 0 and 1 instead of -1 and 1
             Color newColor = new Color(image.color.r, image.color.g, image.color.b, oscillatingAlpha);
             image.color = newColor;
         }
